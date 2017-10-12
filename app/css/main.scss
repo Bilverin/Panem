@@ -1,0 +1,15 @@
+@import 'reset';
+@import 'settings';
+@import 'sprite';
+@import 'animation';
+@import 'fonts';
+@import 'variables';
+
+/***** Modules *****/
+@import 'modules';
+
+/****** Pages ******/
+@import 'pages/index';
+
+/***** Wrappers ****/
+@import 'style';

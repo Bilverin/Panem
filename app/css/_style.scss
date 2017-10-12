@@ -1,0 +1,58 @@
+.app {
+	min-width: 320px;
+	overflow-x: hidden;
+	background: #ffffff;
+
+	.wr {
+
+		// Header
+		&-header {
+			padding: 17px 0 16px;
+			background: #ffffff;
+		}
+
+		// Main Page
+		&-main {
+
+			// Intro
+			&-intro {
+				padding: 90px 0 100px; position: relative; z-index: 2;
+				background: url('../img/intro-bg.jpg') center top no-repeat;
+			}
+
+			// Offer 
+			&-offer {
+				position: relative; z-index: 3;
+				background: #ffffff;
+				&:before {
+					content: '';
+					display: block; width: 2808px; height: 70px; position: absolute; top: -60px; left: 50%; transform: translateX(-50%); z-index: 3;
+					background: url('../img/offer-border-top.png') center center no-repeat;
+				}
+				&:after {
+					content: '';
+					display: block; width: 2808px; height: 68px; position: absolute; bottom: -60px; left: 50%; transform: translateX(-50%); z-index: 3;
+					background: url('../img/offer-border-bottom.png') center center no-repeat;
+				}
+			}
+
+			// News and Contacts
+			&-info {
+				position: relative; z-index: 2;
+			}
+
+			// Partners
+			&-partners {
+				position: relative; z-index: 3;
+			}
+		}
+		
+		// Footer
+		&-footer {
+			position: relative; z-index: 2;
+		}
+		&-subfooter {
+
+		}
+	}
+}

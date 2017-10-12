@@ -1,0 +1,188 @@
+.main {
+
+	// intro
+	&-intro {
+
+		& > figure {
+			text-align: center; width: 654px; margin-left: 50px;
+			img {
+
+			}
+			figcaption {
+				h1 {
+					font-size: 54px; font-family: $ms-500; text-align: center;
+					span {
+						font-size: 28px;
+						display: block;
+					}
+				}
+			}
+		}
+
+		ul {
+			display: flex; justify-content: space-between;
+			li {
+				a {
+					display: inline-block;
+					&:hover {
+						figure {
+							figcaption {
+								color: #ffffff;
+								background: #0041b3;
+							}
+						}
+					}
+					figure {
+						text-align: center;
+						img {
+
+						}
+						figcaption {
+							color: $text-link; font-size: 20px; font-family: $ms-500;
+							display: inline-block; position: relative; padding: 0 5px;
+							background: linear-gradient(to right, rgba(255,255,255,0.5) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0.5) 100%);
+							span {
+
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	// offer 
+	&-offer {
+		position: relative; z-index: 4;
+		background: url('../img/offer-bg.png') center center no-repeat;
+		h2 {
+			font-size: 25px; font-family: $ms-500; text-align: center;
+			img {
+
+			}
+		}
+
+		ul {
+			display: flex;
+			li {
+				text-align: center;
+				width: 33.33333%;
+				a {
+					text-align: center;
+					display: inline-block; position: relative; padding-top: 130px;
+					i {
+						position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+					}
+
+					p {
+
+					}
+				}
+			}
+		}
+	}
+
+	// news and contacts
+	&-news-contacts {
+
+	}
+	&-news {
+		h2 {
+
+		}
+
+		& > ul {
+			& > li {
+				figure {
+
+				}
+
+				span.date {
+
+				}
+
+				div {
+					p {
+						a {
+
+						}
+					}
+				}
+
+				ul {
+					li {
+						a {
+
+						}
+					}
+				}
+			}
+		}
+	}
+	&-contacts {
+		figure {
+			img {
+
+			}
+		}
+
+		& > p {
+
+		}
+
+		form {
+			p {
+
+			}
+
+			input {
+
+			}
+
+			button {
+
+			}
+		}
+
+		ul {
+			li {
+				h3 {
+
+				}
+
+				p {
+
+				}
+			}
+		}
+	}
+
+	// partners
+	&-partners {
+		h3 {
+			img {
+
+			}
+
+			a {
+
+			}
+		}
+
+		p {
+
+		}
+
+		ul {
+			li {
+				a {
+					display: inline-block;
+
+					img {
+
+					}
+				}
+			}
+		}
+	}
+}
