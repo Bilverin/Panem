@@ -38,21 +38,34 @@
 
 			// News and Contacts
 			&-info {
-				position: relative; z-index: 2;
+				position: relative; z-index: 2; padding: 60px 0 100px;
+				background: url('../img/info-bg.png') left top no-repeat;
 			}
 
 			// Partners
 			&-partners {
 				position: relative; z-index: 3;
+				background: #ffde5b;
+				&:before {
+					content: '';
+					display: block; width: 2808px; height: 79px; position: absolute; top: -70px; left: 50%; transform: translateX(-50%); z-index: 3;
+					background: url('../img/partner-border-top.png') center center no-repeat;
+				}
+				&:after {
+					content: '';
+					display: block; width: 2808px; height: 79px; position: absolute; bottom: -70px; left: 50%; transform: translateX(-50%); z-index: 3;
+					background: url('../img/partner-border-bottom.png') center center no-repeat;
+				}
 			}
 		}
 		
 		// Footer
 		&-footer {
-			position: relative; z-index: 2;
+			position: relative; z-index: 2; padding-top: 100px;
+			background: #333333;
 		}
 		&-subfooter {
-
+			background: #ffffff;
 		}
 	}
 }

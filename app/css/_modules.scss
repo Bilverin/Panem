@@ -21,6 +21,12 @@
 }
 
 
+.container {
+	@media (min-width: 1400px) {
+		width: 1300px;
+	}
+}
+
 
 
 /*********************************/
@@ -93,5 +99,30 @@
 
 // footer
 .footer {
+	display: flex;
+	ul {
+		li {
+			a {
+				color: #ffffff; font-size: 16px; font-family: $ms-500;
+			}
+		}
+	}
+}
+.subfooter {
+	display: flex; justify-content: space-between;
+	ul {
+		li {
+			p {
+				font-size: 18px; font-family: $ms-500;
+			}
 
+			a {
+				color: $text-link; font-size: 14px; font-family: $ms-500;
+			}
+		}
+	}
+
+	& > p {
+		font-size: 18px; font-family: $ms-500;
+	}
 }

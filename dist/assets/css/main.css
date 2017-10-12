@@ -7993,8 +7993,8 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 .icon-donuts {
   background-image: url(../img/sprite.png);
   background-position: -128px 0px;
-  width: 109px;
-  height: 106px; }
+  width: 124px;
+  height: 121px; }
 
 .icon-key {
   background-image: url(../img/sprite.png);
@@ -8006,7 +8006,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   background-image: url(../img/sprite.png);
   background-position: 0px -121px;
   width: 104px;
-  height: 95px; }
+  height: 121px; }
 
 .icon-tortila {
   background-image: url(../img/sprite.png);
@@ -8080,6 +8080,10 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 /*********************************/
 .icon {
   display: inline-block; }
+
+@media (min-width: 1400px) {
+  .container {
+    width: 1300px; } }
 
 /*********************************/
 /*********** Modules *************/
@@ -8155,6 +8159,36 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
         font-size: 16px;
         font-family: "museosanscyrl-900", sans-serif; }
 
+.footer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  .footer ul li a {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: "museosanscyrl-500", sans-serif; }
+
+.subfooter {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+  .subfooter ul li p {
+    font-size: 18px;
+    font-family: "museosanscyrl-500", sans-serif; }
+  .subfooter ul li a {
+    color: #0046bb;
+    font-size: 14px;
+    font-family: "museosanscyrl-500", sans-serif; }
+  .subfooter > p {
+    font-size: 18px;
+    font-family: "museosanscyrl-500", sans-serif; }
+
 /****** Pages ******/
 .main-intro > figure {
   text-align: center;
@@ -8214,18 +8248,158 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
       .main-offer ul li a {
         text-align: center;
         display: inline-block;
-        position: relative;
-        padding-top: 130px; }
-        .main-offer ul li a i {
+        position: relative; }
+        .main-offer ul li a:hover p {
+          text-decoration: none; }
+        .main-offer ul li a p {
+          color: #0046bb;
+          font-size: 24px;
+          font-family: "museosanscyrl-500", sans-serif;
+          text-decoration: underline; }
+  .main-offer > p {
+    font-size: 20px;
+    font-family: "museosanscyrl-500", sans-serif;
+    text-align: center; }
+    .main-offer > p a {
+      color: #86b200;
+      display: inline-block; }
+      .main-offer > p a:hover span:after {
+        width: 100%; }
+      .main-offer > p a span {
+        color: inherit;
+        position: relative; }
+        .main-offer > p a span:after {
+          content: '';
+          display: block;
+          width: 0%;
+          height: 1px;
           position: absolute;
-          top: 0;
           left: 50%;
+          bottom: -2px;
           -webkit-transform: translateX(-50%);
           -ms-transform: translateX(-50%);
-          transform: translateX(-50%); }
+          transform: translateX(-50%);
+          background: #86b200;
+          -webkit-transition: 0.3s ease-out;
+          transition: 0.3s ease-out; }
 
-.main-partners ul li a {
-  display: inline-block; }
+.main-news-contacts {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  .main-news-contacts > div {
+    width: 50%; }
+    .main-news-contacts > div:last-child {
+      padding-left: 86px; }
+
+.main-news h2 {
+  font-size: 32px;
+  font-family: "museosanscyrl-500", sans-serif; }
+
+.main-news > ul > li span.date {
+  color: #999999;
+  font-size: 15px;
+  font-family: "museosanscyrl-500", sans-serif; }
+
+.main-news > ul > li div p {
+  font-size: 20px;
+  font-family: "museosanscyrl-500", sans-serif; }
+  .main-news > ul > li div p a {
+    color: #0046bb; }
+
+.main-news > ul > li ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  .main-news > ul > li ul li {
+    padding: 0 8px 0 10px;
+    border-right: solid 1px #d8d8d9; }
+    .main-news > ul > li ul li:first-child {
+      padding-left: 0; }
+    .main-news > ul > li ul li:last-child {
+      padding-right: 0;
+      border-right: 0; }
+    .main-news > ul > li ul li a {
+      color: #0046bb;
+      font-size: 16px;
+      font-family: "museosanscyrl-500", sans-serif;
+      line-height: 16px; }
+      .main-news > ul > li ul li a:hover {
+        color: #0062ff; }
+    .main-news > ul > li ul li span {
+      color: #cccccc;
+      font-size: 16px;
+      font-family: "museosanscyrl-500", sans-serif;
+      line-height: 16px; }
+
+.main-contacts > p {
+  font-size: 24px;
+  font-family: "museosanscyrl-500", sans-serif; }
+  .main-contacts > p span {
+    font-size: 30px;
+    display: block; }
+  .main-contacts > p b {
+    font-family: "museosanscyrl-900", sans-serif; }
+
+.main-contacts form {
+  background: #ffde5b; }
+  .main-contacts form p {
+    font-size: 16px;
+    font-family: "museosanscyrl-500", sans-serif; }
+  .main-contacts form input {
+    color: #cccccc;
+    font-size: 22px;
+    font-family: "museosanscyrl-500", sans-serif;
+    border: solid 1px #b29b40;
+    -webkit-border-radius: 1px;
+    border-radius: 1px; }
+  .main-contacts form button {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: "museosanscyrl-500", sans-serif;
+    text-transform: uppercase;
+    background: #d9bd4d;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    border: none; }
+
+.main-contacts ul li h3 {
+  font-size: 28px;
+  font-family: "museosanscyrl-500", sans-serif; }
+
+.main-contacts ul li p {
+  font-size: 18px;
+  font-family: "museosanscyrl-500", sans-serif; }
+
+.main-partners {
+  position: relative;
+  z-index: 4; }
+  .main-partners h3 {
+    font-size: 22px;
+    font-family: "museosanscyrl-500", sans-serif;
+    text-align: center; }
+  .main-partners p {
+    font-size: 18px;
+    font-family: "museosanscyrl-500", sans-serif;
+    text-align: center;
+    text-transform: uppercase; }
+  .main-partners ul {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+    .main-partners ul li {
+      padding: 0 15px; }
+      .main-partners ul li a {
+        display: inline-block; }
 
 /***** Wrappers ****/
 .app {
@@ -8272,10 +8446,43 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
       background: url("../img/offer-border-bottom.png") center center no-repeat; }
   .app .wr-main-info {
     position: relative;
-    z-index: 2; }
+    z-index: 2;
+    padding: 60px 0 100px;
+    background: url("../img/info-bg.png") left top no-repeat; }
   .app .wr-main-partners {
     position: relative;
-    z-index: 3; }
+    z-index: 3;
+    background: #ffde5b; }
+    .app .wr-main-partners:before {
+      content: '';
+      display: block;
+      width: 2808px;
+      height: 79px;
+      position: absolute;
+      top: -70px;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      transform: translateX(-50%);
+      z-index: 3;
+      background: url("../img/partner-border-top.png") center center no-repeat; }
+    .app .wr-main-partners:after {
+      content: '';
+      display: block;
+      width: 2808px;
+      height: 79px;
+      position: absolute;
+      bottom: -70px;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      transform: translateX(-50%);
+      z-index: 3;
+      background: url("../img/partner-border-bottom.png") center center no-repeat; }
   .app .wr-footer {
     position: relative;
-    z-index: 2; }
+    z-index: 2;
+    padding-top: 100px;
+    background: #333333; }
+  .app .wr-subfooter {
+    background: #ffffff; }

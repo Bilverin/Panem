@@ -25,8 +25,8 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 .icon-donuts {
   background-image: url(../img/sprite.png);
   background-position: -128px 0px;
-  width: 109px;
-  height: 106px;
+  width: 124px;
+  height: 121px;
 }
 .icon-key {
   background-image: url(../img/sprite.png);
@@ -38,7 +38,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   background-image: url(../img/sprite.png);
   background-position: 0px -121px;
   width: 104px;
-  height: 95px;
+  height: 121px;
 }
 .icon-tortila {
   background-image: url(../img/sprite.png);
