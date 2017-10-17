@@ -7927,8 +7927,7 @@ body {
   body.onload {
     overflow: hidden; }
   body * {
-    color: #000000;
-    -webkit-font-smoothing: antialiased !important; }
+    color: #000000; }
 
 /* В дополнение от Bootstrap, <p> (параграфы) получают нижний отступ в половину калькулируемой высоты строки (изначально 10px) */
 h1, h2, h3, h4, h5, h6, p, ul {
@@ -7998,9 +7997,15 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 
 .icon-key {
   background-image: url(../img/sprite.png);
-  background-position: -137px -121px;
+  background-position: -155px -121px;
   width: 17px;
   height: 17px; }
+
+.icon-search {
+  background-image: url(../img/sprite.png);
+  background-position: -137px -121px;
+  width: 18px;
+  height: 18px; }
 
 .icon-shop {
   background-image: url(../img/sprite.png);
@@ -8062,6 +8067,30 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
     font-family: "museosanscyrl-900";
     src: url("../fonts/museosanscyrl-900/museosanscyrl-900.svg#museosanscyrl-900") format("svg"); } }
 
+@font-face {
+  font-family: "opensans-regular";
+  src: url("../fonts/opensans-regular/opensans-regular.eot");
+  src: url("../fonts/opensans-regular/opensans-regular.eot") format("embedded-opentype"), url("../fonts/opensans-regular/opensans-regular.woff2") format("woff2"), url("../fonts/opensans-regular/opensans-regular.woff") format("woff"), url("../fonts/opensans-regular/opensans-regular.ttf") format("truetype"), url("../fonts/opensans-regular/opensans-regular.svg#opensans-regular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: "opensans-regular";
+    src: url("../fonts/opensans-regular/opensans-regular.svg#opensans-regular") format("svg"); } }
+
+@font-face {
+  font-family: "opensans-semibold";
+  src: url("../fonts/opensans-semibold/opensans-semibold.eot");
+  src: url("../fonts/opensans-semibold/opensans-semibold.eot") format("embedded-opentype"), url("../fonts/opensans-semibold/opensans-semibold.woff2") format("woff2"), url("../fonts/opensans-semibold/opensans-semibold.woff") format("woff"), url("../fonts/opensans-semibold/opensans-semibold.ttf") format("truetype"), url("../fonts/opensans-semibold/opensans-semibold.svg#opensans-semibold") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: "opensans-semibold";
+    src: url("../fonts/opensans-semibold/opensans-semibold.svg#opensans-semibold") format("svg"); } }
+
 /***************************/
 /********* Colors **********/
 /***************************/
@@ -8092,6 +8121,21 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   .btn:hover {
     color: #0046bb;
     background: #ffffff; }
+  .btn-2 {
+    color: #ffffff;
+    font-size: 22px;
+    font-family: "museosanscyrl-700", sans-serif;
+    padding: 11px 23px 14px 21px;
+    display: inline-block;
+    background: #005cff;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    border: solid 2px #005cff;
+    -webkit-transition: .2s ease-out;
+    transition: .2s ease-out; }
+    .btn-2:hover {
+      color: #005cff;
+      background: #ffffff; }
 
 /*********************************/
 /******** Class Helpers **********/
@@ -8724,6 +8768,330 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
           -ms-transform: translateY(-5px);
           transform: translateY(-5px); }
 
+.catalog-search {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 16px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .catalog-search h2 {
+    font-size: 18px;
+    font-family: "museosanscyrl-900", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1.7px;
+    padding-right: 63px;
+    padding-top: 2px; }
+  .catalog-search .search-block {
+    position: relative; }
+    .catalog-search .search-block input {
+      color: #000000;
+      font-size: 18px;
+      font-family: "museosanscyrl-900", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1.7px;
+      width: 407px;
+      height: 45px;
+      padding: 0 42px 0 8px;
+      border: solid 1px #d5d7dd;
+      -webkit-border-radius: 4px;
+      border-radius: 4px; }
+      .catalog-search .search-block input::-webkit-input-placeholder {
+        color: #d5d7dd; }
+      .catalog-search .search-block input::-moz-placeholder {
+        color: #d5d7dd; }
+      .catalog-search .search-block input:-moz-placeholder {
+        color: #d5d7dd; }
+      .catalog-search .search-block input:-ms-input-placeholder {
+        color: #d5d7dd; }
+    .catalog-search .search-block button {
+      text-align: center;
+      position: absolute;
+      right: 8px;
+      top: 7px;
+      width: 32px;
+      height: 32px;
+      padding-top: 6px;
+      background: transparent;
+      border: none; }
+
+.catalog-wrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.catalog-root {
+  width: 100%;
+  padding: 45px 64px 0 16px; }
+  .catalog-root > ul {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+    .catalog-root > ul > li {
+      padding-right: 25px; }
+      .catalog-root > ul > li figure {
+        margin-bottom: 24px; }
+        .catalog-root > ul > li figure img {
+          margin-bottom: 25px; }
+        .catalog-root > ul > li figure figcaption {
+          font-size: 16px;
+          font-family: "museosanscyrl-900", sans-serif;
+          text-transform: uppercase;
+          letter-spacing: 1.2px; }
+      .catalog-root > ul > li ul li {
+        margin-bottom: 25px; }
+        .catalog-root > ul > li ul li:last-child {
+          margin-bottom: 0; }
+        .catalog-root > ul > li ul li a {
+          color: #035dff;
+          font-size: 18px;
+          font-family: "museosanscyrl-500", sans-serif;
+          line-height: 22px;
+          letter-spacing: 0.2px; }
+
+.catalog-nav-list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 89px 0 0 16px;
+  margin-right: 74px;
+  min-width: 598px; }
+  .catalog-nav-list ul {
+    padding-right: 36px; }
+    .catalog-nav-list ul:last-child {
+      padding-right: 0; }
+      .catalog-nav-list ul:last-child li a {
+        color: #005bff; }
+    .catalog-nav-list ul li {
+      margin-bottom: 25px; }
+      .catalog-nav-list ul li:last-child {
+        margin-bottom: 0; }
+      .catalog-nav-list ul li.active a {
+        color: #b9bdc7;
+        pointer-events: none; }
+      .catalog-nav-list ul li a {
+        color: #0046bb;
+        font-size: 18px;
+        font-family: "museosanscyrl-500", sans-serif;
+        line-height: 22px;
+        letter-spacing: 0.2px; }
+
+.catalog-group {
+  padding: 74px 0 0; }
+  .catalog-group ul {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    width: 904px;
+    padding-left: 19px;
+    margin: -13px; }
+    .catalog-group ul:hover li a {
+      opacity: 0.6; }
+    .catalog-group ul li {
+      margin: 13px; }
+      .catalog-group ul li a {
+        display: block;
+        width: 99px;
+        height: 99px;
+        background: #efefef;
+        -webkit-border-radius: 200px;
+        border-radius: 200px;
+        overflow: hidden;
+        -webkit-transition: .3s ease-out;
+        transition: .3s ease-out; }
+        .catalog-group ul li a:hover {
+          -webkit-transform: translateY(-6px);
+          -ms-transform: translateY(-6px);
+          transform: translateY(-6px);
+          opacity: 1; }
+
+.catalog-item {
+  width: 702px; }
+  .catalog-item figure {
+    position: relative;
+    height: 330px;
+    width: 100%;
+    margin-bottom: 14px; }
+    .catalog-item figure img {
+      position: absolute;
+      left: 31px;
+      bottom: -27px; }
+  .catalog-item .product-name {
+    position: relative;
+    margin-bottom: 44px; }
+    .catalog-item .product-name h3 {
+      font-size: 42px;
+      font-family: "museosanscyrl-500", sans-serif;
+      line-height: 42px;
+      margin-bottom: 11px; }
+    .catalog-item .product-name p {
+      font-size: 22px;
+      font-family: "museosanscyrl-500", sans-serif;
+      letter-spacing: 0.1px;
+      line-height: 30px; }
+    .catalog-item .product-name span {
+      display: block;
+      width: 89px;
+      height: 89px;
+      position: absolute;
+      left: -33px;
+      top: -111px;
+      -webkit-border-radius: 200px;
+      border-radius: 200px;
+      overflow: hidden; }
+      .catalog-item .product-name span img {
+        min-width: 100%; }
+  .catalog-item dl {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding-right: 90px;
+    margin-bottom: 61px; }
+    .catalog-item dl dt, .catalog-item dl dd {
+      margin-bottom: 25px; }
+      .catalog-item dl dt:last-of-type, .catalog-item dl dd:last-of-type {
+        margin-bottom: 0; }
+    .catalog-item dl dt {
+      font-size: 14px;
+      font-family: "opensans-regular", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      line-height: 22px;
+      width: 136px; }
+    .catalog-item dl dd {
+      font-size: 16px;
+      font-family: "opensans-regular", sans-serif;
+      letter-spacing: 0.1px;
+      line-height: 22px;
+      width: -webkit-calc( 100% - 136px);
+      width: calc( 100% - 136px); }
+      .catalog-item dl dd:after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 0;
+        clear: both; }
+  .catalog-item a.btn-2 {
+    margin-bottom: 60px; }
+  .catalog-item form {
+    margin-bottom: 53px; }
+    .catalog-item form.disabled textarea {
+      background: #f2f2f2;
+      pointer-events: none;
+      resize: none; }
+    .catalog-item form textarea {
+      width: 100%;
+      min-height: 118px;
+      margin-bottom: 11px;
+      background: #ffffff;
+      border: solid 1px #cdcdcd;
+      -webkit-border-radius: 4px;
+      border-radius: 4px; }
+    .catalog-item form p {
+      font-size: 16px;
+      font-family: "opensans-regular", sans-serif;
+      letter-spacing: 0.13px;
+      padding-left: 27px; }
+      .catalog-item form p a {
+        color: #0046bb;
+        text-decoration: underline; }
+        .catalog-item form p a:hover {
+          text-decoration: none; }
+  .catalog-item .testi > h4 {
+    font-size: 28px;
+    font-family: "museosanscyrl-500", sans-serif;
+    line-height: 30px;
+    letter-spacing: 0.3px;
+    display: inline-block;
+    height: 30px;
+    vertical-align: top;
+    padding-right: 18px; }
+  .catalog-item .testi select {
+    font-size: 14px;
+    font-family: "opensans-regular", sans-serif;
+    line-height: 30px;
+    letter-spacing: 0.1px;
+    display: inline-block;
+    height: 30px;
+    vertical-align: top;
+    padding: 0 19px 0 2px; }
+    .catalog-item .testi select:focus {
+      outline: none; }
+  .catalog-item .testi ul {
+    padding-top: 16px; }
+    .catalog-item .testi ul li {
+      margin-bottom: 25px;
+      position: relative;
+      padding-left: 70px;
+      padding-top: 12px; }
+      .catalog-item .testi ul li:last-child {
+        margin-bottom: 0; }
+      .catalog-item .testi ul li > a {
+        display: inline-block;
+        position: absolute;
+        left: -6px;
+        top: 0; }
+      .catalog-item .testi ul li h4 {
+        font-size: 18px;
+        font-family: "opensans-regular", sans-serif;
+        letter-spacing: -0.1px;
+        line-height: 22px; }
+        .catalog-item .testi ul li h4 a {
+          font-family: "opensans-semibold", sans-serif;
+          letter-spacing: 0;
+          display: inline-block;
+          position: relative; }
+          .catalog-item .testi ul li h4 a:after {
+            content: '';
+            display: block;
+            width: 0%;
+            height: 1px;
+            position: absolute;
+            left: 50%;
+            bottom: 1px;
+            -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+            background: #000000;
+            -webkit-transition: .3s ease-out;
+            transition: .3s ease-out; }
+          .catalog-item .testi ul li h4 a:hover {
+            color: #000000; }
+            .catalog-item .testi ul li h4 a:hover:after {
+              width: 100%; }
+      .catalog-item .testi ul li span.date {
+        color: #b2b2b2;
+        font-size: 15px;
+        font-family: "opensans-regular", sans-serif;
+        display: block;
+        margin-bottom: 11px; }
+      .catalog-item .testi ul li p {
+        font-size: 18px;
+        font-family: "opensans-regular", sans-serif;
+        line-height: 24px;
+        letter-spacing: 0.05px;
+        margin-bottom: 1px; }
+        .catalog-item .testi ul li p:last-child {
+          margin-bottom: 0; }
+
 /***** Wrappers ****/
 .app {
   min-width: 320px;
@@ -8731,7 +9099,9 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   background: #ffffff; }
   .app .wr-header {
     padding: 17px 0 16px;
-    background: #ffffff; }
+    position: relative;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.7); }
   .app .wr-main-intro {
     padding: 89px 0 113px;
     position: relative;
@@ -8804,11 +9174,37 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
       transform: translateX(-50%);
       z-index: 3;
       background: url("../img/partner-border-bottom.png") center center no-repeat; }
+  .app .wr-catalog {
+    padding: 66px 0 133px;
+    min-height: -webkit-calc(100vh - 133px);
+    min-height: calc(100vh - 133px); }
   .app .wr-footer {
     position: relative;
     z-index: 2;
     padding: 146px 0 86px;
     background: #333333; }
+    .app .wr-footer-2 {
+      padding: 22px 0 31px;
+      position: relative;
+      z-index: 3;
+      background: #ffde5b; }
+      .app .wr-footer-2:before {
+        content: '';
+        display: block;
+        width: 2806px;
+        height: 26px;
+        position: absolute;
+        top: -25px;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+        z-index: 3;
+        background: url("../img/footer-2-border-top.png") center center no-repeat; }
+      .app .wr-footer-2 .subfooter {
+        padding: 0 16px; }
+        .app .wr-footer-2 .subfooter ul {
+          padding-top: 0; }
   .app .wr-subfooter {
     padding: 33px 0 31px;
     background: #ffffff; }

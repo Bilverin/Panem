@@ -30,9 +30,15 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-key {
   background-image: url(../img/sprite.png);
-  background-position: -137px -121px;
+  background-position: -155px -121px;
   width: 17px;
   height: 17px;
+}
+.icon-search {
+  background-image: url(../img/sprite.png);
+  background-position: -137px -121px;
+  width: 18px;
+  height: 18px;
 }
 .icon-shop {
   background-image: url(../img/sprite.png);

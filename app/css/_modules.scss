@@ -18,6 +18,17 @@
 		color: $text-link;
 		background: #ffffff;
 	}
+
+	&-2 {
+		color: #ffffff; font-size: 22px; font-family: $ms-700;
+		padding: 11px 23px 14px 21px; display: inline-block;
+		background: #005cff; border-radius: 4px; border: solid 2px #005cff;
+		transition: .2s ease-out;
+		&:hover {
+			color: #005cff;
+			background: #ffffff;
+		}
+	}
 }
 
 
