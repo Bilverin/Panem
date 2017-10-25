@@ -81,6 +81,10 @@
 							figcaption {
 								color: #ffffff;
 								background: #0041b3;
+								&:before,
+								&:after {
+									background: #0041b3;
+								}
 								span {
 									color: #ffffff;
 									background: #0041b3;
@@ -96,11 +100,23 @@
 						figcaption {
 							color: $text-link; font-size: 20px; font-family: $ms-500; letter-spacing: 0.5px;
 							display: inline-block; position: relative; padding: 0 5px;
-							background: linear-gradient(to right, rgba(255,255,255,0.5) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0.5) 100%);
+							background: #ffffff;
+							&:before,
+							&:after {
+								content: '';
+								display: block; height: 100%; width: 6px; position: absolute; top: 0; z-index: 1;
+								background: #ffffff; border-radius: 50%;
+							}
+							&:before {
+								left: -3px;
+							}
+							&:after {
+								right: -3px;
+							}
 							span {
 								color: $text-link; font-size: 14px; font-family: $ms-500; text-align: center;
-								height: 22px; display: inline-block; width: 37px; margin-left: -23px; position: relative; left: 15px; top: -15px; padding-top: 2px;
-								background: rgba(255,255,255,0.5); border-radius: 20px;
+								height: 22px; display: inline-block; width: 37px; margin-left: -23px; position: relative; left: 15px; top: -15px; padding-top: 2px; z-index: 2;
+								background: #ffffff; border-radius: 20px;
 							}
 						}
 					}
@@ -365,6 +381,11 @@
 			a.btn {
 				margin-left: 5px;
 			}
+		}
+
+		h4 {
+			font-size: 18px; font-family: $os-reg; text-transform: uppercase; text-align: center; line-height: 25px; letter-spacing: -0.05px;
+			margin-bottom: 31px;
 		}
 
 		p {

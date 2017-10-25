@@ -64,11 +64,44 @@
 		&-catalog {
 			padding: 66px 0 133px; min-height: calc(100vh - 133px);
 		}
+
+		// Company Page
+		&-company {
+			&-about {
+				padding: 0 0 138px;
+			}
+			&-partners {
+				@extend .wr-main-partners;
+				padding: 26px 0 78px;
+				&:after {
+					content: none;
+				}
+			}
+		}
+
+		// Contacts Page
+		&-contacts {
+			&-info {
+				padding: 110px 0 74px;
+			}
+			&-map {
+				figure {
+					img {
+						width: 100%;
+					}
+				}
+			}
+		}
 		
 		// Footer
 		&-footer {
 			position: relative; z-index: 2; padding: 146px 0 86px;
 			background: #333333;
+		}
+
+		&-subfooter {
+			padding: 33px 0 31px; position: relative; z-index: 4;
+			background: #ffffff;
 
 			&-2 {
 				padding: 22px 0 31px; position: relative; z-index: 3;
@@ -86,10 +119,6 @@
 					}
 				}
 			}
-		}
-		&-subfooter {
-			padding: 33px 0 31px;
-			background: #ffffff;
 		}
 	}
 }

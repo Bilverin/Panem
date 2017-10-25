@@ -7989,6 +7989,24 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   width: 128px;
   height: 121px; }
 
+.icon-company-location-1 {
+  background-image: url(../img/sprite.png);
+  background-position: -183px -139px;
+  width: 16px;
+  height: 20px; }
+
+.icon-company-location-2 {
+  background-image: url(../img/sprite.png);
+  background-position: -199px -139px;
+  width: 16px;
+  height: 20px; }
+
+.icon-company-location-3 {
+  background-image: url(../img/sprite.png);
+  background-position: -215px -139px;
+  width: 16px;
+  height: 20px; }
+
 .icon-donuts {
   background-image: url(../img/sprite.png);
   background-position: -128px 0px;
@@ -7997,13 +8015,19 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 
 .icon-key {
   background-image: url(../img/sprite.png);
-  background-position: -155px -121px;
+  background-position: -201px -121px;
   width: 17px;
   height: 17px; }
 
+.icon-pdf {
+  background-image: url(../img/sprite.png);
+  background-position: -104px -121px;
+  width: 46px;
+  height: 47px; }
+
 .icon-search {
   background-image: url(../img/sprite.png);
-  background-position: -137px -121px;
+  background-position: -183px -121px;
   width: 18px;
   height: 18px; }
 
@@ -8015,7 +8039,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 
 .icon-tortila {
   background-image: url(../img/sprite.png);
-  background-position: -104px -121px;
+  background-position: -150px -121px;
   width: 33px;
   height: 38px; }
 
@@ -8078,6 +8102,18 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   @font-face {
     font-family: "opensans-regular";
     src: url("../fonts/opensans-regular/opensans-regular.svg#opensans-regular") format("svg"); } }
+
+@font-face {
+  font-family: "opensans-bold";
+  src: url("../fonts/opensans-bold/opensans-bold.eot");
+  src: url("../fonts/opensans-bold/opensans-bold.eot") format("embedded-opentype"), url("../fonts/opensans-bold/opensans-bold.woff2") format("woff2"), url("../fonts/opensans-bold/opensans-bold.woff") format("woff"), url("../fonts/opensans-bold/opensans-bold.ttf") format("truetype"), url("../fonts/opensans-bold/opensans-bold.svg#opensans-bold") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: "opensans-bold";
+    src: url("../fonts/opensans-bold/opensans-bold.svg#opensans-bold") format("svg"); } }
 
 @font-face {
   font-family: "opensans-semibold";
@@ -8177,9 +8213,41 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
       display: -ms-flexbox;
       display: flex; }
       .header nav ul li {
-        margin-right: 31px; }
+        margin-right: 15px;
+        padding: 0 15px; }
         .header nav ul li:last-child {
           margin-right: 0; }
+        .header nav ul li.active {
+          position: relative; }
+          .header nav ul li.active:before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 200px;
+            position: absolute;
+            left: 50%;
+            bottom: -5px;
+            -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+            background: #000000; }
+          .header nav ul li.active:after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 18px;
+            position: absolute;
+            left: 50%;
+            bottom: -20px;
+            -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+            background: url("../img/header-active-border.png") center center no-repeat;
+            background-size: 100% 100%; }
+          .header nav ul li.active a {
+            color: #ffffff; }
+            .header nav ul li.active a:hover:after {
+              width: 0; }
         .header nav ul li a {
           color: #0041b2;
           font-size: 14px;
@@ -8217,7 +8285,6 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
     font-family: "museosanscyrl-500", sans-serif;
     letter-spacing: 1.3px;
     display: inline-block;
-    margin-right: 10px;
     position: relative; }
     .header a.phone:after {
       content: '';
@@ -8237,41 +8304,90 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
       width: 100%; }
     .header a.phone span {
       font-family: "museosanscyrl-900", sans-serif; }
-  .header ul.city {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    padding-right: 4px; }
-    .header ul.city li {
-      margin-right: 5px; }
-      .header ul.city li:last-child {
-        margin-right: 0; }
-      .header ul.city li.active a {
-        color: #000000;
-        pointer-events: none; }
-      .header ul.city li a {
-        color: #005dff;
-        font-size: 16px;
-        font-family: "museosanscyrl-900", sans-serif;
+  .header div.city {
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+    margin-right: -6px; }
+    .header div.city > a {
+      color: #000000;
+      font-size: 16px;
+      font-family: "museosanscyrl-900", sans-serif;
+      display: inline-block;
+      position: relative; }
+      .header div.city > a:after {
+        content: '';
         display: inline-block;
-        position: relative; }
-        .header ul.city li a:after {
-          content: '';
-          display: block;
-          width: 0%;
-          height: 2px;
-          position: absolute;
-          left: 50%;
-          bottom: -2px;
-          -webkit-transform: translateX(-50%);
-          -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
-          background: #005dff;
-          -webkit-transition: .3s ease-out;
-          transition: .3s ease-out; }
-        .header ul.city li a:hover:after {
-          width: 100%; }
+        width: 10px;
+        height: 7px;
+        margin-left: 6px;
+        position: relative;
+        top: -1px;
+        border-top: solid 7px #000000;
+        border-left: solid 5px transparent;
+        border-right: solid 5px transparent;
+        border-bottom: solid 0px #000000; }
+      .header div.city > a:before {
+        content: '';
+        display: block;
+        width: 0%;
+        height: 2px;
+        position: absolute;
+        left: 50%;
+        bottom: -1px;
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+        background: #000000;
+        -webkit-transition: .3s ease-out;
+        transition: .3s ease-out; }
+      .header div.city > a:hover:before {
+        width: 100%; }
+      .header div.city > a.active:after {
+        border-bottom-width: 7px;
+        border-top-width: 0; }
+    .header div.city ul {
+      padding: 5px 6px 7px 10px;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      -webkit-transform: translateY(100%);
+      -ms-transform: translateY(100%);
+      transform: translateY(100%);
+      background: #ffffff;
+      border: solid 1px rgba(0, 0, 0, 0.1);
+      opacity: 0;
+      pointer-events: none; }
+      .header div.city ul.active {
+        opacity: 1;
+        pointer-events: all; }
+      .header div.city ul li {
+        margin-bottom: 5px; }
+        .header div.city ul li:last-child {
+          margin-bottom: 0; }
+        .header div.city ul li a {
+          color: #005dff;
+          font-size: 16px;
+          font-family: "museosanscyrl-900", sans-serif;
+          display: inline-block;
+          position: relative; }
+          .header div.city ul li a:after {
+            content: '';
+            display: block;
+            width: 0%;
+            height: 2px;
+            position: absolute;
+            left: 50%;
+            bottom: -2px;
+            -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+            background: #005dff;
+            -webkit-transition: .3s ease-out;
+            transition: .3s ease-out; }
+          .header div.city ul li a:hover:after {
+            width: 100%; }
 
 .footer {
   display: -webkit-box;
@@ -8368,6 +8484,110 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
       top: -2px;
       margin-left: 3px; }
 
+.testimonials form {
+  margin-bottom: 53px; }
+  .testimonials form.disabled textarea {
+    background: #f2f2f2;
+    pointer-events: none;
+    resize: none; }
+  .testimonials form textarea {
+    width: 100%;
+    min-height: 118px;
+    margin-bottom: 11px;
+    background: #ffffff;
+    border: solid 1px #cdcdcd;
+    -webkit-border-radius: 4px;
+    border-radius: 4px; }
+  .testimonials form p {
+    font-size: 16px;
+    font-family: "opensans-regular", sans-serif;
+    letter-spacing: 0.13px;
+    padding-left: 27px; }
+    .testimonials form p a {
+      color: #0046bb;
+      text-decoration: underline; }
+      .testimonials form p a:hover {
+        text-decoration: none; }
+
+.testimonials .testi > h4 {
+  font-size: 28px;
+  font-family: "museosanscyrl-500", sans-serif;
+  line-height: 30px;
+  letter-spacing: 0.3px;
+  display: inline-block;
+  height: 30px;
+  vertical-align: top;
+  padding-right: 18px; }
+
+.testimonials .testi select {
+  font-size: 14px;
+  font-family: "opensans-regular", sans-serif;
+  line-height: 30px;
+  letter-spacing: 0.1px;
+  display: inline-block;
+  height: 30px;
+  vertical-align: top;
+  padding: 0 19px 0 2px; }
+  .testimonials .testi select:focus {
+    outline: none; }
+
+.testimonials .testi ul {
+  padding-top: 16px; }
+  .testimonials .testi ul li {
+    margin-bottom: 25px;
+    position: relative;
+    padding-left: 70px;
+    padding-top: 12px; }
+    .testimonials .testi ul li:last-child {
+      margin-bottom: 0; }
+    .testimonials .testi ul li > a {
+      display: inline-block;
+      position: absolute;
+      left: -6px;
+      top: 0; }
+    .testimonials .testi ul li h4 {
+      font-size: 18px;
+      font-family: "opensans-regular", sans-serif;
+      letter-spacing: -0.1px;
+      line-height: 22px; }
+      .testimonials .testi ul li h4 a {
+        font-family: "opensans-semibold", sans-serif;
+        letter-spacing: 0;
+        display: inline-block;
+        position: relative; }
+        .testimonials .testi ul li h4 a:after {
+          content: '';
+          display: block;
+          width: 0%;
+          height: 1px;
+          position: absolute;
+          left: 50%;
+          bottom: 1px;
+          -webkit-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+          background: #000000;
+          -webkit-transition: .3s ease-out;
+          transition: .3s ease-out; }
+        .testimonials .testi ul li h4 a:hover {
+          color: #000000; }
+          .testimonials .testi ul li h4 a:hover:after {
+            width: 100%; }
+    .testimonials .testi ul li span.date {
+      color: #b2b2b2;
+      font-size: 15px;
+      font-family: "opensans-regular", sans-serif;
+      display: block;
+      margin-bottom: 11px; }
+    .testimonials .testi ul li p {
+      font-size: 18px;
+      font-family: "opensans-regular", sans-serif;
+      line-height: 24px;
+      letter-spacing: 0.05px;
+      margin-bottom: 1px; }
+      .testimonials .testi ul li p:last-child {
+        margin-bottom: 0; }
+
 /****** Pages ******/
 .main-intro > figure {
   text-align: center;
@@ -8417,6 +8637,8 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
     .main-intro ul li a:hover figure figcaption {
       color: #ffffff;
       background: #0041b3; }
+      .main-intro ul li a:hover figure figcaption:before, .main-intro ul li a:hover figure figcaption:after {
+        background: #0041b3; }
       .main-intro ul li a:hover figure figcaption span {
         color: #ffffff;
         background: #0041b3; }
@@ -8432,9 +8654,22 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
         display: inline-block;
         position: relative;
         padding: 0 5px;
-        background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.5)), color-stop(50%, white), to(rgba(255, 255, 255, 0.5)));
-        background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.5) 0%, white 50%, rgba(255, 255, 255, 0.5) 100%);
-        background: linear-gradient(to right, rgba(255, 255, 255, 0.5) 0%, white 50%, rgba(255, 255, 255, 0.5) 100%); }
+        background: #ffffff; }
+        .main-intro ul li a figure figcaption:before, .main-intro ul li a figure figcaption:after {
+          content: '';
+          display: block;
+          height: 100%;
+          width: 6px;
+          position: absolute;
+          top: 0;
+          z-index: 1;
+          background: #ffffff;
+          -webkit-border-radius: 50%;
+          border-radius: 50%; }
+        .main-intro ul li a figure figcaption:before {
+          left: -3px; }
+        .main-intro ul li a figure figcaption:after {
+          right: -3px; }
         .main-intro ul li a figure figcaption span {
           color: #0046bb;
           font-size: 14px;
@@ -8448,7 +8683,8 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
           left: 15px;
           top: -15px;
           padding-top: 2px;
-          background: rgba(255, 255, 255, 0.5);
+          z-index: 2;
+          background: #ffffff;
           -webkit-border-radius: 20px;
           border-radius: 20px; }
 
@@ -8721,6 +8957,14 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
       top: -3px; }
     .main-partners h3 a.btn {
       margin-left: 5px; }
+  .main-partners h4 {
+    font-size: 18px;
+    font-family: "opensans-regular", sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 25px;
+    letter-spacing: -0.05px;
+    margin-bottom: 31px; }
   .main-partners p {
     font-size: 18px;
     font-family: "museosanscyrl-500", sans-serif;
@@ -8768,7 +9012,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
           -ms-transform: translateY(-5px);
           transform: translateY(-5px); }
 
-.catalog-search {
+.catalog-search, .knowledge-search {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8778,20 +9022,19 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center; }
-  .catalog-search h2 {
+  .catalog-search h2, .knowledge-search h2 {
     font-size: 18px;
     font-family: "museosanscyrl-900", sans-serif;
     text-transform: uppercase;
     letter-spacing: 1.7px;
     padding-right: 63px;
     padding-top: 2px; }
-  .catalog-search .search-block {
+  .catalog-search .search-block, .knowledge-search .search-block {
     position: relative; }
-    .catalog-search .search-block input {
+    .catalog-search .search-block input, .knowledge-search .search-block input {
       color: #000000;
       font-size: 18px;
       font-family: "museosanscyrl-900", sans-serif;
-      text-transform: uppercase;
       letter-spacing: 1.7px;
       width: 407px;
       height: 45px;
@@ -8799,15 +9042,15 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
       border: solid 1px #d5d7dd;
       -webkit-border-radius: 4px;
       border-radius: 4px; }
-      .catalog-search .search-block input::-webkit-input-placeholder {
+      .catalog-search .search-block input::-webkit-input-placeholder, .knowledge-search .search-block input::-webkit-input-placeholder {
         color: #d5d7dd; }
-      .catalog-search .search-block input::-moz-placeholder {
+      .catalog-search .search-block input::-moz-placeholder, .knowledge-search .search-block input::-moz-placeholder {
         color: #d5d7dd; }
-      .catalog-search .search-block input:-moz-placeholder {
+      .catalog-search .search-block input:-moz-placeholder, .knowledge-search .search-block input:-moz-placeholder {
         color: #d5d7dd; }
-      .catalog-search .search-block input:-ms-input-placeholder {
+      .catalog-search .search-block input:-ms-input-placeholder, .knowledge-search .search-block input:-ms-input-placeholder {
         color: #d5d7dd; }
-    .catalog-search .search-block button {
+    .catalog-search .search-block button, .knowledge-search .search-block button {
       text-align: center;
       position: absolute;
       right: 8px;
@@ -8818,16 +9061,16 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
       background: transparent;
       border: none; }
 
-.catalog-wrap {
+.catalog-wrap, .knowledge-wrap {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex; }
 
-.catalog-root {
+.catalog-root, .knowledge-root {
   width: 100%;
   padding: 45px 64px 0 16px; }
-  .catalog-root > ul {
+  .catalog-root > ul, .knowledge-root > ul {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -8836,55 +9079,102 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
     justify-content: space-between; }
-    .catalog-root > ul > li {
+    .catalog-root > ul > li, .knowledge-root > ul > li {
       padding-right: 25px; }
-      .catalog-root > ul > li figure {
+      .catalog-root > ul > li figure, .knowledge-root > ul > li figure {
         margin-bottom: 24px; }
-        .catalog-root > ul > li figure img {
+        .catalog-root > ul > li figure img, .knowledge-root > ul > li figure img {
           margin-bottom: 25px; }
-        .catalog-root > ul > li figure figcaption {
+        .catalog-root > ul > li figure figcaption, .knowledge-root > ul > li figure figcaption {
           font-size: 16px;
           font-family: "museosanscyrl-900", sans-serif;
           text-transform: uppercase;
           letter-spacing: 1.2px; }
-      .catalog-root > ul > li ul li {
+      .catalog-root > ul > li ul li, .knowledge-root > ul > li ul li {
         margin-bottom: 25px; }
-        .catalog-root > ul > li ul li:last-child {
+        .catalog-root > ul > li ul li:last-child, .knowledge-root > ul > li ul li:last-child {
           margin-bottom: 0; }
-        .catalog-root > ul > li ul li a {
+        .catalog-root > ul > li ul li a, .knowledge-root > ul > li ul li a {
           color: #035dff;
           font-size: 18px;
           font-family: "museosanscyrl-500", sans-serif;
           line-height: 22px;
-          letter-spacing: 0.2px; }
+          letter-spacing: 0.2px;
+          position: relative;
+          display: inline-block; }
+          .catalog-root > ul > li ul li a:after, .knowledge-root > ul > li ul li a:after {
+            content: '';
+            display: block;
+            width: 0%;
+            height: 2px;
+            position: absolute;
+            left: 50%;
+            bottom: -2px;
+            -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+            background: #035dff;
+            -webkit-transition: .3s ease-out;
+            transition: .3s ease-out; }
+          .catalog-root > ul > li ul li a:hover:after, .knowledge-root > ul > li ul li a:hover:after {
+            width: 100%; }
 
-.catalog-nav-list {
+.catalog-nav-list, .knowledge-nav-list {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   padding: 89px 0 0 16px;
-  margin-right: 74px;
-  min-width: 598px; }
-  .catalog-nav-list ul {
-    padding-right: 36px; }
-    .catalog-nav-list ul:last-child {
-      padding-right: 0; }
-      .catalog-nav-list ul:last-child li a {
-        color: #005bff; }
-    .catalog-nav-list ul li {
-      margin-bottom: 25px; }
-      .catalog-nav-list ul li:last-child {
-        margin-bottom: 0; }
-      .catalog-nav-list ul li.active a {
-        color: #b9bdc7;
-        pointer-events: none; }
-      .catalog-nav-list ul li a {
-        color: #0046bb;
-        font-size: 18px;
-        font-family: "museosanscyrl-500", sans-serif;
-        line-height: 22px;
-        letter-spacing: 0.2px; }
+  margin-right: 51px;
+  min-width: 527px; }
+  .catalog-nav-list ul:first-child, .knowledge-nav-list ul:first-child {
+    width: 166px; }
+  .catalog-nav-list ul:nth-child(2), .knowledge-nav-list ul:nth-child(2) {
+    width: 166px;
+    margin-right: 13px; }
+  .catalog-nav-list ul:nth-child(3), .knowledge-nav-list ul:nth-child(3) {
+    width: 186px;
+    margin-right: 22px; }
+  .catalog-nav-list ul:last-child, .knowledge-nav-list ul:last-child {
+    padding-right: 0;
+    margin-right: 0; }
+    .catalog-nav-list ul:last-child li a, .knowledge-nav-list ul:last-child li a {
+      color: #005bff; }
+      .catalog-nav-list ul:last-child li a:after, .knowledge-nav-list ul:last-child li a:after {
+        background: #005bff; }
+  .catalog-nav-list ul:nth-child(4), .knowledge-nav-list ul:nth-child(4) {
+    width: 186px;
+    margin-right: 19px; }
+  .catalog-nav-list ul li, .knowledge-nav-list ul li {
+    margin-bottom: 25px; }
+    .catalog-nav-list ul li:last-child, .knowledge-nav-list ul li:last-child {
+      margin-bottom: 0; }
+    .catalog-nav-list ul li.active.curr a, .knowledge-nav-list ul li.active.curr a {
+      position: relative; }
+      .catalog-nav-list ul li.active.curr a:before, .knowledge-nav-list ul li.active.curr a:before {
+        content: '';
+        display: block;
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        left: -19px;
+        top: 6px;
+        background: #09090d;
+        -webkit-border-radius: 50%;
+        border-radius: 50%; }
+    .catalog-nav-list ul li.active a, .knowledge-nav-list ul li.active a {
+      color: #b9bdc7;
+      pointer-events: none; }
+    .catalog-nav-list ul li a, .knowledge-nav-list ul li a {
+      color: #0046bb;
+      font-size: 18px;
+      font-family: "museosanscyrl-500", sans-serif;
+      line-height: 22px;
+      letter-spacing: 0.2px;
+      position: relative;
+      display: inline; }
+      .catalog-nav-list ul li a:hover, .knowledge-nav-list ul li a:hover {
+        text-decoration: underline; }
 
 .catalog-group {
   padding: 74px 0 0; }
@@ -8928,7 +9218,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
     margin-bottom: 14px; }
     .catalog-item figure img {
       position: absolute;
-      left: 31px;
+      left: 0;
       bottom: -27px; }
   .catalog-item .product-name {
     position: relative;
@@ -8938,11 +9228,24 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
       font-family: "museosanscyrl-500", sans-serif;
       line-height: 42px;
       margin-bottom: 11px; }
-    .catalog-item .product-name p {
+      .catalog-item .product-name h3:last-child {
+        margin-bottom: 0; }
+    .catalog-item .product-name h4 {
       font-size: 22px;
       font-family: "museosanscyrl-500", sans-serif;
       letter-spacing: 0.1px;
-      line-height: 30px; }
+      line-height: 30px;
+      margin-bottom: 20px; }
+      .catalog-item .product-name h4:last-child {
+        margin-bottom: 0; }
+    .catalog-item .product-name p {
+      font-size: 16px;
+      font-family: "opensans-regular", sans-serif;
+      letter-spacing: 0.05px;
+      line-height: 22px;
+      margin-bottom: 10px; }
+      .catalog-item .product-name p:last-child {
+        margin-bottom: 0; }
     .catalog-item .product-name span {
       display: block;
       width: 89px;
@@ -8952,9 +9255,16 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
       top: -111px;
       -webkit-border-radius: 200px;
       border-radius: 200px;
+      border: solid 1px #cccccc;
       overflow: hidden; }
       .catalog-item .product-name span img {
-        min-width: 100%; }
+        min-width: 100%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%); }
   .catalog-item dl {
     display: -webkit-box;
     display: -webkit-flex;
@@ -8989,108 +9299,596 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
         width: 100%;
         height: 0;
         clear: both; }
+  .catalog-item .recipes {
+    margin-bottom: 72px; }
+    .catalog-item .recipes h3 {
+      font-size: 22px;
+      font-family: "museosanscyrl-500", sans-serif;
+      margin-bottom: 17px; }
+    .catalog-item .recipes ul li {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      margin-bottom: 22px; }
+      .catalog-item .recipes ul li:last-child {
+        margin-bottom: 0; }
+      .catalog-item .recipes ul li a {
+        display: inline-block;
+        min-height: 53px;
+        padding-left: 60px;
+        padding-top: 10px;
+        position: relative; }
+        .catalog-item .recipes ul li a:hover span {
+          text-decoration: none; }
+        .catalog-item .recipes ul li a img {
+          position: absolute;
+          left: -5px;
+          top: 50%;
+          -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+          transform: translateY(-50%); }
+        .catalog-item .recipes ul li a span {
+          color: #0141b2;
+          font-size: 22px;
+          font-family: "museosanscyrl-500", sans-serif;
+          text-decoration: underline; }
   .catalog-item a.btn-2 {
     margin-bottom: 60px; }
-  .catalog-item form {
-    margin-bottom: 53px; }
-    .catalog-item form.disabled textarea {
-      background: #f2f2f2;
-      pointer-events: none;
-      resize: none; }
-    .catalog-item form textarea {
+
+.company-header img {
+  margin-left: -149px;
+  position: relative;
+  top: -5px; }
+
+.company-header h1 {
+  font-size: 48px;
+  font-family: "museosanscyrl-500", sans-serif;
+  line-height: 50px;
+  letter-spacing: -0.2px;
+  display: inline-block;
+  vertical-align: top;
+  padding-top: 149px;
+  position: relative;
+  left: -8px; }
+  .company-header h1 b {
+    font-family: "museosanscyrl-900", sans-serif;
+    letter-spacing: 2.7px; }
+
+.company-info {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 50px 0 50px; }
+  .company-info .about {
+    width: 72.5%;
+    padding-top: 43px;
+    padding-right: 80px; }
+    .company-info .about:last-child {
       width: 100%;
-      min-height: 118px;
-      margin-bottom: 11px;
-      background: #ffffff;
-      border: solid 1px #cdcdcd;
-      -webkit-border-radius: 4px;
-      border-radius: 4px; }
-    .catalog-item form p {
-      font-size: 16px;
-      font-family: "opensans-regular", sans-serif;
-      letter-spacing: 0.13px;
-      padding-left: 27px; }
-      .catalog-item form p a {
-        color: #0046bb;
-        text-decoration: underline; }
-        .catalog-item form p a:hover {
-          text-decoration: none; }
-  .catalog-item .testi > h4 {
-    font-size: 28px;
-    font-family: "museosanscyrl-500", sans-serif;
-    line-height: 30px;
-    letter-spacing: 0.3px;
-    display: inline-block;
-    height: 30px;
-    vertical-align: top;
-    padding-right: 18px; }
-  .catalog-item .testi select {
-    font-size: 14px;
-    font-family: "opensans-regular", sans-serif;
-    line-height: 30px;
-    letter-spacing: 0.1px;
-    display: inline-block;
-    height: 30px;
-    vertical-align: top;
-    padding: 0 19px 0 2px; }
-    .catalog-item .testi select:focus {
-      outline: none; }
-  .catalog-item .testi ul {
-    padding-top: 16px; }
-    .catalog-item .testi ul li {
-      margin-bottom: 25px;
-      position: relative;
-      padding-left: 70px;
-      padding-top: 12px; }
-      .catalog-item .testi ul li:last-child {
+      padding-top: 0;
+      padding-right: 0; }
+    .company-info .about p {
+      font-size: 22px;
+      font-family: "museosanscyrl-500", sans-serif;
+      line-height: 30px;
+      letter-spacing: 0.15px;
+      margin-bottom: 25px; }
+      .company-info .about p:last-child {
         margin-bottom: 0; }
-      .catalog-item .testi ul li > a {
-        display: inline-block;
-        position: absolute;
-        left: -6px;
-        top: 0; }
-      .catalog-item .testi ul li h4 {
-        font-size: 18px;
+      .company-info .about p b {
+        font-family: "museosanscyrl-900", sans-serif;
+        letter-spacing: 1.8px; }
+    .company-info .about ul {
+      padding-top: 38px;
+      width: 495px;
+      margin-bottom: 84px; }
+      .company-info .about ul li {
+        font-size: 16px;
         font-family: "opensans-regular", sans-serif;
-        letter-spacing: -0.1px;
-        line-height: 22px; }
-        .catalog-item .testi ul li h4 a {
-          font-family: "opensans-semibold", sans-serif;
-          letter-spacing: 0;
-          display: inline-block;
-          position: relative; }
-          .catalog-item .testi ul li h4 a:after {
-            content: '';
-            display: block;
-            width: 0%;
-            height: 1px;
-            position: absolute;
-            left: 50%;
-            bottom: 1px;
-            -webkit-transform: translateX(-50%);
-            -ms-transform: translateX(-50%);
-            transform: translateX(-50%);
-            background: #000000;
-            -webkit-transition: .3s ease-out;
-            transition: .3s ease-out; }
-          .catalog-item .testi ul li h4 a:hover {
-            color: #000000; }
-            .catalog-item .testi ul li h4 a:hover:after {
-              width: 100%; }
-      .catalog-item .testi ul li span.date {
+        line-height: 26px;
+        letter-spacing: 0.04px;
+        margin-bottom: 25px; }
+        .company-info .about ul li:last-child {
+          margin-bottom: 0; }
+        .company-info .about ul li i {
+          margin-bottom: -3px;
+          position: relative;
+          top: 2px; }
+  .company-info .map {
+    width: 27.5%; }
+    .company-info .map blockquote {
+      position: relative;
+      top: -28px;
+      padding: 0;
+      margin: 0;
+      width: 380px;
+      margin-bottom: 89px;
+      border: none; }
+      .company-info .map blockquote p {
         color: #b2b2b2;
         font-size: 15px;
-        font-family: "opensans-regular", sans-serif;
-        display: block;
-        margin-bottom: 11px; }
-      .catalog-item .testi ul li p {
+        font-family: "museosanscyrl-500", sans-serif;
+        line-height: 20px;
+        letter-spacing: 0.9px;
+        text-transform: uppercase;
+        margin-bottom: 7px; }
+        .company-info .map blockquote p span {
+          color: inherit;
+          display: inline-block;
+          margin-left: -14px; }
+        .company-info .map blockquote p b {
+          color: #000000; }
+      .company-info .map blockquote cite {
+        color: #b2b2b2;
+        font-size: 15px;
+        font-family: "museosanscyrl-500", sans-serif;
+        line-height: 20px;
+        letter-spacing: 0.9px;
+        text-transform: uppercase; }
+    .company-info .map figure img {
+      position: relative;
+      left: 14px;
+      -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      transform: translateX(-50%); }
+
+.contacts {
+  padding: 0 0 0 50px; }
+  .contacts > h4 {
+    font-size: 22px;
+    font-family: "opensans-regular", sans-serif;
+    letter-spacing: 0.1px;
+    margin-bottom: 29px; }
+    .contacts > h4 b {
+      font-family: "museosanscyrl-900", sans-serif;
+      letter-spacing: 1.8px; }
+    .contacts > h4 span {
+      font-size: 18px;
+      letter-spacing: 0;
+      display: block;
+      margin-top: 11px; }
+  .contacts > p {
+    font-size: 18px;
+    font-family: "opensans-regular", sans-serif;
+    letter-spacing: -0.1px;
+    line-height: 30px;
+    padding-top: 1px;
+    padding-right: 260px;
+    margin-bottom: 60px; }
+    .contacts > p b {
+      font-family: "museosanscyrl-900", sans-serif;
+      letter-spacing: 1.6px; }
+  .contacts > ul {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+    .contacts > ul > li:first-child {
+      width: 38.6%; }
+    .contacts > ul > li:nth-child(2) {
+      width: 34.76%; }
+    .contacts > ul > li:last-child {
+      width: 26.64%; }
+    .contacts > ul > li h4 {
+      font-size: 28px;
+      font-family: "museosanscyrl-500", sans-serif;
+      letter-spacing: 0.2px;
+      margin-bottom: 15px; }
+    .contacts > ul > li ul {
+      margin-bottom: 5px; }
+      .contacts > ul > li ul li {
         font-size: 18px;
         font-family: "opensans-regular", sans-serif;
-        line-height: 24px;
-        letter-spacing: 0.05px;
-        margin-bottom: 1px; }
-        .catalog-item .testi ul li p:last-child {
+        line-height: 25px;
+        letter-spacing: 0px;
+        margin-bottom: 11px; }
+        .contacts > ul > li ul li:last-child {
           margin-bottom: 0; }
+    .contacts > ul > li p {
+      font-size: 22px;
+      font-family: "opensans-regular", sans-serif;
+      letter-spacing: 0.1px; }
+
+.knowledge-wrap-search {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  .knowledge-wrap-search .search-list {
+    width: 40.234%; }
+    .knowledge-wrap-search .search-list .knowledge-search ul {
+      margin-right: 34px; }
+  .knowledge-wrap-search .search-result-item {
+    width: 59.766%;
+    padding-right: 100px; }
+    .knowledge-wrap-search .search-result-item > h1 {
+      font-size: 42px;
+      font-family: "museosanscyrl-500", sans-serif;
+      line-height: 48px;
+      letter-spacing: -0.3px;
+      margin-bottom: 9px; }
+    .knowledge-wrap-search .search-result-item > h2 {
+      font-size: 22px;
+      font-family: "opensans-regular", sans-serif;
+      line-height: 30px;
+      letter-spacing: 0.1px;
+      margin-bottom: 20px; }
+    .knowledge-wrap-search .search-result-item > h3 {
+      font-size: 28px;
+      font-family: "museosanscyrl-500", sans-serif;
+      letter-spacing: 0.3px;
+      margin-bottom: 16px; }
+    .knowledge-wrap-search .search-result-item > p {
+      font-size: 18px;
+      font-family: "opensans-regular", sans-serif;
+      line-height: 25px;
+      margin-bottom: 32px; }
+      .knowledge-wrap-search .search-result-item > p a {
+        color: #0141b2; }
+        .knowledge-wrap-search .search-result-item > p a:hover {
+          text-decoration: underline; }
+    .knowledge-wrap-search .search-result-item > ul {
+      padding-left: 58px;
+      margin-bottom: 41px; }
+      .knowledge-wrap-search .search-result-item > ul > li {
+        margin-bottom: 37px; }
+        .knowledge-wrap-search .search-result-item > ul > li > *:last-child {
+          margin-bottom: 0; }
+        .knowledge-wrap-search .search-result-item > ul > li:last-child {
+          margin-bottom: 0; }
+        .knowledge-wrap-search .search-result-item > ul > li h4 {
+          font-size: 28px;
+          font-family: "museosanscyrl-500", sans-serif;
+          line-height: 34px;
+          margin-bottom: 12px;
+          position: relative; }
+          .knowledge-wrap-search .search-result-item > ul > li h4 span {
+            display: block;
+            width: 52px;
+            height: 52px;
+            position: absolute;
+            left: -67px;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+            overflow: hidden; }
+            .knowledge-wrap-search .search-result-item > ul > li h4 span img {
+              max-width: 100%; }
+        .knowledge-wrap-search .search-result-item > ul > li p {
+          font-size: 18px;
+          font-family: "opensans-regular", sans-serif;
+          line-height: 25px;
+          margin-bottom: 20px; }
+          .knowledge-wrap-search .search-result-item > ul > li p a {
+            color: #0141b2; }
+            .knowledge-wrap-search .search-result-item > ul > li p a:hover {
+              text-decoration: underline; }
+        .knowledge-wrap-search .search-result-item > ul > li ul {
+          padding-left: 41px;
+          margin-bottom: 25px; }
+          .knowledge-wrap-search .search-result-item > ul > li ul li {
+            font-size: 18px;
+            font-family: "opensans-regular", sans-serif;
+            line-height: 25px;
+            margin-bottom: 10px;
+            position: relative; }
+            .knowledge-wrap-search .search-result-item > ul > li ul li:before {
+              content: '';
+              display: block;
+              width: 8px;
+              height: 8px;
+              position: absolute;
+              left: -19px;
+              top: 10px;
+              background: #000000;
+              -webkit-border-radius: 50%;
+              border-radius: 50%; }
+            .knowledge-wrap-search .search-result-item > ul > li ul li:last-child {
+              margin-bottom: 0; }
+      .knowledge-wrap-search .search-result-item > ul.btns {
+        padding-left: 0;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        padding-top: 15px; }
+        .knowledge-wrap-search .search-result-item > ul.btns li {
+          -webkit-align-self: center;
+          -ms-flex-item-align: center;
+          -ms-grid-row-align: center;
+          align-self: center;
+          margin-bottom: 0;
+          margin-right: 42px; }
+          .knowledge-wrap-search .search-result-item > ul.btns li:last-child {
+            margin-right: 0; }
+          .knowledge-wrap-search .search-result-item > ul.btns li a {
+            color: #005cff;
+            font-size: 22px;
+            font-family: "museosanscyrl-700", sans-serif;
+            position: relative; }
+            .knowledge-wrap-search .search-result-item > ul.btns li a:after {
+              content: '';
+              display: block;
+              width: 0%;
+              height: 2px;
+              position: absolute;
+              left: 50%;
+              bottom: -2px;
+              -webkit-transform: translateX(-50%);
+              -ms-transform: translateX(-50%);
+              transform: translateX(-50%);
+              background: #005cff;
+              -webkit-transition: .3s ease-out;
+              transition: .3s ease-out; }
+            .knowledge-wrap-search .search-result-item > ul.btns li a:hover:after {
+              width: 100%; }
+            .knowledge-wrap-search .search-result-item > ul.btns li a.btn-2 {
+              color: #ffffff; }
+              .knowledge-wrap-search .search-result-item > ul.btns li a.btn-2:hover {
+                color: #005cff; }
+              .knowledge-wrap-search .search-result-item > ul.btns li a.btn-2:after {
+                content: none; }
+            .knowledge-wrap-search .search-result-item > ul.btns li a.pdf {
+              font-size: 20px;
+              letter-spacing: -0.25px;
+              margin-left: 76px; }
+              .knowledge-wrap-search .search-result-item > ul.btns li a.pdf:after {
+                bottom: 2px; }
+              .knowledge-wrap-search .search-result-item > ul.btns li a.pdf i {
+                position: absolute;
+                left: -60px;
+                top: 50%;
+                -webkit-transform: translateY(-50%);
+                -ms-transform: translateY(-50%);
+                transform: translateY(-50%); }
+            .knowledge-wrap-search .search-result-item > ul.btns li a span {
+              color: #005cff;
+              font-size: 16px;
+              font-family: "museosanscyrl-700", sans-serif;
+              position: absolute;
+              right: -6px;
+              top: -5px;
+              -webkit-transform: translateX(100%);
+              -ms-transform: translateX(100%);
+              transform: translateX(100%); }
+    .knowledge-wrap-search .search-result-item > dl {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+      .knowledge-wrap-search .search-result-item > dl dt {
+        font-weight: 400; }
+      .knowledge-wrap-search .search-result-item > dl.ingredients {
+        width: 562px;
+        margin: 21px 0 53px;
+        padding: 31px 62px 40px 51px;
+        background: #f5f5f5; }
+        .knowledge-wrap-search .search-result-item > dl.ingredients dt, .knowledge-wrap-search .search-result-item > dl.ingredients dd {
+          margin-bottom: 12px; }
+          .knowledge-wrap-search .search-result-item > dl.ingredients dt:last-of-type, .knowledge-wrap-search .search-result-item > dl.ingredients dd:last-of-type {
+            margin-bottom: 0; }
+        .knowledge-wrap-search .search-result-item > dl.ingredients dt {
+          font-size: 20px;
+          font-family: "museosanscyrl-500", sans-serif;
+          letter-spacing: 0.2px;
+          width: -webkit-calc(100% - 85px);
+          width: calc(100% - 85px); }
+          .knowledge-wrap-search .search-result-item > dl.ingredients dt:last-of-type {
+            width: 0%; }
+          .knowledge-wrap-search .search-result-item > dl.ingredients dt a {
+            color: #0046bb; }
+            .knowledge-wrap-search .search-result-item > dl.ingredients dt a:hover {
+              text-decoration: underline; }
+        .knowledge-wrap-search .search-result-item > dl.ingredients dd {
+          font-size: 16px;
+          font-family: "opensans-regular", sans-serif;
+          text-align: right;
+          letter-spacing: 0.5px;
+          width: 85px;
+          padding-top: 2px; }
+          .knowledge-wrap-search .search-result-item > dl.ingredients dd:last-of-type {
+            width: 100%;
+            padding-top: 12px; }
+          .knowledge-wrap-search .search-result-item > dl.ingredients dd span {
+            font-family: "opensans-bold", sans-serif; }
+      .knowledge-wrap-search .search-result-item > dl.cooking-info {
+        padding-top: 19px;
+        margin-bottom: 48px; }
+        .knowledge-wrap-search .search-result-item > dl.cooking-info dt, .knowledge-wrap-search .search-result-item > dl.cooking-info dd {
+          margin-bottom: 23px; }
+          .knowledge-wrap-search .search-result-item > dl.cooking-info dt:last-of-type, .knowledge-wrap-search .search-result-item > dl.cooking-info dd:last-of-type {
+            margin-bottom: 0; }
+        .knowledge-wrap-search .search-result-item > dl.cooking-info dt {
+          font-size: 14px;
+          font-family: "opensans-regular", sans-serif;
+          text-transform: uppercase;
+          letter-spacing: 0.3px;
+          line-height: 22px;
+          width: 176px;
+          padding-top: 2px; }
+        .knowledge-wrap-search .search-result-item > dl.cooking-info dd {
+          font-size: 16px;
+          font-family: "opensans-regular", sans-serif;
+          width: -webkit-calc(100% - 176px);
+          width: calc(100% - 176px); }
+
+.knowledge-search {
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start; }
+  .knowledge-search ul {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding-top: 10px;
+    margin-right: 56px; }
+    .knowledge-search ul li {
+      margin-right: 44px; }
+      .knowledge-search ul li:last-child {
+        margin-right: 0; }
+      .knowledge-search ul li.active a {
+        color: #000000;
+        letter-spacing: 1.3px;
+        pointer-events: none; }
+      .knowledge-search ul li a {
+        color: #005bff;
+        font-size: 18px;
+        font-family: "museosanscyrl-900", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 1.3px;
+        position: relative;
+        display: inline-block; }
+        .knowledge-search ul li a:after {
+          content: '';
+          display: block;
+          width: 0%;
+          height: 2px;
+          position: absolute;
+          left: 50%;
+          bottom: -2px;
+          -webkit-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+          background: #005bff;
+          -webkit-transition: .3s ease-out;
+          transition: .3s ease-out; }
+        .knowledge-search ul li a:hover:after {
+          width: 100%; }
+        .knowledge-search ul li a span {
+          color: inherit;
+          font-size: 14px;
+          letter-spacing: 0;
+          position: absolute;
+          right: -3px;
+          top: -6px;
+          -webkit-transform: translateX(100%);
+          -ms-transform: translateX(100%);
+          transform: translateX(100%); }
+  .knowledge-search form .search-block input {
+    font-family: "museosanscyrl-500", sans-serif;
+    letter-spacing: 1.5px; }
+  .knowledge-search form input[type=checkbox] {
+    display: none; }
+  .knowledge-search form label {
+    font-size: 16px;
+    font-family: "opensans-regular", sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.1px;
+    position: relative;
+    display: inline-block;
+    padding-left: 28px;
+    margin: 11px 0 0 16px;
+    cursor: pointer; }
+    .knowledge-search form label:before {
+      content: '';
+      display: block;
+      width: 18px;
+      height: 18px;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      border: solid 1px #b9bdc7;
+      -webkit-border-radius: 2px;
+      border-radius: 2px; }
+  .knowledge-search form input[type=checkbox]:checked + label:before {
+    background: url("../img/check.png") center center no-repeat; }
+  .knowledge-search-result {
+    padding-top: 58px;
+    padding-left: 104px; }
+    .knowledge-search-result > ul > li {
+      position: relative;
+      padding-left: 76px;
+      margin-bottom: 34px; }
+      .knowledge-search-result > ul > li:last-child {
+        margin-bottom: 0; }
+      .knowledge-search-result > ul > li.active span {
+        border: solid 4px #000000; }
+        .knowledge-search-result > ul > li.active span:after {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          left: 0;
+          top: 0;
+          z-index: 2;
+          background: #e5edff;
+          opacity: 0.6; }
+      .knowledge-search-result > ul > li.active > a {
+        color: #b9bdc7;
+        pointer-events: none; }
+      .knowledge-search-result > ul > li span {
+        display: block;
+        width: 52px;
+        height: 52px;
+        position: absolute;
+        left: 0;
+        top: 45%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        overflow: hidden; }
+        .knowledge-search-result > ul > li span img {
+          max-width: 100%;
+          position: relative;
+          z-index: 1; }
+      .knowledge-search-result > ul > li ul {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex; }
+        .knowledge-search-result > ul > li ul li {
+          line-height: 11px; }
+          .knowledge-search-result > ul > li ul li:last-child:after {
+            content: none; }
+          .knowledge-search-result > ul > li ul li:after {
+            content: '/';
+            color: #0046bb;
+            font-size: 11px;
+            font-family: "museosanscyrl-500", sans-serif;
+            display: inline-block;
+            margin-right: 5px; }
+          .knowledge-search-result > ul > li ul li a {
+            color: #0046bb;
+            font-size: 11px;
+            font-family: "museosanscyrl-500", sans-serif;
+            letter-spacing: 0.2px;
+            text-transform: uppercase; }
+            .knowledge-search-result > ul > li ul li a:hover {
+              text-decoration: underline; }
+      .knowledge-search-result > ul > li > a {
+        color: #005bff;
+        font-size: 20px;
+        font-family: "museosanscyrl-500", sans-serif; }
+        .knowledge-search-result > ul > li > a:hover {
+          text-decoration: underline; }
+  .knowledge-search-slider {
+    margin-bottom: 50px; }
+
+.knowledge-nav-list {
+  min-width: auto;
+  margin-right: 0; }
+  .knowledge-nav-list ul {
+    padding-right: 25px; }
+    .knowledge-nav-list ul:first-child {
+      width: 42%; }
+    .knowledge-nav-list ul:last-child {
+      width: 42%; }
 
 /***** Wrappers ****/
 .app {
@@ -9143,12 +9941,12 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
     z-index: 2;
     padding: 121px 0 139px;
     background: url("../img/info-bg.png") left top no-repeat; }
-  .app .wr-main-partners {
+  .app .wr-main-partners, .app .wr-company-partners {
     position: relative;
     z-index: 3;
     padding: 45px 0 32px;
     background: #ffde5b; }
-    .app .wr-main-partners:before {
+    .app .wr-main-partners:before, .app .wr-company-partners:before {
       content: '';
       display: block;
       width: 2808px;
@@ -9161,7 +9959,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
       transform: translateX(-50%);
       z-index: 3;
       background: url("../img/partner-border-top.png") center center no-repeat; }
-    .app .wr-main-partners:after {
+    .app .wr-main-partners:after, .app .wr-company-partners:after {
       content: '';
       display: block;
       width: 2808px;
@@ -9178,17 +9976,32 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
     padding: 66px 0 133px;
     min-height: -webkit-calc(100vh - 133px);
     min-height: calc(100vh - 133px); }
+  .app .wr-company-about {
+    padding: 0 0 138px; }
+  .app .wr-company-partners {
+    padding: 26px 0 78px; }
+    .app .wr-company-partners:after {
+      content: none; }
+  .app .wr-contacts-info {
+    padding: 110px 0 74px; }
+  .app .wr-contacts-map figure img {
+    width: 100%; }
   .app .wr-footer {
     position: relative;
     z-index: 2;
     padding: 146px 0 86px;
     background: #333333; }
-    .app .wr-footer-2 {
+  .app .wr-subfooter {
+    padding: 33px 0 31px;
+    position: relative;
+    z-index: 4;
+    background: #ffffff; }
+    .app .wr-subfooter-2 {
       padding: 22px 0 31px;
       position: relative;
       z-index: 3;
       background: #ffde5b; }
-      .app .wr-footer-2:before {
+      .app .wr-subfooter-2:before {
         content: '';
         display: block;
         width: 2806px;
@@ -9201,10 +10014,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
         transform: translateX(-50%);
         z-index: 3;
         background: url("../img/footer-2-border-top.png") center center no-repeat; }
-      .app .wr-footer-2 .subfooter {
+      .app .wr-subfooter-2 .subfooter {
         padding: 0 16px; }
-        .app .wr-footer-2 .subfooter ul {
+        .app .wr-subfooter-2 .subfooter ul {
           padding-top: 0; }
-  .app .wr-subfooter {
-    padding: 33px 0 31px;
-    background: #ffffff; }

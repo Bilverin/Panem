@@ -15,7 +15,7 @@
 	<div class="app">
 
 		<!-- Header -->
-		//= tpl/header.html
+		//= tpl/header-catalog.html
 
 		<!-- Catalog -->
 		<section class="wr-catalog">
@@ -28,7 +28,7 @@
 							<h2>Каталог</h2>
 							<form action="#">
 								<div class="search-block">
-									<input type="text" placeholder="Поиск">
+									<input type="text" placeholder="ПОИСК">
 									<button><i class="icon icon-search"></i></button>
 								</div>
 							</form>
@@ -60,7 +60,7 @@
 									<li><a href="#">Прессованные</a></li>
 								</ul>
 								<ul>
-									<li class="active"><a href="#">&laquo;DCL&raquo;</a></li>
+									<li class="active curr"><a href="#">&laquo;DCL&raquo;</a></li>
 									<li><a href="#">&laquo;Eagle Gold&raquo;</a></li>
 									<li><a href="#">&laquo;Eagle&raquo;</a></li>
 									<li><a href="#">&laquo;Gloripan&raquo;</a></li>
@@ -82,9 +82,9 @@
 									<img src="assets/img/catalog-item-1.jpg">
 								</figure>
 								<div class="product-name">
-									<h3>Дрожжи <br>сухие инстантные «DCL»</h3>
-									<p>Для массового изготовления хлебобулочных изделий.</p>
 									<span><img src="assets/img/catalog-item-logo-1.png"></span>
+									<h3>Дрожжи <br>сухие инстантные «DCL»</h3>
+									<h4>Для массового изготовления хлебобулочных изделий.</h4>
 								</div>
 								<dl>
 									<dt>состав</dt>
@@ -99,25 +99,27 @@
 									<dd>РОССИЯ</dd>
 								</dl>
 								<a href="#" class="btn-2">Добавить в избранные</a>
-								<form action="#" class="disabled">
-									<textarea></textarea>
-									<p>Возможность оставлять отзывы к материалам появляется после <a href="#">регистрации</a>.</p>
-								</form>
-								<div class="testi">
-									<h4>1 отзыв</h4>
-									<select>
-										<option value="1">Сначала новые</option>
-									</select>
-									<ul>
-										<li>
-											<a href="#">
-												<img src="assets/img/ava-1.png">
-											</a>
-											<h4><a href="">Хьюберт Урбанский</a>, Миллениум Банк, Москва</h4>
-											<span class="date">2 августа 2017, 11:22</span>
-											<p>Спасибо, супер-семинар! Самара — самая сладкая, светлая, стильная!</p>
-										</li>
-									</ul>
+								<div class="testimonials">
+									<form action="#" class="disabled">
+										<textarea></textarea>
+										<p>Возможность оставлять отзывы к материалам появляется после <a href="#">регистрации</a>.</p>
+									</form>
+									<div class="testi">
+										<h4>1 отзыв</h4>
+										<select>
+											<option value="1">Сначала новые</option>
+										</select>
+										<ul>
+											<li>
+												<a href="#">
+													<img src="assets/img/ava-1.png">
+												</a>
+												<h4><a href="">Хьюберт Урбанский</a>, Миллениум Банк, Москва</h4>
+												<span class="date">2 августа 2017, 11:22</span>
+												<p>Спасибо, супер-семинар! Самара — самая сладкая, светлая, стильная!</p>
+											</li>
+										</ul>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -128,7 +130,7 @@
 		</section>
 
 		<!-- Footer -->
-		//= tpl/footer-2.html
+		//= tpl/subfooter-2.html
 
 	</div>
 

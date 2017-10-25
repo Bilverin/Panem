@@ -1,0 +1,77 @@
+.company {
+	// header
+	&-header {
+		img {
+			margin-left: -149px; position: relative; top: -5px;
+		}
+		h1 {
+			font-size: 48px; font-family: $ms-500; line-height: 50px; letter-spacing: -0.2px;
+			display: inline-block; vertical-align: top; padding-top: 149px; position: relative; left: -8px;
+			b {
+				font-family: $ms-900; letter-spacing: 2.7px;
+			}
+		}
+	}
+
+	// info
+	&-info {
+		display: flex; padding: 0 50px 0 50px;
+		.about {
+			width: 72.5%; padding-top: 43px; padding-right: 80px;
+			&:last-child {
+				width: 100%; padding-top: 0; padding-right: 0;
+			}
+			p {
+				font-size: 22px; font-family: $ms-500; line-height: 30px; letter-spacing: 0.15px;
+				margin-bottom: 25px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+				b {
+					font-family: $ms-900; letter-spacing: 1.8px;
+				}
+			}
+
+			ul {
+				padding-top: 38px; width: 495px; margin-bottom: 84px;
+				li {
+					font-size: 16px; font-family: $os-reg; line-height: 26px; letter-spacing: 0.04px;
+					margin-bottom: 25px;
+					&:last-child {
+						margin-bottom: 0;
+					}
+					i {
+						margin-bottom: -3px; position: relative; top: 2px;
+					}
+				}
+			}
+		}
+
+		.map {
+			width: 27.5%;
+			blockquote {
+				position: relative; top: -28px; padding: 0; margin: 0; width: 380px; margin-bottom: 89px;
+				border: none;
+				p {
+					color: #b2b2b2; font-size: 15px; font-family: $ms-500; line-height: 20px; letter-spacing: 0.9px; text-transform: uppercase;
+					margin-bottom: 7px;
+					span {
+						color: inherit;
+						display: inline-block; margin-left: -14px;
+					}
+					b {
+						color: $text-1;
+					}
+				}
+				cite {
+					color: #b2b2b2; font-size: 15px; font-family: $ms-500; line-height: 20px; letter-spacing: 0.9px; text-transform: uppercase;
+				}
+			}
+			figure {
+				img {
+					position: relative; left: 14px; transform: translateX(-50%);
+				}
+			}
+		}
+	}
+}

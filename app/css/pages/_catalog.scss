@@ -10,7 +10,7 @@
 		.search-block {
 			position: relative;
 			input {
-				color: $text-1; font-size: 18px; font-family: $ms-900; text-transform: uppercase; letter-spacing: 1.7px;
+				color: $text-1; font-size: 18px; font-family: $ms-900; letter-spacing: 1.7px;
 				width: 407px; height: 45px; padding: 0 42px 0 8px;
 				border: solid 1px #d5d7dd; border-radius: 4px;
 				&::-webkit-input-placeholder {color:#d5d7dd;}
@@ -63,6 +63,18 @@
 						}
 						a {
 							color: #035dff; font-size: 18px; font-family: $ms-500; line-height: 22px; letter-spacing: 0.2px;
+							position: relative; display: inline-block;
+							&:after {
+								content: '';
+								display: block; width: 0%; height: 2px; position: absolute; left: 50%; bottom: -2px; transform: translateX(-50%);
+								background: #035dff;
+								transition: .3s ease-out;
+							}
+							&:hover {
+								&:after {
+									width: 100%;
+								}
+							}
 						}
 					}
 				}
@@ -72,16 +84,30 @@
 
 	// navigation list
 	&-nav-list {
-		display: flex; padding: 89px 0 0 16px; margin-right: 74px; min-width: 598px;
+		display: flex; padding: 89px 0 0 16px; margin-right: 51px; min-width: 527px;
 		ul {
-			padding-right: 36px;
+			&:first-child {
+				width: 166px;
+			}
+			&:nth-child(2) {
+				width: 166px; margin-right: 13px;
+			}
+			&:nth-child(3) {
+				width: 186px; margin-right: 22px;
+			}
 			&:last-child {
-				padding-right: 0;
+				padding-right: 0; margin-right: 0;
 				li {
 					a {
 						color: #005bff;
+						&:after {
+							background: #005bff;
+						}
 					}
 				}
+			}
+			&:nth-child(4) {
+				width: 186px; margin-right: 19px;
 			}
 			li {
 				margin-bottom: 25px;
@@ -89,6 +115,16 @@
 					margin-bottom: 0;
 				}
 				&.active {
+					&.curr {
+						a {
+							position: relative;
+							&:before {
+								content: '';
+								display: block; width: 10px; height: 10px; position: absolute; left: -19px; top: 6px;
+								background: #09090d; border-radius: 50%;
+							}
+						}
+					}
 					a {
 						color: #b9bdc7;
 						pointer-events: none;
@@ -96,6 +132,10 @@
 				}
 				a {
 					color: $text-link; font-size: 18px; font-family: $ms-500; line-height: 22px; letter-spacing: 0.2px;
+					position: relative; display: inline;
+					&:hover {
+						text-decoration: underline;
+					}
 				}
 			}
 		}
@@ -137,7 +177,7 @@
 			position: relative; height: 330px; width: 100%;
 			margin-bottom: 14px;
 			img {
-				position: absolute; left: 31px; bottom: -27px;
+				position: absolute; left: 0; bottom: -27px;
 			}
 		}
 		.product-name {
@@ -145,17 +185,31 @@
 			h3 {
 				font-size: 42px; font-family: $ms-500; line-height: 42px;
 				margin-bottom: 11px;
+				&:last-child {
+					margin-bottom: 0;
+				}
 			}
 
-			p {
+			h4 {
 				font-size: 22px; font-family: $ms-500; letter-spacing: 0.1px; line-height: 30px;
+				margin-bottom: 20px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+			p {
+				font-size: 16px; font-family: $os-reg; letter-spacing: 0.05px; line-height: 22px;
+				margin-bottom: 10px;
+				&:last-child {
+					margin-bottom: 0;
+				}
 			}
 			span {
 				display: block; width: 89px; height: 89px; position: absolute; left: -33px; top: -111px;
-				border-radius: 200px;
+				border-radius: 200px; border: solid 1px #cccccc;
 				overflow: hidden;
 				img {
-					min-width: 100%;
+					min-width: 100%; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);
 				}
 			}
 		}
@@ -182,94 +236,38 @@
 			}
 		}
 
-		a.btn-2 {
-			margin-bottom: 60px;
-		}
-
-		form {
-			margin-bottom: 53px;
-			&.disabled {
-				textarea {
-					background: #f2f2f2;
-					pointer-events: none; resize: none;
-				}
+		.recipes {
+			margin-bottom: 72px;
+			h3 {
+				font-size: 22px; font-family: $ms-500;
+				margin-bottom: 17px;
 			}
-
-			textarea {
-				width: 100%; min-height: 118px; margin-bottom: 11px;
-				background: #ffffff; border: solid 1px #cdcdcd; border-radius: 4px;
-			}
-
-			p {
-				font-size: 16px; font-family: $os-reg; letter-spacing: 0.13px;
-				padding-left: 27px;
-				a {
-					color: $text-link; text-decoration: underline;
-					&:hover {
-						text-decoration: none;
-					}
-				}
-			}
-		}
-
-		.testi {
-			& > h4 {
-				font-size: 28px; font-family: $ms-500; line-height: 30px; letter-spacing: 0.3px;
-				display: inline-block; height: 30px; vertical-align: top; padding-right: 18px;
-			}
-			select {
-				font-size: 14px; font-family: $os-reg; line-height: 30px; letter-spacing: 0.1px;
-				display: inline-block; height: 30px; vertical-align: top; padding: 0 19px 0 2px;
-				&:focus {
-					outline: none;
-				}
-			}
-
 			ul {
-				padding-top: 16px;
 				li {
-					margin-bottom: 25px; position: relative; padding-left: 70px; padding-top: 12px;
+					display: flex; margin-bottom: 22px;
 					&:last-child {
 						margin-bottom: 0;
 					}
-					& > a {
-						display: inline-block; position: absolute; left: -6px; top: 0;
+					a {
+						display: inline-block; min-height: 53px; padding-left: 60px; padding-top: 10px; position: relative;
+						&:hover {
+							span {
+								text-decoration: none;
+							}
+						}
 						img {
-
+							position: absolute; left: -5px; top: 50%; transform: translateY(-50%);
 						}
-					}
-					h4 {
-						font-size: 18px; font-family: $os-reg; letter-spacing: -0.1px; line-height: 22px;
-						a {
-							font-family: $os-sb; letter-spacing: 0;
-							display: inline-block; position: relative;
-							&:after {
-								content: '';
-								display: block; width: 0%; height: 1px; position: absolute; left: 50%; bottom: 1px; transform: translateX(-50%);
-								background: $text-1;
-								transition: .3s ease-out;
-							}
-							&:hover {
-								color: $text-1;
-								&:after {
-									width: 100%;
-								}
-							}
-						}
-					}
-					span.date {
-						color: #b2b2b2; font-size: 15px; font-family: $os-reg;
-						display: block; margin-bottom: 11px;
-					}
-					p {
-						font-size: 18px; font-family: $os-reg; line-height: 24px; letter-spacing: 0.05px;
-						margin-bottom: 1px;
-						&:last-child {
-							margin-bottom: 0;
+						span {
+							color: #0141b2; font-size: 22px; font-family: $ms-500; text-decoration: underline;
 						}
 					}
 				}
 			}
+		}
+
+		a.btn-2 {
+			margin-bottom: 60px;
 		}
 	}
 }

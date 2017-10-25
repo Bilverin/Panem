@@ -22,6 +22,24 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   width: 128px;
   height: 121px;
 }
+.icon-company-location-1 {
+  background-image: url(../img/sprite.png);
+  background-position: -183px -139px;
+  width: 16px;
+  height: 20px;
+}
+.icon-company-location-2 {
+  background-image: url(../img/sprite.png);
+  background-position: -199px -139px;
+  width: 16px;
+  height: 20px;
+}
+.icon-company-location-3 {
+  background-image: url(../img/sprite.png);
+  background-position: -215px -139px;
+  width: 16px;
+  height: 20px;
+}
 .icon-donuts {
   background-image: url(../img/sprite.png);
   background-position: -128px 0px;
@@ -30,13 +48,19 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-key {
   background-image: url(../img/sprite.png);
-  background-position: -155px -121px;
+  background-position: -201px -121px;
   width: 17px;
   height: 17px;
 }
+.icon-pdf {
+  background-image: url(../img/sprite.png);
+  background-position: -104px -121px;
+  width: 46px;
+  height: 47px;
+}
 .icon-search {
   background-image: url(../img/sprite.png);
-  background-position: -137px -121px;
+  background-position: -183px -121px;
   width: 18px;
   height: 18px;
 }
@@ -48,7 +72,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-tortila {
   background-image: url(../img/sprite.png);
-  background-position: -104px -121px;
+  background-position: -150px -121px;
   width: 33px;
   height: 38px;
 }
