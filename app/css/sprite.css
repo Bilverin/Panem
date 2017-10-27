@@ -30,13 +30,13 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-company-location-2 {
   background-image: url(../img/sprite.png);
-  background-position: -199px -139px;
+  background-position: -215px -139px;
   width: 16px;
   height: 20px;
 }
 .icon-company-location-3 {
   background-image: url(../img/sprite.png);
-  background-position: -215px -139px;
+  background-position: -199px -139px;
   width: 16px;
   height: 20px;
 }
@@ -51,6 +51,12 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   background-position: -201px -121px;
   width: 17px;
   height: 17px;
+}
+.icon-link-mark {
+  background-image: url(../img/sprite.png);
+  background-position: -231px -139px;
+  width: 14px;
+  height: 18px;
 }
 .icon-pdf {
   background-image: url(../img/sprite.png);

@@ -2,7 +2,7 @@
 	min-width: 320px;
 	overflow-x: hidden;
 	background: #ffffff;
-	// width: 1600px;
+	width: 1600px;
 
 	.wr {
 
@@ -62,6 +62,16 @@
 
 		// Catalog Page
 		&-catalog {
+			padding: 66px 0 133px; min-height: calc(100vh - 133px);
+		}
+
+		// Knowledge Page
+		&-knowledge {
+			padding: 66px 0 133px; min-height: calc(100vh - 133px);
+		}
+
+		// Events Page
+		&-events {
 			padding: 66px 0 133px; min-height: calc(100vh - 133px);
 		}
 
