@@ -22,23 +22,41 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   width: 128px;
   height: 121px;
 }
+.icon-clip {
+  background-image: url(../img/sprite.png);
+  background-position: -104px -212px;
+  width: 12px;
+  height: 24px;
+}
 .icon-company-location-1 {
   background-image: url(../img/sprite.png);
-  background-position: -183px -139px;
+  background-position: -136px -192px;
   width: 16px;
   height: 20px;
 }
 .icon-company-location-2 {
   background-image: url(../img/sprite.png);
-  background-position: -215px -139px;
+  background-position: -120px -192px;
   width: 16px;
   height: 20px;
 }
 .icon-company-location-3 {
   background-image: url(../img/sprite.png);
-  background-position: -199px -139px;
+  background-position: -104px -192px;
   width: 16px;
   height: 20px;
+}
+.icon-delete {
+  background-image: url(../img/sprite.png);
+  background-position: -183px -168px;
+  width: 8px;
+  height: 8px;
+}
+.icon-docx {
+  background-image: url(../img/sprite.png);
+  background-position: -215px -121px;
+  width: 32px;
+  height: 32px;
 }
 .icon-donuts {
   background-image: url(../img/sprite.png);
@@ -46,15 +64,33 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   width: 124px;
   height: 121px;
 }
+.icon-down {
+  background-image: url(../img/sprite.png);
+  background-position: -183px -153px;
+  width: 10px;
+  height: 6px;
+}
+.icon-exit-blue {
+  background-image: url(../img/sprite.png);
+  background-position: -104px -168px;
+  width: 22px;
+  height: 24px;
+}
+.icon-exit-white {
+  background-image: url(../img/sprite.png);
+  background-position: -126px -168px;
+  width: 22px;
+  height: 24px;
+}
 .icon-key {
   background-image: url(../img/sprite.png);
-  background-position: -201px -121px;
+  background-position: -166px -168px;
   width: 17px;
   height: 17px;
 }
 .icon-link-mark {
   background-image: url(../img/sprite.png);
-  background-position: -231px -139px;
+  background-position: -152px -192px;
   width: 14px;
   height: 18px;
 }
@@ -64,9 +100,15 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   width: 46px;
   height: 47px;
 }
-.icon-search {
+.icon-print {
   background-image: url(../img/sprite.png);
   background-position: -183px -121px;
+  width: 32px;
+  height: 32px;
+}
+.icon-search {
+  background-image: url(../img/sprite.png);
+  background-position: -148px -168px;
   width: 18px;
   height: 18px;
 }
@@ -81,4 +123,10 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   background-position: -150px -121px;
   width: 33px;
   height: 38px;
+}
+.icon-up {
+  background-image: url(../img/sprite.png);
+  background-position: -150px -159px;
+  width: 10px;
+  height: 7px;
 }

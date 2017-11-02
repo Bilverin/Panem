@@ -2,7 +2,7 @@
 	min-width: 320px;
 	overflow-x: hidden;
 	background: #ffffff;
-	width: 1600px;
+	// width: 1600px;
 
 	.wr {
 
@@ -18,7 +18,7 @@
 			// Intro
 			&-intro {
 				padding: 89px 0 113px; position: relative; z-index: 2;
-				background: url('../img/intro-bg.jpg') center top no-repeat;
+				background: url('../img/intro-bg.jpg') center top no-repeat; background-size: cover;
 			}
 
 			// Offer 
@@ -101,6 +101,10 @@
 					}
 				}
 			}
+		}
+
+		&-cabinet {
+			padding: 30px 0 68px; min-height: calc(100vh - 133px);
 		}
 		
 		// Footer

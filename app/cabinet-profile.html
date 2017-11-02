@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+//= tpl/head.html
+
+<body>
+	<!--[if lt IE 10]>
+	<p class="browsehappy">Вы используете <strong>УСТАРЕВШИЙ Internet Explorer</strong> браузер. Пожалуйста, <a href="http://browsehappy.com/">обновите ваш Браузер</a> чтобы увидеть больше возможностей на сайтах!</p>
+	<![endif]-->
+
+	<!-- Preloader  -->
+	<div class="preloader"></div>
+
+	<!-- Application -->
+	<div class="app">
+
+		<!-- Header -->
+		//= tpl/header-cabinet.html
+
+		<!-- Cabinet Page -->
+		<section class="wr-cabinet">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-12">
+
+						<div class="cabinet-wrap">
+							<nav class="cabinet-nav">
+								<ul>
+									<li class="active"><a href="#">Профиль</a></li>
+									<li><a href="#">Избранное</a></li>
+									<li><a href="#">Сообщения</a></li>
+								</ul>
+							</nav>
+							<div class="cabinet-profile">
+								<form action="#" class="profile-info">
+									<div class="input-module">
+										<p>Имя</p>
+										<input class="name" type="text">
+									</div>
+									<div class="input-module">
+										<p>Э/Почта</p>
+										<input type="text">
+									</div>
+									<div class="input-module">
+										<p>Телефон</p>
+										<input type="text">
+									</div>
+									<div class="input-module">
+										<p>Пароль</p>
+										<input class="pass js-pass" type="password">
+										<ul class="pass-actions">
+											<li>
+												<a href="#" class="js-passShowHide">Показать</a>
+											</li>
+											<li>
+												<a href="#">Сменить</a>
+											</li>
+										</ul>
+									</div>
+									<ul class="actions">
+										<li>
+											<a href="#">Загрузить аватар</a>
+										</li>
+										<li>
+											<p>Интеграция с соцсетями:</p>
+											<ul class="socials">
+												<li class="integr">
+													<a href="#"><i class="fa fa-vk"></i></a>
+												</li>
+												<li>
+													<a href="#"><i class="fa fa-facebook"></i></a>
+												</li>
+												<li>
+													<a href="#"><i class="fa fa-google"></i></a>
+												</li>
+												<li>
+													<a href="#"><i class="fa fa-twitter"></i></a>
+												</li>
+												<li>
+													<a href="#"><i class="fa fa-odnoklassniki"></i></a>
+												</li>
+											</ul>
+										</li>
+									</ul>
+									<button class="disable">Обновить</button>
+								</form>
+								<form action="#" class="profile-add">
+									<h2>Анкета пользователя</h2>
+									<p>Дополнительная информация поможет администрации сайта правильно идентифицировать своих партнёров и дать им дополнительные права доступа.</p>
+									<div class="input-module">
+										<p>Город</p>
+										<select>
+											<option></option>
+											<option value="Самара">Самара</option>
+											<option value="Саратов">Саратов</option>
+											<option value="Пенза">Пенза</option>
+										</select>
+									</div>
+									<div class="input-module">
+										<p>Предприятие</p>
+										<input type="text">
+									</div>
+									<div class="input-module">
+										<p>Должность</p>
+										<select>
+											<option></option>
+											<option value="1">Должность1</option>
+											<option value="2">Должность2</option>
+											<option value="3">Должность3</option>
+										</select>
+									</div>
+									<div class="input-module check">
+										<p>Область деятельности</p>
+										<ul>
+											<li>
+												<input id="profile-check1" type="checkbox">
+												<label for="profile-check1">Пекарня</label>
+											</li>
+											<li>
+												<input id="profile-check2" type="checkbox">
+												<label for="profile-check2">Хлебозавод</label>
+											</li>
+											<li>
+												<input id="profile-check3" type="checkbox">
+												<label for="profile-check3">Кондитерская</label>
+											</li>
+											<li>
+												<input id="profile-check4" type="checkbox">
+												<label for="profile-check4">Оптовик</label>
+											</li>
+											<li>
+												<input id="profile-check5" type="checkbox">
+												<label for="profile-check5">Кулинария</label>
+											</li>
+											<li>
+												<input id="profile-check6" type="checkbox">
+												<label for="profile-check6">Торты на дому</label>
+											</li>
+											<li class="another">
+												<input id="profile-check7" type="checkbox">
+												<label for="profile-check7"></label>
+												<input type="text" placeholder="свое направление">
+											</li>
+										</ul>
+									</div>
+									<input id="conf-agree" type="checkbox">
+									<label for="conf-agree">Я согласен с Политикой конфиденциальности и даю согласие <br>на обработку и хранение моих персональных данных</label>
+									<button class="disable">Обновить</button>
+								</form>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		//= tpl/subfooter-2.html
+
+	</div>
+
+	<!-- Plugins -->
+	<div class="popup"></div>
+	
+	<!-- Scripts -->
+	//= tpl/scripts.html
+</body>
+</html>
