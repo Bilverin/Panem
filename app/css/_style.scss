@@ -2,7 +2,13 @@
 	min-width: 320px;
 	overflow-x: hidden;
 	background: #ffffff;
-	// width: 1600px;
+	// width: 1400px;
+	@include respond-to(1400px) {
+		padding-top: 62px;
+	}
+	@include respond-to(sm) {
+		padding-top: 65px;
+	}
 
 	.wr {
 
@@ -10,6 +16,20 @@
 		&-header {
 			padding: 17px 0 16px; position: relative; z-index: 100;
 			background: rgba(255,255,255,0.7);
+			@include respond-to(1400px) {
+				position: fixed; top: 0; left: 0; width: 100%;
+			}
+			@include respond-to(sm) {
+				padding: 24px 0 12px;
+			}
+			&:before {
+				content: '';
+				display: none; width: 100%; height: 100%; position: absolute; left: 0; top: 0; z-index: 15;
+				background: #ffffff; box-shadow: 0 0 10px 1px rgba(0,0,0,0.1);
+				// @include respond-to(1400px) {
+				// 	display: block;
+				// }
+			}
 		}
 
 		// Main Page
@@ -18,17 +38,28 @@
 			// Intro
 			&-intro {
 				padding: 89px 0 113px; position: relative; z-index: 2;
-				background: url('../img/intro-bg.jpg') center top no-repeat; background-size: cover;
+				background: url('../img/intro-bg.jpg') 50% top no-repeat; background-size: cover;
+				@include respond-to(sm) {
+					padding: 50px 0 65px;
+					background-position: 57% top;
+				}
 			}
 
 			// Offer 
 			&-offer {
 				position: relative; z-index: 3; padding: 39px 0 25px;
 				background: #ffffff;
+				@include respond-to(sm) {
+					padding: 95px 0 18px;
+				}
 				&:before {
 					content: '';
 					display: block; width: 2808px; height: 70px; position: absolute; top: -60px; left: 50%; transform: translateX(-50%); z-index: 3;
 					background: url('../img/offer-border-top.png') center center no-repeat;
+					@include respond-to(sm) {
+						width: 857px; height: 68px; top: -34px;
+						background: url('../img/offer-border-top-mob.png') center center no-repeat;
+					}
 				}
 				&:after {
 					content: '';
@@ -41,16 +72,26 @@
 			&-info {
 				position: relative; z-index: 2; padding: 121px 0 139px;
 				background: url('../img/info-bg.png') left top no-repeat;
+				@include respond-to(sm) {
+					padding: 86px 0 74px;
+				}
 			}
 
 			// Partners
 			&-partners {
 				position: relative; z-index: 3; padding: 45px 0 32px;
 				background: #ffde5b;
+				@include respond-to(sm) {
+					padding: 76px 0 64px;
+				}
 				&:before {
 					content: '';
 					display: block; width: 2808px; height: 79px; position: absolute; top: -70px; left: 50%; transform: translateX(-50%); z-index: 3;
 					background: url('../img/partner-border-top.png') center center no-repeat;
+					@include respond-to(sm) {
+						width: 1007px; height: 56px; top: -28px;
+						background: url('../img/partner-border-top-mob.png') center center no-repeat;
+					}
 				}
 				&:after {
 					content: '';
@@ -63,6 +104,9 @@
 		// Catalog Page
 		&-catalog {
 			padding: 66px 0 133px; min-height: calc(100vh - 133px);
+			@include respond-to(md) {
+				padding: 0 0 133px;
+			}
 		}
 
 		// Knowledge Page
@@ -111,11 +155,37 @@
 		&-footer {
 			position: relative; z-index: 2; padding: 146px 0 86px;
 			background: #333333;
+			@include respond-to(1500px) {
+				padding: 156px 0 96px;
+			}
+			@include respond-to(md) {
+				background: linear-gradient(to bottom, #0a0a0a 0%, #383838 100%)
+			}
+			@include respond-to(sm) {
+				padding: 137px 0 43px;
+			}
 		}
 
 		&-subfooter {
 			padding: 33px 0 31px; position: relative; z-index: 4;
 			background: #ffffff;
+			@include respond-to(1500px) {
+				padding: 38px 0 46px;
+			}
+			@include respond-to(md) {
+				background: #ffde5b;
+				&:before {
+					content: '';
+					display: block; width: 2806px; height: 26px; position: absolute; top: -25px; left: 50%; transform: translateX(-50%); z-index: 3;
+					background: url('../img/footer-2-border-top.png') center center no-repeat;
+				}
+			}
+			@include respond-to(sm) {
+				padding: 27px 0 70px;
+			}
+			@include respond-to(540px) {
+				padding: 27px 0 40px;
+			}
 
 			&-2 {
 				padding: 22px 0 31px; position: relative; z-index: 3;

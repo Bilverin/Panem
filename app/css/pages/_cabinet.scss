@@ -177,6 +177,7 @@
 						}
 						select {
 							background: url('../img/select-arr.png') right 9px center no-repeat;
+							-moz-appearance: none;
 						}
 						& > ul {
 							display: flex; flex-wrap: wrap; width: 406px; padding-left: 26px;

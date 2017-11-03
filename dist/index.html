@@ -46,29 +46,46 @@
 		
 						<div class="header">
 							<div class="left">
-								<a href="index.html" class="logo">
-									<img src="assets/img/header-logo.png">
+								<a href="#" class="burger js-burgerNav">
+									<span></span>
+									<span></span>
+									<span></span>
+									<span></span>
 								</a>
-								<nav>
+								<span href="index.html" class="logo main">
+									<img src="assets/img/header-logo.png">
+									<img class="mob" src="assets/img/header-logo-mob.png">
+								</span>
+								<nav class="js-headerNav">
 									<ul>
 										<li><a href="company.html">О компании</a></li>
 										<li><a href="catalog.html">Продукция</a></li>
 										<li><a href="events.html">Мероприятия</a></li>
 										<li><a href="knowledge.html">База знаний</a></li>
-										<li><a href="contacts.html">Как купить/контакты</a></li>
+										<li><a href="contacts.html"><span>Как купить/контакты</span><span class="mob">Контакты</span></a></li>
 										<li><a href="#" class="personal-area"><i class="icon icon-key"></i>Личный кабинет</a></li>
 									</ul>
+									<div class="city">
+										<a href="tel:+78462771307" class="phone">+7 (846) <span>277-13-07</span></a>
+										<ul>
+											<li><a href="#">Самара</a></li>
+											<li><a href="#">Саратов</a></li>
+											<li><a href="#">Пенза</a></li>
+										</ul>
+									</div>
 								</nav>
 							</div>
 							<div class="right">
 								<a href="tel:+78462771307" class="phone">+7 (846) <span>277-13-07</span></a>
 								<div class="city">
-									<a href="#" class="js-cityDropdown">Самара</a>
+									<a href="#" class="js-cityDropdown"><span>Самара</span><i class="icon map-marker"></i></a>
 									<ul class="js-cityList">
+										<li class="active"><a href="#">Самара</a></li>
 										<li><a href="#">Саратов</a></li>
 										<li><a href="#">Пенза</a></li>
 									</ul>
 								</div>
+								<a href="#" class="search"><i class="icon icon-header-search"></i></a>
 							</div>
 						</div>
 						
@@ -86,6 +103,7 @@
 						<div class="main-intro">
 							<figure>
 								<img src="assets/img/intro-logo.png">
+								<img class="mob" src="assets/img/intro-logo-mob.png">
 								<figcaption>
 									<h1>1300+ ингредиентов
 										<span>для хлебопекарен и кондитерских</span>
@@ -98,6 +116,7 @@
 										<figure>
 											<img src="assets/img/intro-menu-1.png">
 											<figcaption>
+												<em><img src="assets/img/intro-menu-1-mob.png"></em>
 												Хлебопечение
 												<span>532</span>
 											</figcaption>
@@ -109,6 +128,7 @@
 										<figure>
 											<img src="assets/img/intro-menu-2.png">
 											<figcaption>
+												<em><img src="assets/img/intro-menu-2-mob.png"></em>
 												Торты и пирожные
 												<span>395</span>
 											</figcaption>
@@ -120,6 +140,7 @@
 										<figure>
 											<img src="assets/img/intro-menu-3.png">
 											<figcaption>
+												<em><img src="assets/img/intro-menu-3-mob.png"></em>
 												Печенье и маффины
 												<span>318</span>
 											</figcaption>
@@ -131,6 +152,7 @@
 										<figure>
 											<img src="assets/img/intro-menu-4.png">
 											<figcaption>
+												<em><img src="assets/img/intro-menu-4-mob.png"></em>
 												Шоколад
 												<span>26</span>
 											</figcaption>
@@ -142,6 +164,7 @@
 										<figure>
 											<img src="assets/img/intro-menu-5.png">
 											<figcaption>
+												<em><img src="assets/img/intro-menu-5-mob.png"></em>
 												Инвентарь и упаковка
 												<span>33</span>
 											</figcaption>
@@ -163,7 +186,7 @@
 					<div class="col-md-12">
 
 						<div class="main-offer">
-							<h2>Специальные предложения <img src="assets/img/offer-logo.png"></h2>
+							<h2>Специальные предложения <img src="assets/img/offer-logo.png"><img class="mob" src="assets/img/offer-logo-mob.png"></h2>
 							<ul>
 								<li>
 									<a href="#">
@@ -184,7 +207,7 @@
 									</a>
 								</li>
 							</ul>
-							<p>А для домашних кулинаров мы ведём сайт <a href="http://tortila63.ru/" target="_blank"><i class="icon icon-tortila"></i><span>tortila63.ru</span></a></p>
+							<p>А&nbsp;для&nbsp;домашних&nbsp;кулинаров мы&nbsp;ведём&nbsp;сайт <a href="http://tortila63.ru/" target="_blank"><i class="icon icon-tortila"></i><span>tortila63.ru</span></a></p>
 						</div>
 						
 					</div>
@@ -252,30 +275,32 @@
 								<p><span>Собственный автопарк,</span> оборудованный холодильными установками, позволяет <b>ПАНЭМ</b> доставить товар по региону бесплатно, сохраняя все его качественные характеристики.  </p>
 								<form action="#">
 									<p>Укажите свой телефон — наш менеджер позвонит <br>в течение минуты и ответит на все интересующие вопросы.</p>
-									<input type="text">
-									<button>Отправить</button>
+									<div class="input-module">
+										<input type="text">
+										<button>Отправить</button>
+									</div>
 								</form>
 								<ul>
 									<li>
 										<h3>Головной офис</h3>
 										<p>443052, г. Самара, Корсунский пер., 14</p>
 										<p>график работы: ПН-ПТ с 9:00 до 18:00</p>
-										<p>+7 (846) 277-13-07, 992-60-13, 992-61-49</p>
+										<p><a href="tel:+78462771307">+7 (846) 277-13-07</a>, 992-60-13, 992-61-49</p>
 									</li>
 									<li>
 										<h3>Саратовский филиал</h3>
 										<p>г. Саратов, Новоастраханское шоссе, д. 67<br>(на территории автоколонны № 1181)</p>
 										<p>график работы: ПН-ПТ с 9:00 до 18:00</p>
-										<p>+7 (8452) 42-62-29</p>
+										<p><a href="tel:+78452426229">+7 (8452) 42-62-29</a></p>
 									</li>
 									<li>
 										<h3>Пензенский филиал</h3>
 										<p>г. Пенза, Проезд металлистов, д. 2, корпус 1, 2 этаж</p>
 										<p>график работы: ПН-ПТ с 9:00 до 17:00</p>
-										<p>+7 (8412) 99-61-01</p>
+										<p><a href="tel:+78412996101">+7 (8412) 99-61-01</a></p>
 									</li>
 								</ul>
-								<a href="#" class="btn">Смотреть на карте</a>
+								<a href="#" class="btn"><span>Смотреть на карте</span><span class="mob">Открыть карту</span></a>
 							</div>
 
 						</div>
@@ -292,8 +317,8 @@
 					<div class="col-md-12">
 
 						<div class="main-partners">
-							<h3><img src="assets/img/offer-logo.png">&mdash; ведущий дистрибутор в Поволжье и один из лучших дистрибуторов России.<a href="#" class="btn">Подробности</a></h3>
-							<p>Наши партнеры:</p>
+							<h3><img src="assets/img/offer-logo.png"><img class="mob" src="assets/img/offer-logo-mob.png">&mdash; ведущий дистрибутор в Поволжье и один из лучших дистрибуторов России.<a href="#" class="btn">Подробности</a></h3>
+							<p><a href="#">Наши партнеры:</a></p>
 							<ul>
 								<li><a href="#"><img src="assets/img/partner-1.png"></a></li>
 								<li><a href="#"><img src="assets/img/partner-2.png"></a></li>
@@ -319,8 +344,8 @@
 				<div class="row">
 					<div class="col-md-12">
 		
-						<div class="footer">
-							<ul>
+						<div class="footer js-masonryFooter">
+							<ul class="bread grid-item">
 								<li><a href="#">Дрожжи</a></li>
 								<li><a href="#">Закваски</a></li>
 								<li><a href="#">Улучшители</a></li>
@@ -329,17 +354,16 @@
 								<li><a href="#">Фруктово-ореховая группа</a></li>
 								<li><a href="#">Специи</a></li>
 							</ul>
-							<ul>
+							<ul class="cake grid-item">
 								<li><a href="#">Смеси для бисквита и рулетов</a></li>
 								<li><a href="#">Гели</a></li>
 								<li><a href="#">Ароматизаторы, стабилизаторы <br>и фонды</a></li>
 								<li><a href="#">Помады</a></li>
 								<li><a href="#">Загустители, эмульгаторы</a></li>
-								<li><a href="#">Загустители эмульгаторы</a></li>
 								<li><a href="#">Смеси для приготовления кремов</a></li>
 								<li><a href="#">Украшения для тортов</a></li>
 							</ul>
-							<ul>
+							<ul class="cookie grid-item">
 								<li><a href="#">Смеси для приготовления начинок</a></li>
 								<li><a href="#">Готовые начинки и наполнители</a></li>
 								<li><a href="#">Смеси для заварных полуфабрикатов</a></li>
@@ -350,12 +374,12 @@
 								<li><a href="#">Продлители свежести мучных изделий</a></li>
 								<li><a href="#">Смеси для масляных бисквитов</a></li>
 							</ul>
-							<ul>
+							<ul class="choco grid-item">
 								<li><a href="#">Какао</a></li>
 								<li><a href="#">Покрытия</a></li>
 								<li><a href="#">Шоколад</a></li>
 							</ul>
-							<ul>
+							<ul class="instrum grid-item">
 								<li><a href="#">Инструмент для карамели</a></li>
 								<li><a href="#">Ножи</a></li>
 								<li><a href="#">Ножи дисковые</a></li>
@@ -378,10 +402,11 @@
 		
 						<div class="subfooter">
 							<ul>
-								<li><p>ООО «ПАНЭМ»: всё для пекаря и кондитера. &copy; 2017</p></li>
+								<li><p>ООО «ПАНЭМ»: всё&nbsp;для&nbsp;пекаря&nbsp;и&nbsp;кондитера. &copy;&nbsp;2017</p></li>
 								<li><a href="#">Соглашение на обработку персональных данных</a></li>
 							</ul>
-							<p>Разработка сайта <a href="#"><img src="assets/img/footer-logo.png"></a></p>
+							<p>Разработка сайта <a href="#"><img src="assets/img/footer-logo.png"><img class="mob" src="assets/img/footer-logo-mob.png"></a></p>
+							<a href="#">Соглашение на обработку персональных данных</a>
 						</div>
 						
 					</div>

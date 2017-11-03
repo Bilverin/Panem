@@ -46,10 +46,17 @@
 		
 						<div class="header">
 							<div class="left">
+								<a href="#" class="burger js-burgerNav">
+									<span></span>
+									<span></span>
+									<span></span>
+									<span></span>
+								</a>
 								<a href="index.html" class="logo">
 									<img src="assets/img/header-logo.png">
+									<img class="mob" src="assets/img/header-logo-mob.png">
 								</a>
-								<nav>
+								<nav class="js-headerNav">
 									<ul>
 										<li><a href="company.html">О компании</a></li>
 										<li><a href="catalog.html">Продукция</a></li>
@@ -58,17 +65,27 @@
 										<li><a href="contacts.html">Как купить/контакты</a></li>
 										<li class="active"><a href="#" class="personal-area exit">Выход<i class="icon icon-exit"></i></a></li>
 									</ul>
+									<div class="city">
+										<a href="tel:+78462771307" class="phone">+7 (846) <span>277-13-07</span></a>
+										<ul>
+											<li><a href="#">Самара</a></li>
+											<li><a href="#">Саратов</a></li>
+											<li><a href="#">Пенза</a></li>
+										</ul>
+									</div>
 								</nav>
 							</div>
 							<div class="right">
 								<a href="tel:+78462771307" class="phone">+7 (846) <span>277-13-07</span></a>
 								<div class="city">
-									<a href="#" class="js-cityDropdown">Самара</a>
+									<a href="#" class="js-cityDropdown"><span>Самара</span><i class="icon map-marker"></i></a>
 									<ul class="js-cityList">
+										<li class="active"><a href="#">Самара</a></li>
 										<li><a href="#">Саратов</a></li>
 										<li><a href="#">Пенза</a></li>
 									</ul>
 								</div>
+								<a href="#" class="search"><i class="icon icon-header-search"></i></a>
 							</div>
 						</div>
 						
@@ -223,9 +240,11 @@
 		
 						<div class="subfooter">
 							<ul>
-								<li><p>ООО «ПАНЭМ»: всё для пекаря и кондитера. &copy; 2017</p></li>
+								<li><p>ООО «ПАНЭМ»: всё&nbsp;для&nbsp;пекаря&nbsp;и&nbsp;кондитера. &copy;&nbsp;2017</p></li>
+								<li><a href="#">Соглашение на обработку персональных данных</a></li>
 							</ul>
-							<p>Разработка сайта <a href="#"><img src="assets/img/footer-logo.png"></a></p>
+							<p>Разработка сайта <a href="#"><img src="assets/img/footer-logo.png"><img class="mob" src="assets/img/footer-logo-mob.png"></a></p>
+							<a href="#">Соглашение на обработку персональных данных</a>
 						</div>
 						
 					</div>

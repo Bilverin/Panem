@@ -36,19 +36,19 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-company-location-2 {
   background-image: url(../img/sprite.png);
-  background-position: -120px -192px;
+  background-position: -168px -192px;
   width: 16px;
   height: 20px;
 }
 .icon-company-location-3 {
   background-image: url(../img/sprite.png);
-  background-position: -104px -192px;
+  background-position: -152px -192px;
   width: 16px;
   height: 20px;
 }
 .icon-delete {
   background-image: url(../img/sprite.png);
-  background-position: -183px -168px;
+  background-position: -229px -168px;
   width: 8px;
   height: 8px;
 }
@@ -70,29 +70,53 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   width: 10px;
   height: 6px;
 }
+.icon-exit-black {
+  background-image: url(../img/sprite.png);
+  background-position: -150px -168px;
+  width: 22px;
+  height: 24px;
+}
 .icon-exit-blue {
   background-image: url(../img/sprite.png);
-  background-position: -104px -168px;
+  background-position: -172px -168px;
   width: 22px;
   height: 24px;
 }
 .icon-exit-white {
   background-image: url(../img/sprite.png);
-  background-position: -126px -168px;
+  background-position: -128px -168px;
   width: 22px;
+  height: 24px;
+}
+.icon-header-search {
+  background-image: url(../img/sprite.png);
+  background-position: -104px -168px;
+  width: 24px;
   height: 24px;
 }
 .icon-key {
   background-image: url(../img/sprite.png);
-  background-position: -166px -168px;
+  background-position: -212px -168px;
   width: 17px;
   height: 17px;
 }
 .icon-link-mark {
   background-image: url(../img/sprite.png);
-  background-position: -152px -192px;
+  background-position: -184px -192px;
   width: 14px;
   height: 18px;
+}
+.icon-map-marker-active {
+  background-image: url(../img/sprite.png);
+  background-position: -104px -192px;
+  width: 16px;
+  height: 20px;
+}
+.icon-map-marker {
+  background-image: url(../img/sprite.png);
+  background-position: -120px -192px;
+  width: 16px;
+  height: 20px;
 }
 .icon-pdf {
   background-image: url(../img/sprite.png);
@@ -108,7 +132,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-search {
   background-image: url(../img/sprite.png);
-  background-position: -148px -168px;
+  background-position: -194px -168px;
   width: 18px;
   height: 18px;
 }
