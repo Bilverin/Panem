@@ -32,19 +32,32 @@
 									<input type="text" placeholder="ПОИСК">
 									<button><i class="icon icon-search"></i></button>
 								</div>
+								<input id="check1" type="checkbox">
+								<label for="check1">искать только в каталоге</label>
 							</form>
 						</div>
 
 						<!-- Catalog Wrap -->
 						<div class="catalog-wrap">
 							<!-- Catalog Navigation -->
-							<div class="catalog-nav-list">
-								<ul>
-									<li><a href="#">Хлебопечение</a></li>
-									<li class="active"><a href="#">Торты <br>и пирожные</a></li>
-									<li><a href="#">Печенье <br>и маффины</a></li>
-									<li><a href="#">Шоколад</a></li>
-									<li><a href="#">Упаковка <br>и инвентарь</a></li>
+							<div class="catalog-nav-list js-navList">
+								<ul class="root">
+									<li class="active"><a href="#cat-1"><span>Хлебопечение</span><img src="assets/img/catalog-root-1-mob.png"></a></li>
+									<li><a href="#cat-2"><span>Торты <br>и пирожные</span><img src="assets/img/catalog-root-2-mob.png"></a></li>
+									<li><a href="#cat-3"><span>Печенье <br>и маффины</span><img src="assets/img/catalog-root-3-mob.png"></a></li>
+									<li><a href="#cat-4"><span>Шоколад</span><img src="assets/img/catalog-root-4-mob.png"></a></li>
+									<li><a href="#cat-5"><span>Упаковка <br>и инвентарь</span><img src="assets/img/catalog-root-5-mob.png"></a></li>
+								</ul>
+								<ul class="breadcrumbs item-page">
+									<li>
+										<a href="#">Каталог</a>
+									</li>
+									<li>
+										<a href="#">Хлебопечение</a>
+									</li>
+									<li>
+										<a href="#">Смеси для кремов</a>
+									</li>
 								</ul>
 								<ul>
 									<li><a href="#">Смеси для <br>бисквита и <br>рулетов</a></li>
@@ -55,7 +68,7 @@
 									<li class="active"><a href="#">Смеси для кремов</a></li>
 									<li><a href="#">Украшения <br>для тортов</a></li>
 								</ul>
-								<ul>
+								<ul class="item-list">
 									<li><a href="#">Айзелла Тирамису</a></li>
 									<li class="active curr"><a href="#">Майстер Крем Гурме</a></li>
 								</ul>
@@ -76,7 +89,7 @@
 									<dd>Смешать 400 г. Майстер Крем Гурме с 1000 г. холодн</dd>
 									<dt>упаковка</dt>
 									<dd>Многослойный бумажный мешок, 10 кг</dd>
-									<dt>производство</dt>
+									<dt>производит</dt>
 									<dd>MeisterMarken ГЕРМАНИЯ</dd>
 								</dl>
 								<div class="recipes">
@@ -96,14 +109,21 @@
 										</li>
 									</ul>
 								</div>
-								<a href="#" class="btn-2">Добавить в избранные</a>
+								<ul class="btns">
+									<li>
+										<a href="#" class="btn-2">Добавить в избранные</a>
+									</li>
+								</ul>
 								<div class="testimonials">
 									<form action="#" class="disabled">
 										<textarea></textarea>
 										<p>Возможность оставлять отзывы к материалам появляется после <a href="#">регистрации</a>.</p>
+										<p class="mob">Отзывы доступны после регистрации</p>
 									</form>
 									<div class="testi">
-										<h4>Отзывов еще нет</h4>
+										<div class="testi-header">
+											<h4>Отзывов еще нет</h4>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -120,7 +140,7 @@
 	</div>
 
 	<!-- Plugins -->
-	<div class="popup"></div>
+	//= tpl/popups.html
 	
 	<!-- Scripts -->
 	//= tpl/scripts.html

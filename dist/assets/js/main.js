@@ -40,6 +40,62 @@ $(document).ready(function() {
 		});
 	}
 
+	// мобильная переключалка в каталоге
+	$('.js-navList .root a').click(function(e) {
+		e.preventDefault();
+
+		var navListId = $(this).attr('href');
+		$(this).parent().parent().find('li.active').removeClass('active');
+		$(this).parent().addClass('active');
+		$('.category-mob.active').removeClass('active').find('li ul').slideUp();
+		$(navListId).addClass('active').find('li').removeClass('active').parent().find('li:first-child').addClass('active');
+	});
+	$('.js-navList .category-mob a').click(function(e) {
+		e.preventDefault();
+
+		$(this).parent().parent().find('li.active').removeClass('active').find('ul').slideUp();
+		$(this).parent().addClass('active');
+		$(this).siblings('ul').slideDown();
+	});
+
+	// окошко сортировки отзывов
+	$('.js-sort').click(function(e) {
+		e.preventDefault();
+
+		$('.js-sortPopup').toggleClass('active');
+	});
+	$('.js-sortPopup a').click(function(e) {
+		e.preventDefault();
+
+		$('.js-sortPopup').find('li.active').removeClass('active');
+		$(this).parent().addClass('active');
+	});
+
+	// ЛогИн попап
+	$('.js-logIn').click(function(e) {
+		e.preventDefault();
+
+		$('.js-popupLogIn').toggleClass('active');
+	});
+
+	// попап регистрации
+	$('.js-popupReg').click(function(e) {
+		$('.js-popupRegistr').bPopup({
+			opacity: 0.5
+		});
+	});
+
+	// автосайзинг высоты полей textarea
+	autosize( $('textarea') );
+
+	// аккордеон настранице профиля в личном кабинете
+	$('.js-cabinetAccord').click(function(e) {
+		e.preventDefault();
+
+		var accordList = $(this).attr('href');
+		$(this).toggleClass('active');
+		$(accordList).slideToggle();
+	});
 });
 
 $(window).resize(function() {
@@ -65,11 +121,19 @@ $(window).resize(function() {
 	}
 });
 
-// Закрытие всплывающего списка городов в хедере при клике в любую точку сайта кроме самого блока
+// Закрытие всплывающих окон при клике в любую точку сайта кроме самого блока
 $(document).mouseup(function (e) {
-	var cityBlock = $("div.city");
+	var cityBlock = $("div.city"),
+		sortList = $("div.sort-block"),
+		logInWrap = $('.logIn').parent();
 	if (cityBlock.has(e.target).length === 0){
 		$('.js-cityDropdown').removeClass('active');
 		$('.js-cityList').removeClass('active');
+	}
+	if (sortList.has(e.target).length === 0){
+		$('.sort-popup').removeClass('active');
+	}
+	if (logInWrap.has(e.target).length === 0){
+		$('.js-popupLogIn').removeClass('active');
 	}
 });

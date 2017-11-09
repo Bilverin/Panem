@@ -33,119 +33,141 @@
 							</nav>
 							<div class="cabinet-profile">
 								<form action="#" class="profile-info">
-									<div class="input-module">
-										<p>Имя</p>
-										<input class="name" type="text">
+									<div class="main-info">
+										<a href="#" class="ava-upload"><i class="fa fa-camera"></i></a>
+										<div class="input-module">
+											<p>Имя</p>
+											<input class="name" type="text">
+										</div>
+										<div class="input-module">
+											<p>Э/Почта</p>
+											<input type="text">
+										</div>
+										<div class="input-module">
+											<p>Телефон</p>
+											<input type="text">
+										</div>
+										<div class="input-module">
+											<p>Пароль</p>
+											<input class="pass js-pass" type="password">
+											<ul class="pass-actions">
+												<li>
+													<a href="#" class="js-passShowHide">Показать</a>
+												</li>
+												<li>
+													<a href="#">Сменить</a>
+												</li>
+											</ul>
+										</div>
 									</div>
-									<div class="input-module">
-										<p>Э/Почта</p>
-										<input type="text">
-									</div>
-									<div class="input-module">
-										<p>Телефон</p>
-										<input type="text">
-									</div>
-									<div class="input-module">
-										<p>Пароль</p>
-										<input class="pass js-pass" type="password">
-										<ul class="pass-actions">
-											<li>
-												<a href="#" class="js-passShowHide">Показать</a>
+									<div class="social-integrate">
+										<a href=".actions" class="js-cabinetAccord">Интеграция с соцсетями</a>
+										<ul class="actions">
+											<li class="ava-upload">
+												<a href="#">Загрузить аватар</a>
 											</li>
 											<li>
-												<a href="#">Сменить</a>
+												<p>Интеграция с соцсетями:</p>
+												<ul class="socials">
+													<li class="integr">
+														<a href="#"><i class="fa fa-vk"></i></a>
+													</li>
+													<li>
+														<a href="#"><i class="fa fa-facebook"></i></a>
+													</li>
+													<li>
+														<a href="#"><i class="fa fa-google"></i></a>
+													</li>
+													<li>
+														<a href="#"><i class="fa fa-twitter"></i></a>
+													</li>
+													<li>
+														<a href="#"><i class="fa fa-odnoklassniki"></i></a>
+													</li>
+												</ul>
+												<div class="input-module">
+													<p>Телефон или почта</p>
+													<input class="pass js-pass" type="text">
+												</div>
+												<div class="input-module">
+													<p>Пароль</p>
+													<input class="pass" type="password">
+												</div>
 											</li>
 										</ul>
 									</div>
-									<ul class="actions">
-										<li>
-											<a href="#">Загрузить аватар</a>
-										</li>
-										<li>
-											<p>Интеграция с соцсетями:</p>
-											<ul class="socials">
-												<li class="integr">
-													<a href="#"><i class="fa fa-vk"></i></a>
-												</li>
-												<li>
-													<a href="#"><i class="fa fa-facebook"></i></a>
-												</li>
-												<li>
-													<a href="#"><i class="fa fa-google"></i></a>
-												</li>
-												<li>
-													<a href="#"><i class="fa fa-twitter"></i></a>
-												</li>
-												<li>
-													<a href="#"><i class="fa fa-odnoklassniki"></i></a>
-												</li>
-											</ul>
-										</li>
-									</ul>
 									<button class="disable">Обновить</button>
 								</form>
 								<form action="#" class="profile-add">
 									<h2>Анкета пользователя</h2>
+									<a href=".add-info" class="js-cabinetAccord">Анкета пользователя</a>
 									<p>Дополнительная информация поможет администрации сайта правильно идентифицировать своих партнёров и дать им дополнительные права доступа.</p>
-									<div class="input-module">
-										<p>Город</p>
-										<select>
-											<option></option>
-											<option value="Самара">Самара</option>
-											<option value="Саратов">Саратов</option>
-											<option value="Пенза">Пенза</option>
-										</select>
+									<div class="add-info">
+										<div class="input-module">
+											<p>Город</p>
+											<select>
+												<option></option>
+												<option value="Самара">Самара</option>
+												<option value="Саратов">Саратов</option>
+												<option value="Пенза">Пенза</option>
+											</select>
+											<input class="mob" type="text">
+										</div>
+										<div class="input-module">
+											<p>Предприятие</p>
+											<input type="text">
+										</div>
+										<div class="input-module">
+											<p>Должность</p>
+											<select>
+												<option></option>
+												<option value="1">Должность1</option>
+												<option value="2">Должность2</option>
+												<option value="3">Должность3</option>
+											</select>
+											<input class="mob" type="text">
+										</div>
+										<div class="input-module check">
+											<p>Область деятельности</p>
+											<ul>
+												<li>
+													<input id="profile-check1" type="checkbox">
+													<label for="profile-check1">Пекарня<span></span></label>
+												</li>
+												<li>
+													<input id="profile-check2" type="checkbox">
+													<label for="profile-check2">Хлебозавод<span></span></label>
+												</li>
+												<li>
+													<input id="profile-check3" type="checkbox">
+													<label for="profile-check3">Кондитерская<span></span></label>
+												</li>
+												<li>
+													<input id="profile-check4" type="checkbox">
+													<label for="profile-check4">Оптовик<span></span></label>
+												</li>
+												<li>
+													<input id="profile-check5" type="checkbox">
+													<label for="profile-check5">Кулинария<span></span></label>
+												</li>
+												<li>
+													<input id="profile-check6" type="checkbox">
+													<label for="profile-check6">Торты на дому<span></span></label>
+												</li>
+												<li class="another">
+													<input id="profile-check7" type="checkbox">
+													<label for="profile-check7"></label>
+													<input type="text" placeholder="свое направление">
+													<a href="#">Свое направление</a>
+												</li>
+											</ul>
+										</div>
 									</div>
-									<div class="input-module">
-										<p>Предприятие</p>
-										<input type="text">
+									<div class="agree-info">
+										<input id="conf-agree" type="checkbox">
+										<label for="conf-agree">Я согласен с Политикой конфиденциальности и даю согласие <br>на обработку и хранение моих персональных данных<span></span></label>
+										<button class="disable">Обновить</button>
 									</div>
-									<div class="input-module">
-										<p>Должность</p>
-										<select>
-											<option></option>
-											<option value="1">Должность1</option>
-											<option value="2">Должность2</option>
-											<option value="3">Должность3</option>
-										</select>
-									</div>
-									<div class="input-module check">
-										<p>Область деятельности</p>
-										<ul>
-											<li>
-												<input id="profile-check1" type="checkbox">
-												<label for="profile-check1">Пекарня</label>
-											</li>
-											<li>
-												<input id="profile-check2" type="checkbox">
-												<label for="profile-check2">Хлебозавод</label>
-											</li>
-											<li>
-												<input id="profile-check3" type="checkbox">
-												<label for="profile-check3">Кондитерская</label>
-											</li>
-											<li>
-												<input id="profile-check4" type="checkbox">
-												<label for="profile-check4">Оптовик</label>
-											</li>
-											<li>
-												<input id="profile-check5" type="checkbox">
-												<label for="profile-check5">Кулинария</label>
-											</li>
-											<li>
-												<input id="profile-check6" type="checkbox">
-												<label for="profile-check6">Торты на дому</label>
-											</li>
-											<li class="another">
-												<input id="profile-check7" type="checkbox">
-												<label for="profile-check7"></label>
-												<input type="text" placeholder="свое направление">
-											</li>
-										</ul>
-									</div>
-									<input id="conf-agree" type="checkbox">
-									<label for="conf-agree">Я согласен с Политикой конфиденциальности и даю согласие <br>на обработку и хранение моих персональных данных</label>
-									<button class="disable">Обновить</button>
 								</form>
 							</div>
 						</div>
@@ -161,7 +183,7 @@
 	</div>
 
 	<!-- Plugins -->
-	<div class="popup"></div>
+	//= tpl/popups.html
 	
 	<!-- Scripts -->
 	//= tpl/scripts.html

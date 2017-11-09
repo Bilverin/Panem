@@ -15,16 +15,55 @@
 						<a href="index.html" class="logo">
 							<img src="assets/img/header-logo.png">
 							<img class="lg" src="assets/img/header-home.png">
-							<img class="mob" src="assets/img/header-logo-mob.png">
 						</a>
 						<nav class="js-headerNav">
 							<ul>
+								<li class="main"><a href="index.html">Главная</a></li>
 								<li><a href="company.html">О компании</a></li>
 								<li class="active"><a href="catalog.html">Продукция</a></li>
 								<li><a href="events.html">Мероприятия</a></li>
 								<li><a href="knowledge.html">База знаний</a></li>
 								<li><a href="contacts.html"><span>Как купить/контакты</span><span class="mob">Контакты</span></a></li>
-								<li><a href="#" class="personal-area"><i class="icon icon-key"></i>Личный кабинет</a></li>
+								<li>
+									<a href="#" class="personal-area js-logIn"><i class="icon icon-key"></i>Личный кабинет</a>
+									<div class="logIn js-popupLogIn">
+										<form action="#">
+											<input type="text" placeholder="Э/почта">
+											<input type="text" placeholder="Пароль">
+											<input id="login1" type="checkbox">
+											<label for="login1">Чужой компьютер</label>
+											<ul class="btns">
+												<li>
+													<a href="#" class="btn-3 disabled">Войти</a>
+												</li>
+												<li>
+													<a href="#" class="pass-recov">Восстановить пароль</a>
+												</li>
+											</ul>
+											<ul class="btns">
+												<li>
+													<ul class="socials">
+														<li>
+															<a href="#"><i class="fa fa-vk"></i></a>
+														</li>
+														<li>
+															<a href="#"><i class="fa fa-facebook"></i></a>
+														</li>
+														<li>
+															<a href="#"><i class="fa fa-google"></i></a>
+														</li>
+														<li>
+															<a href="#">...</a>
+														</li>
+													</ul>
+												</li>
+												<li>
+													<a href="#" class="registr js-popupReg">Регистрация</a>
+												</li>
+											</ul>
+										</form>
+									</div>
+								</li>
 							</ul>
 							<div class="city">
 								<a href="tel:+78462771307" class="phone">+7 (846) <span>277-13-07</span></a>

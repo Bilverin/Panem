@@ -35,6 +35,26 @@
 											</a>
 										</li>
 									</ul>
+									<ul class="mob">
+										<li class="active">
+											<a href="#">
+												Рецепты
+												<span>57</span>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Статьи
+												<span>12</span>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Печатные материалы
+												<span>9</span>
+											</a>
+										</li>
+									</ul>
 									<form action="#">
 										<div class="search-block">
 											<input type="text" placeholder="Поиск по базе знаний">
@@ -43,15 +63,20 @@
 									</form>
 								</div>
 
-								<div class="knowledge-nav-list">
-									<ul>
-										<li><a href="#">Хлебопечение</a></li>
-										<li><a href="#">Торты и пирожные</a></li>
-										<li><a href="#">Печенье и маффины</a></li>
-										<li><a href="#">Шоколад</a></li>
-										<li class="active"><a href="#">Прочее</a></li>
+								<div class="knowledge-nav-list js-navList">
+									<ul class="root">
+										<li><a href="#cat-1"><span>Хлебопечение</span><img src="assets/img/catalog-root-1-mob.png"></a></li>
+										<li><a href="#cat-2"><span>Торты <br>и пирожные</span><img src="assets/img/catalog-root-2-mob.png"></a></li>
+										<li><a href="#cat-3"><span>Печенье <br>и маффины</span><img src="assets/img/catalog-root-3-mob.png"></a></li>
+										<li><a href="#cat-4"><span>Шоколад</span><img src="assets/img/catalog-root-4-mob.png"></a></li>
+										<li class="active"><a href="#cat-5"><span>Прочее</span><img src="assets/img/catalog-root-1-mob.png"></a></li>
 									</ul>
-									<ul>
+									<ul class="breadcrumbs item-page">
+										<li>
+											<a href="#">Прочее</a>
+										</li>
+									</ul>
+									<ul class="item-list">
 										<li class="active curr"><a href="#">Помадки готовые и сухие</a></li>
 										<li><a href="#">Мерчендайзинг кондитерской витрины</a></li>
 										<li><a href="#">Оригинальные решения <br>в оформлении тортов и пирожных</a></li>
@@ -64,6 +89,9 @@
 							<div class="search-result-item">
 								<div class="knowledge-search-slider">
 									<img src="assets/img/knowledge-slider.png">
+									<figure class="mob">
+										<img src="assets/img/knowledge-slider-mob.jpg">
+									</figure>
 								</div>
 								<h1>Помадки готовые и сухие</h1>
 								<h2>Помадка — желанный продукт в арсенале любого производства и применяется для украшения хлебобулочных и кондитерских изделий (торты, кексы, рулеты, эклеры, пряники, печенья и т.д.). Она востребована круглый год, но особую ценность она приобретает во время подготовки к Пасхе. В это время производители кондитерских и хлебобулочных изделий предъявляют к ней особо пристальное внимание и соответствующие требования по качеству, вкусу, технологичности и цене. </h2>
@@ -114,7 +142,7 @@
 	</div>
 
 	<!-- Plugins -->
-	<div class="popup"></div>
+	//= tpl/popups.html
 	
 	<!-- Scripts -->
 	//= tpl/scripts.html

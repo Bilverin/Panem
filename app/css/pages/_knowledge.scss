@@ -4,34 +4,83 @@
 		@extend .catalog-wrap;
 		&-search {
 			display: flex;
+			@include respond-to(md) {
+				flex-wrap: wrap;
+			}
 			.search {
 				&-list {
 					width: 634px; padding-right: 38px; flex-shrink: 0;
+					@include respond-to(1399px) {
+						width: 530px;
+					}
+					@include respond-to(lg) {
+						width: 400px;
+					}
+					@include respond-to(md) {
+						width: 100%; padding-right: 0;
+					}
 					.knowledge-search {
 						ul {
 							margin-right: 34px;
+							@include respond-to(md) {
+								margin-right: 0;
+							}
 						}
 					}
 				}
 				&-result {
 					&-item {
 						width: 100%; padding-right: 100px;
+						@include respond-to(1599px) {
+							padding-right: 16px;
+						}
+						@include respond-to(md) {
+							padding: 0 12px;
+						}
+						@include respond-to(539px) {
+							padding: 0;
+						}
 
 						& > h1 {
 							font-size: 42px; font-family: $ms-500; line-height: 48px; letter-spacing: -0.3px;
 							margin-bottom: 9px;
+							@include respond-to(md) {
+								font-size: 44px; line-height: 52px;
+								margin-bottom: 29px;
+							}
+							@include respond-to(539px) {
+								font-size: 38px; line-height: 44px;
+							}
 						}
 						& > h2 {
 							font-size: 22px; font-family: $os-reg; line-height: 30px; letter-spacing: 0.1px;
 							margin-bottom: 20px;
+							@include respond-to(md) {
+								font-size: 26px; line-height: 34px;
+							}
+							@include respond-to(539px) {
+								font-size: 18px; line-height: 25px;
+							}
 						}
 						& > h3 {
 							font-size: 28px; font-family: $ms-500; letter-spacing: 0.3px;
 							margin-bottom: 16px;
+							@include respond-to(md) {
+								font-size: 32px;
+							}
+							@include respond-to(539px) {
+								font-size: 26px;
+							}
 						}
 						& > p {
 							font-size: 18px; font-family: $os-reg; line-height: 25px;
 							margin-bottom: 32px;
+							@include respond-to(md) {
+								font-size: 22px; line-height: 28px;
+							}
+							@include respond-to(539px) {
+								font-size: 16px; line-height: 22px;
+							}
 							a {
 								color: #0141b2;
 								&:hover {
@@ -54,6 +103,12 @@
 								h4 {
 									font-size: 28px; font-family: $ms-500; line-height: 34px;
 									margin-bottom: 12px; position: relative;
+									@include respond-to(md) {
+										font-size: 32px;
+									}
+									@include respond-to(539px) {
+										font-size: 26px;
+									}
 									span {
 										display: block; width: 52px; height: 52px; position: absolute; left: -67px; top: 50%; transform: translateY(-50%);
 										border-radius: 50%;
@@ -66,6 +121,12 @@
 								p {
 									font-size: 18px; font-family: $os-reg; line-height: 25px;
 									margin-bottom: 20px;
+									@include respond-to(md) {
+										font-size: 22px; line-height: 28px;
+									}
+									@include respond-to(539px) {
+										font-size: 16px; line-height: 22px;
+									}
 									a {
 										color: #0141b2;
 										&:hover {
@@ -75,9 +136,18 @@
 								}
 								ul {
 									padding-left: 41px; margin-bottom: 25px;
+									@include respond-to(539px) {
+										padding-left: 19px;
+									}
 									li {
 										font-size: 18px; font-family: $os-reg; line-height: 25px;
 										margin-bottom: 10px; position: relative;
+										@include respond-to(md) {
+											font-size: 22px; line-height: 28px;
+										}
+										@include respond-to(539px) {
+											font-size: 16px; line-height: 22px;
+										}
 										&:before {
 											content: '';
 											display: block; width: 8px; height: 8px; position: absolute; left: -19px; top: 10px;
@@ -90,8 +160,21 @@
 								}
 							}
 							&.btns {
+								@include respond-to(1599px) {
+									padding-left: 0;
+								}
+								@include respond-to(lg) {
+									flex-direction: column;
+								}
 								li {
 									margin-bottom: 0;
+									@include respond-to(lg) {
+										margin-bottom: 20px; margin-right: 0; align-self: flex-end;
+									}
+									&:last-child {
+										margin-bottom: 0; margin-right: 0;
+									}
+
 								}
 							}
 							
@@ -104,6 +187,12 @@
 							&.ingredients {
 								width: 562px; margin: 21px 0 53px; padding: 31px 62px 40px 51px;
 								background: #f5f5f5;
+								@include respond-to(sm) {
+									width: 100%;
+								}
+								@include respond-to(639px) {
+									padding: 20px 15px 30px;
+								}
 								dt, dd {
 									margin-bottom: 12px;
 									&:last-of-type {
@@ -113,6 +202,9 @@
 								dt {
 									font-size: 20px; font-family: $ms-500; letter-spacing: 0.2px;
 									width: calc(100% - 85px);
+									@include respond-to(639px) {
+										font-size: 16px;
+									}
 									&:last-of-type {
 										width: 0%;
 									}
@@ -138,6 +230,9 @@
 								padding-top: 19px; margin-bottom: 48px;
 								dt, dd {
 									margin-bottom: 23px;
+									@include respond-to(md) {
+										margin-bottom: 26px;
+									}
 									&:last-of-type {
 										margin-bottom: 0;
 									}
@@ -145,10 +240,26 @@
 								dt {
 									font-size: 14px; font-family: $os-reg; text-transform: uppercase; letter-spacing: 0.3px; line-height: 22px;
 									width: 176px; padding-top: 2px;
+									@include respond-to(md) {
+										font-size: 22px; line-height: 28px;
+										width: 191px; padding-right: 10px;
+									}
+									@include respond-to(539px) {
+										font-size: 14px; font-weight: 600;
+										width: 100%; padding-top: 0; margin-bottom: 5px;
+									}
 								}
 								dd {
 									font-size: 16px; font-family: $os-reg;
 									width: calc(100% - 176px);
+									@include respond-to(md) {
+										font-size: 26px; font-family: $os-reg; line-height: 34px;
+										width: calc(100% - 191px);
+									}
+									@include respond-to(539px) {
+										font-size: 16px; line-height: 22px;
+										width: 100%; margin-bottom: 20px;
+									}
 								}
 							}
 						}
@@ -162,8 +273,55 @@
 	&-search {
 		@extend .catalog-search;
 		align-items: flex-start; max-width: 1000px; justify-content: space-between;
+		@include respond-to(lg) {
+			flex-wrap: wrap;
+		}
+		@include respond-to(md) {
+			display: flex;
+		}
+		@include respond-to(539px) {
+			padding: 0;
+		}
 		ul {
 			display: flex; padding-top: 10px;
+			@include respond-to(md) {
+				display: none;
+			}
+			&.mob {
+				display: none;
+				@include respond-to(md) {
+					display: flex; justify-content: space-between; width: 100%; padding-right: 12px; padding-top: 0;
+				}
+				@include respond-to(639px) {
+					flex-wrap: wrap; justify-content: flex-start;
+				}
+				li {
+					@include respond-to(md) {
+						margin-right: 0;
+					}
+					@include respond-to(639px) {
+						width: 100%; margin-bottom: 10px;
+					}
+					&:last-child {
+						margin-bottom: 0;
+					}
+					&.active {
+						a {
+							@include respond-to(md) {
+								font-family: $ms-900;
+							}
+						}
+					}
+					a {
+						@include respond-to(md) {
+							font-size: 22px; font-family: $ms-700; letter-spacing: 0.6px;
+						}
+						@include respond-to(539px) {
+							font-size: 18px;
+						}
+					}
+				}
+			}
 			li {
 				margin-right: 44px;
 				&:last-child {
@@ -198,9 +356,21 @@
 		}
 
 		form {
+			@include respond-to(lg) {
+				margin-top: 20px; margin-left: 0;
+			}
+			@include respond-to(539px) {
+				width: 100%;
+			}
 			.search-block {
 				input {
 					font-family: $ms-500; letter-spacing: 1.5px;
+					@include respond-to(1399px) {
+						width: 300px;
+					}
+					@include respond-to(539px) {
+						width: 100%;
+					}
 				}
 			}
 			label {
@@ -210,10 +380,22 @@
 
 		&-result {
 			padding-top: 58px; padding-left: 104px;
+			@include respond-to(1399px) {
+				padding-left: 50px;
+			}
+			@include respond-to(lg) {
+				padding-left: 16px;
+			}
+			@include respond-to(539px) {
+				padding-left: 0;
+			}
 
 			& > ul {
 				& > li {
 					position: relative; padding-left: 76px; margin-bottom: 34px;
+					@include respond-to(539px) {
+						padding-left: 65px;
+					}
 					&:last-child {
 						margin-bottom: 0;
 					}
@@ -273,7 +455,27 @@
 		}
 
 		&-slider {
-			margin-bottom: 50px;
+			margin-bottom: 50px; width: 100%;
+			@include respond-to(md) {
+				margin-bottom: 40px;
+			}
+			img {
+				width: 100%;
+				@include respond-to(md) {
+					display: none;
+				}
+			}
+			figure {
+				display: none; margin: 0 -27px;
+				&.mob {
+					@include respond-to(md) {
+						display: block;
+					}
+					img {
+						display: block;
+					}
+				}
+			}
 		}
 	}
 	// root
@@ -282,8 +484,12 @@
 		padding: 45px 16px 0;
 		& > ul {
 			justify-content: space-between;
+
 			& > li {
 				max-width: 320px; padding-right: 50px;
+				@include respond-to(1399px) {
+					max-width: none;
+				}
 			}
 		}
 	}
@@ -291,13 +497,29 @@
 		&-list {
 			@extend .catalog-nav-list;
 			min-width: auto; margin-right: 0;
+			@include respond-to(md) {
+				margin-bottom: 77px;
+			}
 			ul {
 				padding-right: 25px;
+				@include respond-to(1399px) {
+					display: none; padding-right: 0;
+				}
 				&:first-child {
 					width: 42%;
 				}
 				&:last-child {
 					width: 42%;
+				}
+				&:first-child, &:last-child {
+					@include respond-to(1399px) {
+						width: 100%;
+					}
+				}
+				&.item-list {
+					@include respond-to(md) {
+						width: auto;
+					}
 				}
 			}
 		}

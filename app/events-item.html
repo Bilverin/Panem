@@ -35,6 +35,20 @@
 
 						<div class="events-single">
 							<div class="events-nav">
+								<div class="years">
+									<ul>
+										<li class="active">
+											<a href="#">2017</a>
+										</li>
+										<li>
+											<a href="#">2016</a>
+										</li>
+										<li>
+											<a href="#">2015</a>
+										</li>
+									</ul>
+									<a href="#"></a>
+								</div>
 								<ul>
 									<li>
 										<ul>
@@ -112,37 +126,41 @@
 									<li>Пасхальные хлеба элитного плана.</li>
 									<li>Разнообразные покрытия, декор и упаковка для куличей.</li>
 								</ul>
-								<a href="" class="address"><i class="icon icon-link-mark"></i><span>Самара, ул.Стара-Загора, 64.</span></a>
+								<a href="" class="address"><i class="icon icon-link-mark"></i><i class="icon icon-link-mark-mob"></i><span>Самара, ул.Стара-Загора, 64.</span></a>
 								<ul class="btns">
 									<li>
 										<a href="#" class="btn-2">Добавить в избранное</a>
 									</li>
 								</ul>
 								<div class="testimonials">
-									<form action="#" class="disabled">
-										<textarea></textarea>
-										<p>Возможность оставлять отзывы к материалам появляется после <a href="#">регистрации</a>.</p>
+									<form action="#">
+										<textarea placeholder="Оставить свой отзыв"></textarea>
 									</form>
 									<div class="testi">
-										<h4>1 отзыв</h4>
-										<select>
-											<option value="1">Сначала новые</option>
-										</select>
+										<div class="testi-header">
+											<h4>1 отзыв</h4>
+											<select>
+												<option value="1">Сначала новые</option>
+												<option value="2">Сначала старые</option>
+											</select>
+											<div class="sort-block">
+												<a href="#" class="sort js-sort"><i class="icon icon-sort-sett"></i></a>
+												<ul class="sort-popup js-sortPopup">
+													<li class="active">
+														<a href="#"><i class="icon icon-sort-check"></i>Новые сверху</a>
+													</li>
+													<li>
+														<a href="#"><i class="icon icon-sort-check"></i>Новые снизу</a>
+													</li>
+												</ul>
+											</div>
+										</div>
 										<ul>
 											<li>
 												<a href="#">
 													<img src="assets/img/ava-1.png">
 												</a>
-												<h4><a href="">Хьюберт Урбанский</a>, Миллениум Банк, Москва</h4>
-												<span class="date">2 августа 2017, 11:22</span>
-												<p>Как отметили в Роспотребнадзоре, за январь-июнь 2017 года не зарегистрировано ни одного случая дифтерии, кори, краснухи, эпидемического паротита, острого паралитического полиомиелита.</p>
-												<p>Однако на территории области зарегистрирован случай заболевания лихорадкой Зика. Заболел житель Тольятти, посетивший Колумбию. Также зарегистрировано 4 случая Ку лихорадки у самарцев, выезжавших в Казахстан, 2 случая лихорадки Денге у жителей Тольятти и Самары, вернувшихся из Таиланда.</p>
-											</li>
-											<li>
-												<a href="#">
-													<img src="assets/img/ava-1.png">
-												</a>
-												<h4><a href="">Хьюберт Урбанский</a>, Миллениум Банк, Москва</h4>
+												<h4><a href="">Хьюберт Урбанский</a>, <span>Миллениум Банк, Москва</span></h4>
 												<span class="date">2 августа 2017, 11:22</span>
 												<p>Спасибо, супер-семинар! Самара — самая сладкая, светлая, стильная!</p>
 											</li>
@@ -162,7 +180,7 @@
 	</div>
 
 	<!-- Plugins -->
-	<div class="popup"></div>
+	//= tpl/popups.html
 	
 	<!-- Scripts -->
 	//= tpl/scripts.html

@@ -33,9 +33,36 @@
 		padding: 11px 23px 14px 21px; display: inline-block;
 		background: #005cff; border-radius: 4px; border: solid 2px #005cff;
 		transition: .2s ease-out;
+		@include respond-to(md) {
+			font-size: 26px;
+			padding: 8px 18px 11px 25px;
+		}
+		@include respond-to(539px) {
+			font-size: 20px; text-align: center;
+			display: block;
+		}
 		&:hover {
 			color: #005cff;
 			background: #ffffff;
+		}
+		&.disabled {
+			background: #dfdfdf; border-color: #dfdfdf;
+			pointer-events: none;
+		}
+	}
+
+	&-3 {
+		color: #ffffff; font-size: 18px; font-family: $ms-900; text-transform: uppercase; text-align: center; letter-spacing: 2px;
+		padding: 9px 14px 7px 16px;
+		background: #005cff; border: solid 2px #005cff; border-radius: 4px;
+		transition: .2s ease-out;
+		&:hover {
+			color: #005cff;
+			background: #ffffff;
+		}
+		&.disabled {
+			background: #dfdfdf; border-color: #dfdfdf;
+			pointer-events: none;
 		}
 	}
 }
@@ -65,10 +92,13 @@
 // header
 .header {
 	display: flex; justify-content: space-between; padding: 0 16px;
-	@include respond-to(1400px) {
-		padding: 0 5px 0 16px;
+	@include respond-to(1399px) {
+		padding: 0 5px 0 16px; align-items: center;
 	}
-	@include respond-to(540px) {
+	@include respond-to(md) {
+		padding: 0 16px;
+	}
+	@include respond-to(539px) {
 		padding: 0;
 	}
 
@@ -81,18 +111,111 @@
 		& > p {
 			font-size: 26px; font-family: $ms-700; text-transform: uppercase; line-height: 32px;
 			display: none; position: relative; z-index: 20; margin-top: -4px;
-			// @include respond-to(1400px) {
-			// 	display: block;
-			// }
+			@include respond-to(1099px) {
+				display: block;
+			}
+			@include respond-to(539px) {
+				font-size: 20px; line-height: 30px;
+			}
+		}
+	}
+
+	.logIn {
+		width: 356px; padding: 0 35px 35px; position: absolute; left: -13px; bottom: -15px; transform: translate(-10%, 100%);
+		background: #ffffff;
+		opacity: 0; pointer-events: none;
+		transition: .3s ease-out;
+		&.active {
+			transform: translate(0%, 100%);
+			opacity: 1; pointer-events: all;
+		}
+		form {
+			input[type=text] {
+				color: #000000; font-size: 20px; font-family: $ms-500; letter-spacing: -0.3px;
+				display: block; width: 100%; padding: 0 12px; height: 40px; margin-bottom: 10px;
+				border: solid 1px #b9bdc7; border-radius: 4px;
+
+				&::-webkit-input-placeholder {color: #cccccc;}
+				&::-moz-placeholder {color: #cccccc;}
+				&:-moz-placeholder {color: #cccccc;}
+				&:-ms-input-placeholder {color: #cccccc;}
+			}
+			input[type=checkbox] {
+				display: none;
+			}
+			input[type=checkbox]:checked ~ label:before {
+				background: url('../img/check.png') center center no-repeat;
+			}
+			label {
+				font-size: 14px; font-family: $os-reg;
+				position: relative; padding-left: 27px; margin-left: 11px; margin-bottom: 10px;
+				cursor: pointer;
+				&:before {
+					content: '';
+					display: block; width: 18px; height: 18px; position: absolute; left: 1px; top: 1px;
+					border: solid 1px #b9bdc7; border-radius: 4px;
+				}
+			}
+			ul.btns {
+				margin-bottom: 10px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+				& > li {
+					margin-right: 0;
+					&:first-child {
+						width: 130px; flex-shrink: 0;
+					}
+					& > a {
+						&.btn-3 {
+							@extend .btn-3;
+						}
+						&.pass-recov {
+							color: #0141b2; font-size: 14px; font-family: $os-reg; text-decoration: underline; text-transform: initial; letter-spacing: 0.1px;
+							margin-bottom: 5px;
+							&:hover {
+								text-decoration: none;
+							}
+							&:after {
+								content: none;
+							}
+						}
+						&.registr {
+							color: #005dff; font-size: 18px; font-family: $ms-900; text-transform: uppercase; letter-spacing: 2px;
+							&:after {
+								background: #005dff;
+							}
+						}
+					}
+					ul.socials {
+						display: flex; padding-left: 4px;
+						li {
+							margin-right: 11px;
+							&:last-child {
+								margin-right: 0;
+							}
+							a {
+								font-size: 22px;
+								&:after {
+									content: none;
+								}
+								i {
+									color: #0141b2;
+								}
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 
 	a, span {
 		&.burger {
 			display: none; width: 24px; height: 20px; position: relative; margin-right: 25px; z-index: 20;
-			// @include respond-to(1400px) {
-			// 	display: block;
-			// }
+			@include respond-to(1099px) {
+				display: block;
+			}
 			span {
 				width: 100%; height: 4px; position: absolute; left: 50%; transform: translateX(-50%);
 				background: #0141b2;
@@ -115,11 +238,14 @@
 		}
 		&.logo {
 			display: inline-block; margin-right: 40px; position: relative; z-index: 20;
-			@include respond-to(1500px) {
+			@include respond-to(1499px) {
 				margin-right: 26px;
 			}
-			@include respond-to(1400px) {
+			@include respond-to(1399px) {
 				margin-right: 23px;
+			}
+			@include respond-to(1099px) {
+
 			}
 			&.main {
 				@include respond-to(md) {
@@ -127,23 +253,32 @@
 				}
 			}
 			img {
-				@include respond-to(1400px) {
+				@include respond-to(1399px) {
 					display: none;
 				}
 				&.lg {
 					display: none;
-					@include respond-to(1400px) {
+					@include respond-to(1399px) {
 						display: block;
 					}
-					@include respond-to(md) {
+					@include respond-to(1099px) {
 						display: none;
 					}
 				}
 				&.mob {
 					display: none;
-					@include respond-to(md) {
+					@include respond-to(1099px) {
 						display: block;
 					}
+				}
+			}
+			i {
+				display: none;
+				@include respond-to(1399px) {
+					display: inline-block; margin-top: -6px;
+				}
+				@include respond-to(1099px) {
+					display: none;
 				}
 			}
 		}
@@ -151,35 +286,35 @@
 
 	nav {
 		padding-top: 1px;
-		// @include respond-to(1400px) {
-		// 	padding: 76px 15px 30px;position: fixed; left: 0; top: 0; max-height: 100vh; width: 100%; transform: translateY(-100%); z-index: 10;
-		// 	background: #ffffff; box-shadow: 0 0 10px 1px rgba(0,0,0,0.1);
-		// 	opacity: 0;
-		// 	transition: .4s ease-out;
-		// }
-		// @include respond-to(sm) {
-		// 	padding: 85px 15px 30px; max-height: 100vh; overflow-y: auto;
-		// }
-		// &.active {
-		// 	@include respond-to(1400px) {
-		// 		transform: translateY(0);
-		// 		opacity: 1;
-		// 	}
-		// }
+		@include respond-to(1099px) {
+			padding: 76px 15px 30px;position: fixed; left: 0; top: 0; max-height: 100vh; width: 100%; transform: translateY(-100%); z-index: 10; max-height: 100vh;
+			background: #ffffff; box-shadow: 0 0 10px 1px rgba(0,0,0,0.1);
+			opacity: 0; overflow-y: auto; overflow-x: hidden;
+			transition: .4s ease-out;
+		}
+		@include respond-to(sm) {
+			padding: 85px 15px 30px;
+		}
+		&.active {
+			@include respond-to(1099px) {
+				transform: translateY(0);
+				opacity: 1;
+			}
+		}
 		& > ul {
 			display: flex;
-			// @include respond-to(1400px) {
-			// 	padding: 0 16px;
-			// }
-			// @include respond-to(md) {
-			// 	flex-wrap: wrap; margin-bottom: 30px;
-			// }
+			@include respond-to(1099px) {
+				padding: 0 16px;
+			}
+			@include respond-to(md) {
+				flex-wrap: wrap; margin-bottom: 30px;
+			}
 			& > li {
-				margin-right: 15px; padding: 0 15px;
-				@include respond-to(1500px) {
+				margin-right: 15px; padding: 0 15px; position: relative;
+				@include respond-to(1499px) {
 					margin-right: 0px;
 				}
-				@include respond-to(1400px) {
+				@include respond-to(1399px) {
 					margin-right: 23px; padding: 0;
 				}
 				@include respond-to(md) {
@@ -188,32 +323,41 @@
 				&:last-child {
 					margin-right: 0; margin-bottom: 0;
 				}
+				&.main {
+					display: none;
+					@include respond-to(1099px) {
+						display: inline-block;
+					}
+				}
 				&.active {
 					position: relative;
-					@include respond-to(1400px) {
+					@include respond-to(1399px) {
 						padding: 0 15px; margin-left: -7px; margin-right: 11px;
+					}
+					@include respond-to(1099px) {
+						margin-left: 0; padding: 0; margin-right: 23px;
 					}
 					&:before {
 						content: '';
 						display: block; width: 100%; height: 200px; position: absolute; left: 50%; bottom: -5px; transform: translateX(-50%); z-index: -1;
 						background: #000000;
-						// @include respond-to(1400px) {
-						// 	content: none;
-						// }
+						@include respond-to(1099px) {
+							content: none;
+						}
 					}
 					&:after {
 						content: '';
 						display: block; width: 100%; height: 18px; position: absolute; left: 50%; bottom: -20px; transform: translateX(-50%); z-index: -1;
 						background: url('../img/header-active-border.png') center center no-repeat; background-size: 100% 100%;
-						// @include respond-to(1400px) {
-						// 	content: none;
-						// }
+						@include respond-to(1099px) {
+							content: none;
+						}
 					}
 					a {
 						color: #ffffff;
-						// @include respond-to(1400px) {
-						// 	color: #000000; font-family: $ms-900;
-						// }
+						@include respond-to(1099px) {
+							color: #000000; font-family: $ms-900;
+						}
 						&:hover {
 							&:after {
 								width: 0;
@@ -221,9 +365,9 @@
 						}
 						&.personal-area {
 							i {
-								// @include respond-to(1400px) {
-								// 	display: none;
-								// }
+								@include respond-to(1099px) {
+									display: none;
+								}
 								&.icon-exit {
 									@extend .icon-exit-white;
 								}
@@ -262,12 +406,12 @@
 					}
 					span {
 						color: inherit; font-size: inherit; font-family: inherit;
-						@include respond-to(1400px) {
+						@include respond-to(1399px) {
 							display: none;
 						}
 						&.mob {
 							display: none;
-							@include respond-to(1400px) {
+							@include respond-to(1399px) {
 								display: inline;
 							}
 						}
@@ -277,12 +421,12 @@
 		}
 		.city {
 			display: none;
-			// @include respond-to(1400px) {
-			// 	display: flex; align-items: center; padding: 15px 16px 0;
-			// }
-			// @include respond-to(sm) {
-			// 	flex-wrap: wrap;
-			// }
+			@include respond-to(1099px) {
+				display: flex; align-items: center; padding: 15px 16px 0;
+			}
+			@include respond-to(sm) {
+				flex-wrap: wrap;
+			}
 			a.phone {
 				color: #000000; font-size: 16px; font-family: $ms-500; letter-spacing: 1.3px;
 				display: inline-block; position: relative; flex-shrink: 0; margin-right: 30px;
@@ -334,8 +478,11 @@
 	a.phone {
 		color: #000000; font-size: 16px; font-family: $ms-500; letter-spacing: 1.3px;
 		display: inline-block; position: relative;
-		@include respond-to(1400px) {
+		@include respond-to(1399px) {
 			letter-spacing: 0.3px;
+		}
+		@include respond-to(1099px) {
+			display: none;
 		}
 		&:after {
 			content: '';
@@ -356,15 +503,15 @@
 	.right {
 		a.search {
 			display: none; z-index: 20; position: relative;
-			// @include respond-to(1400px) {
-			// 	display: block;
-			// }
+			@include respond-to(1099px) {
+				display: block;
+			}
 		}
 		div.city {
 			padding-left: 10px; padding-right: 10px; position: relative; margin-right: -6px; z-index: 20;
-			// @include respond-to(1400px) {
-			// 	display: none;
-			// }
+			@include respond-to(1099px) {
+				display: none;
+			}
 			& > a {
 				color: $text-1; font-size: 16px; font-family: $ms-900;
 				display: inline-block; position: relative;
@@ -372,7 +519,7 @@
 					content: '';
 					display: inline-block; width: 10px; height: 7px; margin-left: 6px; position: relative; top: -1px;
 					border-top: solid 7px $text-1; border-left: solid 5px transparent; border-right: solid 5px transparent; border-bottom: solid 0px $text-1;
-					@include respond-to(1400px) {
+					@include respond-to(1399px) {
 						content: none;
 					}
 				}
@@ -399,7 +546,7 @@
 				}
 				span {
 					color:inherit; font-size: inherit; font-family: inherit;
-					@include respond-to(1400px) {
+					@include respond-to(1399px) {
 						display: none;
 					}
 				}
@@ -407,7 +554,7 @@
 					&.map-marker {
 						@extend .icon-map-marker;
 						display: none;
-						@include respond-to(1400px) {
+						@include respond-to(1399px) {
 							display: inline-block;
 						}
 					}
@@ -466,7 +613,7 @@
 	@include respond-to(sm) {
 		padding: 0 15px 0 30px;
 	}
-	@include respond-to(540px) {
+	@include respond-to(539px) {
 		flex-direction: row; max-height: none; padding: 0;
 	}
 	ul {
@@ -492,7 +639,7 @@
 			@include respond-to(md) {
 				padding: 0 15px 0 0; width: 50%; margin-bottom: 57px;
 			}
-			@include respond-to(540px) {
+			@include respond-to(539px) {
 				width: 100%; padding: 0 15px;
 			}
 		}
@@ -509,7 +656,7 @@
 			@include respond-to(sm) {
 				padding-right: 0;
 			}
-			@include respond-to(540px) {
+			@include respond-to(539px) {
 				padding-right: 15px;
 			}
 			li {
@@ -561,7 +708,7 @@
 				@include respond-to(sm) {
 					font-size: 20px; line-height: 25px;
 				}
-				@include respond-to(540px) {
+				@include respond-to(539px) {
 					font-size: 18px; line-height: 24px;
 				}
 				&:hover {
@@ -584,7 +731,7 @@
 	@include respond-to(sm) {
 		flex-wrap: wrap; padding: 0 14px 0 12px;
 	}
-	@include respond-to(540px) {
+	@include respond-to(539px) {
 		padding: 0;
 	}
 	ul {
@@ -592,7 +739,7 @@
 		@include respond-to(sm) {
 			padding-right: 30px; width: 60%;
 		}
-		@include respond-to(540px) {
+		@include respond-to(539px) {
 			width: 100%; padding-right: 0; order: 1; margin-bottom: 15px;
 		}
 		li {
@@ -611,7 +758,7 @@
 				@include respond-to(sm) {
 					font-size: 22px; line-height: 28px;
 				}
-				@include respond-to(540px) {
+				@include respond-to(539px) {
 					font-size: 18px; line-height: 24px;
 				}
 			}
@@ -646,7 +793,7 @@
 			font-size: 22px; line-height: 28px;
 			width: 40%; padding-top: 2px;
 		}
-		@include respond-to(540px) {
+		@include respond-to(539px) {
 			text-align: left;
 			width: 100%; padding-top: 0; order: 3;
 		}
@@ -669,7 +816,7 @@
 		@include respond-to(sm) {
 			display: block;
 		}
-		@include respond-to(540px) {
+		@include respond-to(539px) {
 			order: 2; margin-top: 0; margin-bottom: 30px;
 		}
 		&:hover {
@@ -680,63 +827,185 @@
 
 // testimonials
 .testimonials {
+	@include respond-to(md) {
+		padding-top: 14px;
+	}
 	form {
 		margin-bottom: 53px;
+		@include respond-to(md) {
+			margin-bottom: 50px;
+		}
 		&.disabled {
 			textarea {
 				background: #f2f2f2;
 				pointer-events: none; resize: none;
+				@include respond-to(md) {
+					display: none;
+				}
 			}
 		}
 
 		textarea {
-			width: 100%; min-height: 118px; margin-bottom: 11px;
+			font-size: 18px; font-family: $os-reg; line-height: 25px;
+			width: 100%; min-height: 118px; margin-bottom: 11px; padding: 10px 15px;
 			background: #ffffff; border: solid 1px #cdcdcd; border-radius: 4px;
+			&::-webkit-input-placeholder {color: #999999;}
+			&::-moz-placeholder {color: #999999;}
+			&:-moz-placeholder {color: #999999;}
+			&:-ms-input-placeholder {color: #999999;}
+			@include respond-to(md) {
+				font-size: 22px; line-height: 30px;
+				padding: 0 0 15px; min-height: auto; height: 48px;
+				border: none; border-bottom: solid 2px #cccccc; border-radius: 0;
+			}
+			@include respond-to(539px) {
+				font-size: 16px; line-height: 20px;
+				height: 40px;
+			}
 		}
 
 		p {
 			font-size: 16px; font-family: $os-reg; letter-spacing: 0.13px;
 			padding-left: 27px;
+			@include respond-to(md) {
+				display: none;
+			}
 			a {
 				color: $text-link; text-decoration: underline;
 				&:hover {
 					text-decoration: none;
 				}
 			}
+			&.mob {
+				color: #999999; font-size: 22px; text-align: center; letter-spacing: 0;
+				display: none; padding-left: 0; padding-bottom: 15px;
+				border-bottom: solid 2px #cccccc;
+				@include respond-to(md) {
+					display: block;
+				}
+				@include respond-to(539px) {
+					font-size: 16px;
+				}
+			}
 		}
 	}
 
 	.testi {
-		& > h4 {
-			font-size: 28px; font-family: $ms-500; line-height: 30px; letter-spacing: 0.3px;
-			display: inline-block; height: 30px; vertical-align: top; padding-right: 18px;
-		}
-		select {
-			font-size: 14px; font-family: $os-reg; line-height: 30px; letter-spacing: 0.1px;
-			display: inline-block; height: 30px; vertical-align: top; padding: 0 19px 0 2px;
-			&:focus {
-				outline: none;
+		&-header {
+			display: flex; align-items: center; position: relative;
+			@include respond-to(md) {
+				justify-content: space-between; margin-left: -3px; margin-right: -2px;
+			}
+			& > h4 {
+				font-size: 28px; font-family: $ms-500; line-height: 30px; letter-spacing: 0.3px;
+				display: inline-block; height: 30px; vertical-align: top; padding-right: 18px;
+				@include respond-to(md) {
+					font-size: 32px;
+				}
+				@include respond-to(539px) {
+					font-size: 20px;
+				}
+			}
+			select {
+				font-size: 14px; font-family: $os-reg; line-height: 30px; letter-spacing: 0.1px;
+				display: inline-block; height: 30px; vertical-align: top; padding: 0 19px 0 2px;
+				@include respond-to(md) {
+					display: none;
+				}
+				&:focus {
+					outline: none;
+				}
+			}
+			a.sort {
+				display: none; position: relative; top: 3px;
+				@include respond-to(md) {
+					display: block;
+				}
+			}
+			ul.sort-popup {
+				padding-top: 16px; width: 210px; height: 120px; display: none; position: absolute; right: 2px; bottom: -14px; transform: translateY(100%); z-index: 10;
+				background: #ffffff; box-shadow: 4px 4px 7px 4px rgba(0, 0, 0, 0.1);
+				@include respond-to(539px) {
+					padding: 15px 0; width: auto; height: auto;
+				}
+				&.active {
+					display: block;
+				}
+				li {
+					padding-left: 45px; padding-top: 0; margin-bottom: 19px;
+					@include respond-to(539px) {
+						padding-right: 15px; padding-left: 30px;
+					}
+					&:last-child {
+						margin-bottom: 0;
+					}
+					&.active {
+						a {
+							pointer-events: none;
+							i {
+								opacity: 1;
+							}
+						}
+					}
+					a {
+						color: #000000; font-size: 22px; font-family: $ms-500;
+						left: 0; position: relative;
+						@include respond-to(539px) {
+							font-size: 18px;
+						}
+						i {
+							opacity: 0; position: absolute; left: -28px; top: 50%; transform : translateY(-50%);
+							@include respond-to(539px) {
+								left: -23px; top: 48%;
+							}
+						}
+					}
+				}
 			}
 		}
 
 		ul {
 			padding-top: 16px;
+			@include respond-to(md) {
+				padding-top: 47px;
+			}
 			li {
 				margin-bottom: 25px; position: relative; padding-left: 70px; padding-top: 12px;
+				@include respond-to(md) {
+					padding-left: 100px; margin-bottom: 63px;
+				}
+				@include respond-to(539px) {
+					padding-left: 60px; padding-top: 0; margin-bottom: 40px;
+				}
 				&:last-child {
 					margin-bottom: 0;
 				}
 				& > a {
 					display: inline-block; position: absolute; left: -6px; top: 0;
 					img {
-
+						width: 61px;
+						@include respond-to(md) {
+							width: 80px;
+						}
+						@include respond-to(539px) {
+							width: 50px;
+						}
 					}
 				}
 				h4 {
 					font-size: 18px; font-family: $os-reg; letter-spacing: -0.1px; line-height: 22px;
+					@include respond-to(md) {
+						line-height: 28px;
+					}
 					a {
 						font-family: $os-sb; letter-spacing: 0;
 						display: inline-block; position: relative;
+						@include respond-to(md) {
+							font-size: 22px; letter-spacing: 0.1px;
+						}
+						@include respond-to(539px) {
+							font-size: 18px;
+						}
 						&:after {
 							content: '';
 							display: block; width: 0%; height: 1px; position: absolute; left: 50%; bottom: 1px; transform: translateX(-50%);
@@ -750,14 +1019,36 @@
 							}
 						}
 					}
+					span {
+						@include respond-to(md) {
+							font-size: 20px; letter-spacing: 0;
+							display: block;
+						}
+						@include respond-to(539px) {
+							font-size: 16px;
+						}
+					}
 				}
 				span.date {
 					color: #b2b2b2; font-size: 15px; font-family: $os-reg;
 					display: block; margin-bottom: 11px;
+					@include respond-to(md) {
+						color: #000000; font-size: 20px;
+						margin-bottom: 14px;
+					}
+					@include respond-to(539px) {
+						font-size: 16px;
+					}
 				}
 				p {
 					font-size: 18px; font-family: $os-reg; line-height: 25px; letter-spacing: 0.05px;
 					margin-bottom: 15px;
+					@include respond-to(md) {
+						font-size: 26px; line-height: 34px;
+					}
+					@include respond-to(539px) {
+						font-size: 16px; line-height: 20px;
+					}
 					&:last-child {
 						margin-bottom: 0;
 					}
@@ -801,7 +1092,7 @@ ul.btns {
 
 			&.pdf {
 				font-size: 20px; letter-spacing: -0.25px;
-				margin-left: 76px;
+				margin-left: 76px; display: inline-block;
 				&:after {
 					bottom: 2px;
 				}
@@ -812,7 +1103,180 @@ ul.btns {
 
 			span {
 				color: #005cff; font-size: 16px; font-family: $ms-700;
-				position: absolute; right: -6px; top: -5px; transform: translateX(100%);
+				position: relative; right: 0; top: -10px; padding-left: 6px; transform: translateX(100%);
+			}
+		}
+	}
+}
+
+// popups
+.popup {
+	&-registration {
+		padding: 46px 116px 39px 111px; width: 900px; position: relative; display: none;
+		background: #f5f5f5; border-radius: 8px;
+		a.close {
+			display: block; width: 30px; height: 30px; position: absolute; right: 19px; top: 18px;
+			opacity: 0.5;
+			&:before, &:after {
+				content: '';
+				display: block; width: 28px; height: 2px; position: absolute; left: 50%; top: 50%;
+				background: #000000;
+			}
+			&:before {
+				transform: translate(-50%,-50%) rotate(45deg);
+			}
+			&:after {
+				transform: translate(-50%,-50%) rotate(-45deg);
+			}
+			&:hover {
+				opacity: 1;
+			}
+		}
+		h2 {
+			font-size: 42px; font-family: $ms-500;
+			margin-bottom: 27px;
+		}
+		form {
+			.input-module {
+				display: flex; align-items: center; margin-bottom: 15px;
+				& > p {
+					font-size: 14px; font-family: $os-reg; text-transform: uppercase; letter-spacing: 0.3px;
+					width: 84px;
+				}
+				& > input {
+					font-size: 20px; font-family: $ms-500; letter-spacing: 0.48px;
+					width: 267px; height: 45px; padding: 0 8px;
+					border: solid 1px #b9bdc7; border-radius: 4px;
+					&.name {
+						width: calc(100% - 84px);
+					}
+				}
+				ul.pass-actions {
+					display: flex; margin-left: 27px; padding-top: 4px;
+					li {
+						margin-right: 25px;
+						&:last-child {
+							margin-right: 0;
+						}
+						a {
+							color: #005cff; font-size: 18px; font-family: $ms-700;
+							position: relative;
+							&:after {
+								content: '';
+								display: block; width: 0%; height: 1px; position: absolute; left: 50%; bottom: 0px; transform: translateX(-50%);
+								background: #005cff;
+								transition: 0.3s ease-out;
+							}
+							&:hover {
+								&:after {
+									width: 100%;
+								}
+							}
+						}
+					}
+				}
+			}
+			ul.actions {
+				display: flex; align-items: center; padding-top: 8px;
+				& > li {
+					display: flex; align-items: center; margin-right: 63px;
+					&:last-child {
+						margin-right: 0;
+					}
+					& > p, & > a {
+						color: #005cff; font-size: 18px; font-family: $ms-700; letter-spacing: 0.15px;
+						position: relative;
+					}
+					& > a {
+						line-height: 22px;
+						&:after {
+							content: '';
+							display: block; width: 0%; height: 1px; position: absolute; left: 50%; bottom: 0px; transform: translateX(-50%);
+							background: #005cff;
+							transition: 0.3s ease-out;
+						}
+						&:hover {
+							&:after {
+								width: 100%;
+							}
+						}
+					}
+					& > p {
+						margin-right: 24px;
+					}
+					ul {
+						display: flex;
+						li {
+							margin-right: 21px;
+							&:last-child {
+								margin-right: 0;
+							}
+							&.integr {
+								a {
+									i {
+										color: #24b324;
+									}
+								}
+							}
+							a {
+								font-size: 24px;
+								i {
+									color: $text-link; 
+								}
+							}
+						}
+					}
+				}
+			}
+			& > input[type=checkbox] {
+				display: none;
+			}
+			& > label {
+				color: #808080; font-size: 16px; font-family: $os-reg; font-weight: 400;
+				position: relative; margin: 11px 110px 16px 42px;
+				cursor: pointer;
+				&:hover {
+					color: #000000;
+				}
+				&:before {
+					content: '';
+					display: block; width: 18px; height: 18px; position: absolute; left: -30px; top: 2px;
+					border: solid 1px #b9bdc7; border-radius: 2px;
+				}
+			}
+			& > input[type=checkbox]:checked + label {
+				color: #000000;
+				&:before {
+					background: url('../img/check.png') center center no-repeat;
+				}
+			}
+			ul.btns {
+				align-items: center;
+				& > li {
+					margin-right: 57px;
+					&:last-child {
+						margin-right: 0;
+					}
+					button {
+
+					}
+					ul.socials {
+						display: flex;
+						li {
+							font-size: 18px; font-family: $ms-500;
+							margin-right: 21px;
+							&:last-child {
+								margin-right: 0;
+							}
+							a {
+								color: $text-link; font-size: 24px;
+								i {
+									color: inherit; font-size: inherit;
+								}
+							}
+						}
+					}
+				}
 			}
 		}
 	}

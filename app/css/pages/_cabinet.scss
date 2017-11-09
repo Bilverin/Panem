@@ -2,14 +2,32 @@
 	// wrapper for cabinet modules
 	&-wrap {
 		display: flex; padding: 0 16px;
+		@include respond-to(md) {
+			flex-wrap: wrap; padding: 0 15px;
+		}
+		@include respond-to(sm) {
+			padding: 0;
+		}
 	}
 
 	// navigation
 	&-nav {
-		padding-top: 47px; width: 207px; padding-right: 30px;
+		padding-top: 47px; width: 207px; padding-right: 30px; flex-shrink: 0;
+		@include respond-to(md) {
+			width: 100%; padding-right: 0; padding-top: 11px; margin-bottom: 30px;
+		}
+		@include respond-to(sm) {
+			padding: 10px 15px 0;
+		}
 		ul {
+			@include respond-to(md) {
+				display: flex; justify-content: flex-start;
+			}
 			li {
 				margin-bottom: 45px;
+				@include respond-to(md) {
+					margin-bottom: 0; margin-right: 49px;
+				}
 				&:last-child {
 					margin-bottom: 0;
 				}
@@ -19,15 +37,21 @@
 						content: '';
 						display: block; width: 10px; height: 10px; position: absolute; left: -16px; top: 45%; transform: translateY(-50%);
 						background: #000000; border-radius: 50%;
+						@include respond-to(md) {
+							content: none;
+						}
 					}
 					a {
-						color: #000000;
+						color: #000000; font-family: $ms-900;
 						pointer-events: none;
 					}
 				}
 				a {
 					color: #005bff; font-size: 18px; font-family: $ms-900; text-transform: uppercase; letter-spacing: 1.7px;
 					display: inline-block; position: relative;
+					@include respond-to(md) {
+						font-size: 22px; font-family: $ms-700; letter-spacing: 0.6px;
+					}
 					&:after {
 						content: '';
 						display: block; width: 0%; height: 2px; position: absolute; left: 50%; bottom: -2px; transform: translateX(-50%);
@@ -47,27 +71,109 @@
 	// profile
 	&-profile {
 		width: 800px;
+		@include respond-to(md) {
+			width: 100%;
+		}
+		@include respond-to(sm) {
+			width: auto; margin: 0 -15px;
+		}
 		form {
 			&.profile {
 				&-info {
 					padding: 36px 41px 39px 58px;
 					background: #f5f5f5;
+					@include respond-to(lg) {
+						padding: 36px 30px 39px; position: relative;
+					}
+					@include respond-to(sm) {
+						padding: 32px 30px 39px;
+						background: transparent;
+					}
+					.main-info {
+						@include respond-to(sm) {
+							position: relative; padding-left: 90px; margin-bottom: 67px;
+						}
+						a.ava-upload {
+							display: none; width: 60px; height: 60px; position: absolute; left: 4px; top: -15px;
+							background: #e5e5e5; border-radius: 50%;
+							overflow: hidden;
+							@include respond-to(sm) {
+								display: block;
+							}
+							i {
+								color: $text-link; font-size: 32px;
+								position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);
+							}
+						}
+					}
+					.social-integrate {
+						@include respond-to(sm) {
+							margin: 0 -30px; padding: 32px 30px 30px;
+							background: #f5f5f5;
+						}
+						& > a {
+							color: #000000; font-size: 32px; font-family: $ms-500;
+							display: none; position: relative;
+							@include respond-to(sm) {
+								display: block;
+							}
+							&:after {
+								content: '';
+								display: block; width: 18px; height: 18px; position: absolute; right: 4px; top: 50%; transform: translateY(-75%) rotate(225deg);
+								border-left: solid 2px #0947b4; border-top: solid 2px #0947b4;
+							}
+							&.active {
+								&:after {
+									transform: translateY(-25%) rotate(45deg);
+								}
+							}
+						}
+						.input-module {
+							@include respond-to(sm) {
+								width: 100%;
+							}
+							input {
+								@include respond-to(sm) {
+									font-size: 32px; line-height: 36px; letter-spacing: 0.1px;
+									padding-bottom: 8px;
+								}
+							}
+						}
+					}
 					.input-module {
 						display: flex; align-items: center; margin-bottom: 15px;
+						@include respond-to(sm) {
+							flex-wrap: wrap; margin-bottom: 29px;
+						}
 						& > p {
 							font-size: 14px; font-family: $os-reg; text-transform: uppercase; letter-spacing: 0.3px;
 							width: 84px;
+							@include respond-to(sm) {
+								font-size: 18px; font-family: $ms-500; letter-spacing: 1.1px;
+								width: 100%; padding: 0 12px; margin-bottom: 10px;
+							}
 						}
 						& > input {
 							font-size: 20px; font-family: $ms-500; letter-spacing: 0.48px;
 							width: 267px; height: 45px; padding: 0 8px;
 							border: solid 1px #b9bdc7; border-radius: 4px;
+							@include respond-to(sm) {
+								font-size: 44px; line-height: 52px; letter-spacing: -0.2px;
+								width: 100%; height: auto; padding: 0 8px 2px;
+								background: transparent; border: none; border-bottom: solid 2px #cccccc; border-radius: 0;
+							}
 							&.name {
 								width: calc(100% - 84px);
+								@include respond-to(sm) {
+									width: 100%;
+								}
 							}
 						}
 						ul.pass-actions {
 							display: flex; margin-left: 27px; padding-top: 4px;
+							@include respond-to(sm) {
+								display: none;
+							}
 							li {
 								margin-right: 25px;
 								&:last-child {
@@ -93,10 +199,21 @@
 					}
 					ul.actions {
 						display: flex; align-items: center; padding-top: 8px;
+						@include respond-to(sm) {
+							padding-left: 90px; display: none; padding-top: 10px;
+						}
 						& > li {
 							display: flex; align-items: center; margin-right: 63px;
+							@include respond-to(sm) {
+								flex-wrap: wrap;
+							}
 							&:last-child {
 								margin-right: 0;
+							}
+							&.ava-upload {
+								@include respond-to(sm) {
+									display: none;
+								}
 							}
 							& > p, & > a {
 								color: #005cff; font-size: 18px; font-family: $ms-700; letter-spacing: 0.15px;
@@ -118,11 +235,20 @@
 							}
 							& > p {
 								margin-right: 24px;
+								@include respond-to(sm) {
+									display: none;
+								}
 							}
 							ul {
 								display: flex;
+								@include respond-to(sm) {
+									width: 100%; padding-left: 12px; margin-bottom: 30px;
+								}
 								li {
 									margin-right: 21px;
+									@include respond-to(sm) {
+										margin-right: 40px;
+									}
 									&:last-child {
 										margin-right: 0;
 									}
@@ -130,15 +256,30 @@
 										a {
 											i {
 												color: #24b324;
+												@include respond-to(sm) {
+													color: $text-link;
+												}
 											}
 										}
 									}
 									a {
 										font-size: 24px;
+										@include respond-to(sm) {
+											font-size: 52px;
+										}
 										i {
 											color: $text-link; 
+											@include respond-to(sm) {
+												color: #cccccc;
+											}
 										}
 									}
+								}
+							}
+							.input-module {
+								display: none;
+								@include respond-to(sm) {
+									display: block;
 								}
 							}
 						}
@@ -150,44 +291,193 @@
 
 				&-add {
 					padding: 18px 0 0 58px;
+					@include respond-to(sm) {
+						padding: 18px 30px 0;
+					}
+
+					.add-info {
+						@include respond-to(sm) {
+							padding-left: 90px; padding-bottom: 44px; display: none;
+						}
+					}
+
+					.agree-info {
+						@include respond-to(sm) {
+							padding: 62px 30px 100px 131px; margin: 0 -30px;
+							background: #f5f5f5;
+						}
+						& > input[type=checkbox] {
+							display: none;
+						}
+						& > label {
+							color: #808080; font-size: 16px; font-family: $os-reg; font-weight: 400;
+							position: relative; margin-top: 25px; margin-left: 42px;
+							cursor: pointer;
+							@include respond-to(sm) {
+								color: #000000; font-size: 22px; line-height: 28px;
+								margin-left: 0; margin-top: 0;
+							}
+							&:hover {
+								color: #000000;
+							}
+							&:before {
+								content: '';
+								display: block; width: 18px; height: 18px; position: absolute; left: -30px; top: 2px;
+								border: solid 1px #b9bdc7; border-radius: 2px;
+								@include respond-to(sm) {
+									content: none;
+								}
+							}
+							span {
+								display: none; width: 52px; height: 18px; position: absolute; left: -83px; top: 10px;
+								background: #d9d9d9; border-radius: 7px;
+								transition: .3s ease-out;
+								@include respond-to(sm) {
+									display: block;
+								}
+								&:after {
+									content: '';
+									display: block; width: 32px; height: 32px; position: absolute; left: -1px; top: 50%; transform: translateY(-50%);
+									background: #ffffff; border: solid 1px #cdcdcd; border-radius: 50%;
+									transition: .3s ease-out;
+								}
+							}
+							br {
+								@include respond-to(sm) {
+									display: none;
+								}
+							}
+						}
+						& > input[type=checkbox]:checked + label {
+							color: #000000;
+							&:before {
+								background: url('../img/check.png') center center no-repeat;
+							}
+							span {
+								background: #b5c7e8;
+								&:after {
+									left: 21px;
+									background: #0947b4; border-color: #0947b4;
+								}
+							}
+						}
+						button {
+							margin-top: 40px;
+							@include respond-to(sm) {
+								margin-top: 61px;
+							}
+						}
+					}
+
 					& > h2 {
 						font-size: 42px; font-family: $ms-500;
 						margin-bottom: 15px;
+						@include respond-to(sm) {
+							display: none;
+						}
+					}
+					& > a {
+						color: #000000; font-size: 32px; font-family: $ms-500;
+						position: relative; display: none; margin-bottom: 9px;
+						@include respond-to(sm) {
+							display: block;
+						}
+						&:after {
+							content: '';
+							display: block; width: 18px; height: 18px; position: absolute; right: 4px; top: 50%; transform: translateY(-75%) rotate(225deg);
+							border-left: solid 2px #0947b4; border-top: solid 2px #0947b4;
+						}
+						&.active {
+							&:after {
+								transform: translateY(-25%) rotate(45deg);
+							}
+						}
 					}
 					& > p {
 						font-size: 18px; font-family: $os-reg; line-height: 25px; letter-spacing: -0.1px;
 						margin-bottom: 32px;
+						@include respond-to(sm) {
+							color: #4c4c4c; font-size: 22px; line-height: 34px; letter-spacing: 0.1px;
+							margin-bottom: 24px;
+						}
 					}
 					.input-module {
 						display: flex; align-items: center; margin-bottom: 15px;
+						@include respond-to(sm) {
+							flex-wrap: wrap; margin-bottom: 30px;
+						}
 						&.check {
 							padding-top: 13px;
+							@include respond-to(sm) {
+								padding-top: 0;
+							}
 							p {
 								align-self: flex-start;
+								@include respond-to(sm) {
+									margin-bottom: 23px;
+								}
 							}
 						}
 						& > p {
 							font-size: 14px; font-family: $os-reg; text-transform: uppercase;
 							width: 124px;
+							@include respond-to(sm) {
+								font-size: 18px; font-family: $ms-500; letter-spacing: 1.1px;
+								width: 100%; padding: 0 12px; margin-bottom: 10px;
+							}
 						}
 						& > input, & > select {
 							font-size: 20px; font-family: $ms-500; letter-spacing: 0.48px;
 							width: 297px; height: 45px; position: relative; padding: 0 8px;
 							border: solid 1px #b9bdc7; border-radius: 4px;
+							@include respond-to(sm) {
+								font-size: 32px; line-height: 36px; letter-spacing: 0.1px;
+								width: 100%; height: auto; padding: 0 8px 8px;
+								background: transparent; border: none; border-bottom: solid 2px #cccccc; border-radius: 0;
+							}
+						}
+						input {
+							&.mob {
+								display: none;
+								@include respond-to(sm) {
+									display: block;
+								}
+							}
 						}
 						select {
 							background: url('../img/select-arr.png') right 9px center no-repeat;
 							-moz-appearance: none;
+							@include respond-to(sm) {
+								display: none;
+							}
 						}
 						& > ul {
 							display: flex; flex-wrap: wrap; width: 406px; padding-left: 26px;
+							@include respond-to(sm) {
+								padding: 0 12px; width: 400px;
+							}
 							& > li {
 								width: 50%; padding-left: 32px; margin-bottom: 13px;
+								@include respond-to(sm) {
+									width: 100%; padding-left: 0; margin-bottom: 18px;
+								}
 								&:last-child {
 									margin-bottom: 0;
 								}
 								&.another {
 									width: 100%; margin-top: -5px;
+									input {
+										@include respond-to(sm) {
+											display: none;
+										}
+									}
+									a {
+										color: #0947b4; font-size: 26px; font-family: $ms-700;
+										display: none;
+										@include respond-to(sm) {
+											display: inline-block;
+										}
+									}
 								}
 								input[type=checkbox] {
 									display: none;
@@ -206,6 +496,10 @@
 									color: #808080; font-size: 16px; font-family: $os-reg; font-weight: 400; text-transform: lowercase;
 									position: relative; display: inline-block;
 									cursor: pointer;
+									@include respond-to(sm) {
+										font-size: 26px; font-family: $ms-500; text-transform: initial;
+										display: flex; align-items: center; justify-content: space-between;
+									}
 									&:hover {
 										color: #000000;
 									}
@@ -213,12 +507,36 @@
 										content: '';
 										display: block; width: 18px; height: 18px; position: absolute; left: -32px; top: 50%; transform: translateY(-50%);
 										border: solid 1px #b9bdc7; border-radius: 2px;
+										@include respond-to(sm) {
+											content: none;
+										}
+									}
+									span {
+										display: none; width: 52px; height: 18px; position: relative;
+										background: #d9d9d9; border-radius: 7px;
+										transition: .3s ease-out;
+										@include respond-to(sm) {
+											display: block;
+										}
+										&:after {
+											content: '';
+											display: block; width: 32px; height: 32px; position: absolute; left: -1px; top: 50%; transform: translateY(-50%);
+											background: #ffffff; border: solid 1px #cdcdcd; border-radius: 50%;
+											transition: .3s ease-out;
+										}
 									}
 								}
 								input:checked + label {
 									color: #000000;
 									&:before {
 										background: url('../img/check.png') center center no-repeat;
+									}
+									span {
+										background: #b5c7e8;
+										&:after {
+											left: 21px;
+											background: #0947b4; border-color: #0947b4;
+										}
 									}
 								}
 								input[type=checkbox]:checked + label + input[type=text] {
@@ -230,31 +548,6 @@
 								}
 							}
 						}
-					}
-					& > input[type=checkbox] {
-						display: none;
-					}
-					& > label {
-						color: #808080; font-size: 16px; font-family: $os-reg; font-weight: 400;
-						position: relative; margin-top: 25px; margin-left: 42px;
-						cursor: pointer;
-						&:hover {
-							color: #000000;
-						}
-						&:before {
-							content: '';
-							display: block; width: 18px; height: 18px; position: absolute; left: -30px; top: 2px;
-							border: solid 1px #b9bdc7; border-radius: 2px;
-						}
-					}
-					& > input[type=checkbox]:checked + label {
-						color: #000000;
-						&:before {
-							background: url('../img/check.png') center center no-repeat;
-						}
-					}
-					button {
-						margin-top: 40px;
 					}
 				}
 			}

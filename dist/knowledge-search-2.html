@@ -55,16 +55,56 @@
 								<p>База знаний</p>
 								<a href="index.html" class="logo">
 									<img src="assets/img/header-logo.png">
-									<img class="mob" src="assets/img/header-logo-mob.png">
+									<img class="lg" src="assets/img/header-home.png">
 								</a>
 								<nav class="js-headerNav">
 									<ul>
+										<li class="main"><a href="index.html">Главная</a></li>
 										<li><a href="company.html">О компании</a></li>
 										<li><a href="catalog.html">Продукция</a></li>
 										<li><a href="events.html">Мероприятия</a></li>
 										<li class="active"><a href="knowledge.html">База знаний</a></li>
-										<li><a href="contacts.html">Как купить/контакты</a></li>
-										<li><a href="#" class="personal-area"><i class="icon icon-key"></i>Личный кабинет</a></li>
+										<li><a href="contacts.html"><span>Как купить/контакты</span><span class="mob">Контакты</span></a></li>
+										<li>
+											<a href="#" class="personal-area js-logIn"><i class="icon icon-key"></i>Личный кабинет</a>
+											<div class="logIn js-popupLogIn">
+												<form action="#">
+													<input type="text" placeholder="Э/почта">
+													<input type="text" placeholder="Пароль">
+													<input id="login1" type="checkbox">
+													<label for="login1">Чужой компьютер</label>
+													<ul class="btns">
+														<li>
+															<a href="#" class="btn-3 disabled">Войти</a>
+														</li>
+														<li>
+															<a href="#" class="pass-recov">Восстановить пароль</a>
+														</li>
+													</ul>
+													<ul class="btns">
+														<li>
+															<ul class="socials">
+																<li>
+																	<a href="#"><i class="fa fa-vk"></i></a>
+																</li>
+																<li>
+																	<a href="#"><i class="fa fa-facebook"></i></a>
+																</li>
+																<li>
+																	<a href="#"><i class="fa fa-google"></i></a>
+																</li>
+																<li>
+																	<a href="#">...</a>
+																</li>
+															</ul>
+														</li>
+														<li>
+															<a href="#" class="registr js-popupReg">Регистрация</a>
+														</li>
+													</ul>
+												</form>
+											</div>
+										</li>
 									</ul>
 									<div class="city">
 										<a href="tel:+78462771307" class="phone">+7 (846) <span>277-13-07</span></a>
@@ -110,6 +150,26 @@
 										<li>
 											<a href="#">
 												Рецепты
+											</a>
+										</li>
+									</ul>
+									<ul class="mob">
+										<li class="active">
+											<a href="#">
+												Рецепты
+												<span>57</span>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Статьи
+												<span>12</span>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Печатные материалы
+												<span>9</span>
 											</a>
 										</li>
 									</ul>
@@ -223,18 +283,33 @@
 									<form action="#" class="disabled">
 										<textarea></textarea>
 										<p>Возможность оставлять отзывы к материалам появляется после <a href="#">регистрации</a>.</p>
+										<p class="mob">Отзывы доступны после регистрации</p>
 									</form>
 									<div class="testi">
-										<h4>1 отзыв</h4>
-										<select>
-											<option value="1">Сначала новые</option>
-										</select>
+										<div class="testi-header">
+											<h4>1 отзыв</h4>
+											<select>
+												<option value="1">Сначала новые</option>
+												<option value="2">Сначала старые</option>
+											</select>
+											<div class="sort-block">
+												<a href="#" class="sort js-sort"><i class="icon icon-sort-sett"></i></a>
+												<ul class="sort-popup js-sortPopup">
+													<li class="active">
+														<a href="#"><i class="icon icon-sort-check"></i>Новые сверху</a>
+													</li>
+													<li>
+														<a href="#"><i class="icon icon-sort-check"></i>Новые снизу</a>
+													</li>
+												</ul>
+											</div>
+										</div>
 										<ul>
 											<li>
 												<a href="#">
 													<img src="assets/img/ava-1.png">
 												</a>
-												<h4><a href="">Хьюберт Урбанский</a>, Миллениум Банк, Москва</h4>
+												<h4><a href="">Хьюберт Урбанский</a>, <span>Миллениум Банк, Москва</span></h4>
 												<span class="date">2 августа 2017, 11:22</span>
 												<p>Спасибо, супер-семинар! Самара — самая сладкая, светлая, стильная!</p>
 											</li>
@@ -272,7 +347,60 @@
 	</div>
 
 	<!-- Plugins -->
-	<div class="popup"></div>
+	<div class="popup-registration js-popupRegistr">
+		<a href="#" class="close b-close"></a>
+		<h2>Новый пользователь</h2>
+		<form action="#">
+			<div class="input-module">
+				<p>Имя</p>
+				<input class="name" type="text">
+			</div>
+			<div class="input-module">
+				<p>Э/Почта</p>
+				<input type="text">
+			</div>
+			<div class="input-module">
+				<p>Телефон</p>
+				<input type="text">
+			</div>
+			<div class="input-module">
+				<p>Пароль</p>
+				<input class="pass js-pass" type="password">
+				<ul class="pass-actions">
+					<li>
+						<a href="#" class="js-passShowHide">Показать</a>
+					</li>
+				</ul>
+			</div>
+			<input id="popupReg1" type="checkbox">
+			<label for="popupReg1">Я соглашаюсь с политикой конфиденциальности и даю согласие на обработку и хранение моих персональных данных</label>
+			<ul class="btns">
+				<li>
+					<button class="btn-2 disabled">Регистрировать</a>
+				</li>
+				<li>
+					<ul class="socials">
+						<li>Войти через соцсеть:</li>
+						<li>
+							<a href="#"><i class="fa fa-vk"></i></a>
+						</li>
+						<li>
+							<a href="#"><i class="fa fa-facebook"></i></a>
+						</li>
+						<li>
+							<a href="#"><i class="fa fa-google"></i></a>
+						</li>
+						<li>
+							<a href="#"><i class="fa fa-twitter"></i></a>
+						</li>
+						<li>
+							<a href="#"><i class="fa fa-odnoklassniki"></i></a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</form>
+	</div>
 	
 	<!-- Scripts -->
 	<script type="text/javascript" src="assets/js/libs.min.js"></script>
