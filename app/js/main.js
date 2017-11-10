@@ -64,7 +64,7 @@ $(document).ready(function() {
 
 		$('.js-sortPopup').toggleClass('active');
 	});
-	$('.js-sortPopup a').click(function(e) {
+	$('.js-sortPopup li a').click(function(e) {
 		e.preventDefault();
 
 		$('.js-sortPopup').find('li.active').removeClass('active');
@@ -96,6 +96,13 @@ $(document).ready(function() {
 		$(this).toggleClass('active');
 		$(accordList).slideToggle();
 	});
+
+	// режим редактирования на странице "Избранное" в личном кабинете
+	$('.js-redact').click(function(e) {
+		e.preventDefault();
+
+		$('.js-favouriteRed').addClass('active');
+	});
 });
 
 $(window).resize(function() {
@@ -124,7 +131,7 @@ $(window).resize(function() {
 // Закрытие всплывающих окон при клике в любую точку сайта кроме самого блока
 $(document).mouseup(function (e) {
 	var cityBlock = $("div.city"),
-		sortList = $("div.sort-block"),
+		sortList = $(".sort-popup").parent(),
 		logInWrap = $('.logIn').parent();
 	if (cityBlock.has(e.target).length === 0){
 		$('.js-cityDropdown').removeClass('active');

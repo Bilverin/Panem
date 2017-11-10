@@ -409,6 +409,9 @@
 				font-size: 26px;
 				padding-left: 40px;
 			}
+			@include respond-to(xs) {
+				padding-left: 0;
+			}
 		}
 
 		& > ul {
@@ -452,6 +455,9 @@
 						font-size: 20px;
 						padding-left: 40px;
 					}
+					@include respond-to(xs) {
+						padding-left: 0;
+					}
 				}
 
 				div {
@@ -462,12 +468,18 @@
 					@include respond-to(539px) {
 						padding-left: 40px;
 					}
+					@include respond-to(xs) {
+						padding-left: 0;
+					}
 					&:before {
 						content: '';
 						display: block; width: 32px; height: 33px; position: absolute; left: -49px; top: 1px;
 						background: url('../img/news-cloud.png') center center no-repeat;
 						@include respond-to(sm) {
 							left: 0; top: 4px;
+						}
+						@include respond-to(xs) {
+							display: none;
 						}
 					}
 					&.youtube {
@@ -507,6 +519,9 @@
 					@include respond-to(539px) {
 						padding-left: 40px; padding-top: 0;
 					}
+					@include respond-to(xs) {
+						padding-left: 0;
+					}
 					li {
 						padding: 0 9px 0 10px;
 						border-right: solid 1px #d8d8d9;
@@ -517,6 +532,9 @@
 						@include respond-to(539px) {
 							padding: 0 8px 0 7px;
 							border-width: 1px;
+						}
+						@include respond-to(xs) {
+							padding: 0 6px 0 5px;
 						}
 						&:first-child {
 							padding-left: 0;
@@ -532,6 +550,9 @@
 							}
 							@include respond-to(539px) {
 								font-size: 16px;
+							}
+							@include respond-to(xs) {
+								font-size: 14px;
 							}
 							&:hover {
 								color: #0062ff;
@@ -801,6 +822,14 @@
 		h4 {
 			font-size: 18px; font-family: $os-reg; text-transform: uppercase; text-align: center; line-height: 25px; letter-spacing: -0.05px;
 			margin-bottom: 31px;
+			@include respond-to(md) {
+				font-size: 16px; line-height: 22px;
+			}
+			br {
+				@include respond-to(md) {
+					display: none;
+				}
+			}
 		}
 
 		p {

@@ -575,6 +575,10 @@
 						margin-bottom: 0;
 					}
 					&.active {
+						display: none;
+						@include respond-to(1399px) {
+							display: block;
+						}
 						a {
 							color: #000000;
 							pointer-events: none;

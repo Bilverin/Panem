@@ -1,38 +1,98 @@
 .contacts {
 	padding: 0 0 0 50px;
+	@include respond-to(1399px) {
+		padding: 0;
+	}
 	& > h4 {
 		font-size: 22px; font-family: $os-reg; letter-spacing: 0.1px;
 		margin-bottom: 29px;
+		@include respond-to(md) {
+			font-size: 32px;
+		}
+		@include respond-to(639px) {
+			font-size: 22px;
+		}
 		b {
 			font-family: $ms-900; letter-spacing: 1.8px;
 		}
 		span {
 			font-size: 18px; letter-spacing: 0;
 			display: block; margin-top: 11px;
+			@include respond-to(md) {
+				font-size: 26px;
+			}
+			@include respond-to(639px) {
+				font-size: 18px;
+			}
 		}
 	}
 	& > p {
 		font-size: 18px; font-family: $os-reg; letter-spacing: -0.1px; line-height: 30px;
 		padding-top: 1px; padding-right: 260px; margin-bottom: 60px;
+		@include respond-to(md) {
+			font-size: 26px; line-height: 34px; 
+			padding-right: 0;
+		}
+		@include respond-to(639px) {
+			font-size: 18px; line-height: 25px;
+		}
 		b {
 			font-family: $ms-900; letter-spacing: 1.6px;
 		}
 	}
 	& > ul {
 		display: flex;
+		@include respond-to(1399px) {
+			justify-content: space-between;
+		}
+		@include respond-to(md) {
+			flex-wrap: wrap;
+		}
 		& > li {
+			@include respond-to(md) {
+				margin-bottom: 30px;
+			}
 			&:first-child {
 				width: 38.6%;
+				@include respond-to(1399px) {
+					width: 30%;
+				}
+				@include respond-to(md) {
+					width: 100%;
+				}
 			}
 			&:nth-child(2) {
 				width: 34.76%;
+				@include respond-to(1399px) {
+					width: 30%;
+				}
+				@include respond-to(md) {
+					width: 100%;
+				}
 			}
 			&:last-child {
 				width: 26.64%;
+				@include respond-to(1399px) {
+					width: 30%;
+				}
+				@include respond-to(md) {
+					width: 100%;
+				}
 			}
 			h4 {
 				font-size: 28px; font-family: $ms-500; letter-spacing: 0.2px;
 				margin-bottom: 15px;
+				@include respond-to(lg) {
+					font-size: 24px;
+					margin-bottom: 10px;
+				}
+				@include respond-to(md) {
+					font-size: 36px;
+				}
+				@include respond-to(639px) {
+					font-size: 24px;
+					margin-bottom: 10px;
+				}
 			}
 
 			ul {
@@ -40,6 +100,18 @@
 				li {
 					font-size: 18px; font-family: $os-reg; line-height: 25px; letter-spacing: 0px;
 					margin-bottom: 11px;
+					@include respond-to(lg) {
+						font-size: 16px; line-height: 22px;
+						margin-bottom: 5px;
+					}
+					@include respond-to(md) {
+						font-size: 26px; line-height: 34px; 
+						padding-right: 0;
+					}
+					@include respond-to(639px) {
+						font-size: 16px; line-height: 22px;
+						margin-bottom: 5px;
+					}
 					&:last-child {
 						margin-bottom: 0;
 					}
@@ -48,6 +120,18 @@
 
 			p {
 				font-size: 22px; font-family: $os-reg; letter-spacing: 0.1px;
+				@include respond-to(lg) {
+					font-size: 18px;
+				}
+				@include respond-to(md) {
+					font-size: 32px;
+				}
+				@include respond-to(639px) {
+					font-size: 18px;
+				}
+				span {
+					white-space: nowrap;
+				}
 			}
 		}
 	}

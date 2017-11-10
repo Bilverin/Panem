@@ -3,10 +3,32 @@
 	&-header {
 		img {
 			margin-left: -149px; position: relative; top: -5px;
+			@include respond-to(lg) {
+				width: 500px;
+			}
+			@include respond-to(md) {
+				width: 304px; margin-left: -110px;
+			}
+			@include respond-to(sm) {
+				display: none;
+			}
 		}
 		h1 {
 			font-size: 48px; font-family: $ms-500; line-height: 50px; letter-spacing: -0.2px;
 			display: inline-block; vertical-align: top; padding-top: 149px; position: relative; left: -8px;
+			@include respond-to(lg) {
+				font-size: 40px; line-height: 42px;
+			}
+			@include respond-to(md) {
+				font-size: 36px; line-height: 38px;
+				padding-top: 90px;
+			}
+			@include respond-to(sm) {
+				padding-top: 0; left: 0;
+			}
+			@include respond-to(639px) {
+				font-size: 30px; line-height: 34px;
+			}
 			b {
 				font-family: $ms-900; letter-spacing: 2.7px;
 			}
@@ -16,24 +38,53 @@
 	// info
 	&-info {
 		display: flex; padding: 0 50px 0 50px;
+		@include respond-to(lg) {
+			padding: 0;
+		}
+		@include respond-to(md) {
+			flex-wrap: wrap;
+		}
 		.about {
-			width: 72.5%; padding-top: 43px; padding-right: 80px;
+			width: 72.5%; padding-top: 43px; padding-right: 80px; position: relative; z-index: 2;
+			@include respond-to(1399px) {
+				width: 67.5%;
+			}
+			@include respond-to(md) {
+				width: 100%; padding-right: 0;
+			}
 			&:last-child {
 				width: 100%; padding-top: 0; padding-right: 0;
 			}
 			p {
 				font-size: 22px; font-family: $ms-500; line-height: 30px; letter-spacing: 0.15px;
 				margin-bottom: 25px;
+				@include respond-to(639px) {
+					font-size: 18px; line-height: 25px;
+				}
 				&:last-child {
 					margin-bottom: 0;
 				}
 				b {
 					font-family: $ms-900; letter-spacing: 1.8px;
 				}
+				br {
+					@include respond-to(md) {
+						display: none;
+					}
+				}
 			}
 
 			ul {
 				padding-top: 38px; width: 495px; margin-bottom: 84px;
+				@include respond-to(1399px) {
+					width: 425px;
+				}
+				@include respond-to(md) {
+					width: 100%; padding-top: 0; margin-bottom: 40px;
+				}
+				@include respond-to(639px) {
+					margin-bottom: 0;
+				}
 				li {
 					font-size: 16px; font-family: $os-reg; line-height: 26px; letter-spacing: 0.04px;
 					margin-bottom: 25px;
@@ -42,16 +93,36 @@
 					}
 					i {
 						margin-bottom: -3px; position: relative; top: 2px;
+						@include respond-to(639px) {
+							display: none;
+						}
+					}
+					br {
+						@include respond-to(1399px) {
+							display: none;
+						}
 					}
 				}
 			}
 		}
 
 		.map {
-			width: 27.5%;
+			width: 27.5%; position: relative; z-index: 1;
+			@include respond-to(1399px) {
+				width: 32.5%;
+			}
+			@include respond-to(md) {
+				width: 100%; margin-bottom: 60px;
+			}
 			blockquote {
 				position: relative; top: -28px; padding: 0; margin: 0; width: 380px; margin-bottom: 89px;
 				border: none;
+				@include respond-to(lg) {
+					width: auto;
+				}
+				@include respond-to(md) {
+					display: none;
+				}
 				p {
 					color: #b2b2b2; font-size: 15px; font-family: $ms-500; line-height: 20px; letter-spacing: 0.9px; text-transform: uppercase;
 					margin-bottom: 7px;
@@ -68,8 +139,20 @@
 				}
 			}
 			figure {
+				@include respond-to(639px) {
+					display: none;
+				}
 				img {
 					position: relative; left: 14px; transform: translateX(-50%);
+					@include respond-to(1399px) {
+						left: 100px;
+					}
+					@include respond-to(lg) {
+						width: 600px;
+					}
+					@include respond-to(md) {
+						width: 100%; left: 0; transform: translateX(0);
+					}
 				}
 			}
 		}

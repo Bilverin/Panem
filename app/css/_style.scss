@@ -130,6 +130,9 @@
 		&-company {
 			&-about {
 				padding: 0 0 138px;
+				@include respond-to(md) {
+					padding-top: 60px;
+				}
 			}
 			&-partners {
 				@extend .wr-main-partners;
@@ -144,6 +147,9 @@
 		&-contacts {
 			&-info {
 				padding: 110px 0 74px;
+				@include respond-to(md) {
+					padding-top: 80px;
+				}
 			}
 			&-map {
 				figure {
