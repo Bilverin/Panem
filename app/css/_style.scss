@@ -72,7 +72,7 @@
 			// News and Contacts
 			&-info {
 				position: relative; z-index: 2; padding: 121px 0 139px;
-				background: url('../img/info-bg.png') left top no-repeat;
+				background: url('../img/info-bg.png') left top no-repeat; background-size: contain;
 				@include respond-to(sm) {
 					padding: 86px 0 74px;
 				}

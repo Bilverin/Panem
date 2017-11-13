@@ -24,6 +24,9 @@
 	<link rel="stylesheet" href="assets/css/main.css">
 	<link rel="stylesheet" href="assets/css/print.css" media="print">
 
+	<!-- JS -->
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+
 	<title>ПАНЭМ</title>
 </head>
 
@@ -473,7 +476,7 @@
 			</div>
 			<div class="input-module">
 				<p>Телефон</p>
-				<input type="text">
+				<input type="phone">
 			</div>
 			<div class="input-module">
 				<p>Пароль</p>
@@ -485,10 +488,10 @@
 				</ul>
 			</div>
 			<input id="popupReg1" type="checkbox">
-			<label for="popupReg1">Я соглашаюсь с политикой конфиденциальности и даю согласие на обработку и хранение моих персональных данных</label>
+			<label for="popupReg1"><span></span>Я соглашаюсь с политикой конфиденциальности и даю согласие на обработку и хранение моих персональных данных</label>
 			<ul class="btns">
 				<li>
-					<button class="btn-2 disabled">Регистрировать</a>
+					<button class="btn-2">Регистрировать</a>
 				</li>
 				<li>
 					<ul class="socials">
@@ -514,8 +517,48 @@
 		</form>
 	</div>
 	
+	<div class="popup-login js-loginPopup">
+		<a href="#" class="close b-close"></a>
+		<form action="#">
+			<input type="text" placeholder="Э/почта">
+			<input type="text" placeholder="Пароль">
+			<input id="login1" type="checkbox">
+			<label for="login1">Чужой компьютер</label>
+			<ul class="btns">
+				<li>
+					<a href="#" class="btn-3 disabled">Войти</a>
+				</li>
+				<li>
+					<a href="#" class="pass-recov">Восстановить пароль</a>
+				</li>
+			</ul>
+			<ul class="btns">
+				<li>
+					<ul class="socials">
+						<li>
+							<a href="#"><i class="fa fa-vk"></i></a>
+						</li>
+						<li>
+							<a href="#"><i class="fa fa-facebook"></i></a>
+						</li>
+						<li>
+							<a href="#"><i class="fa fa-google"></i></a>
+						</li>
+						<li>
+							<a href="#">...</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#" class="registr js-popupReg">Регистрация</a>
+				</li>
+			</ul>
+		</form>
+	</div>
+	
 	<!-- Scripts -->
 	<script type="text/javascript" src="assets/js/libs.min.js"></script>
+	<script type="text/javascript" src="assets/js/input.masked.min.js"></script>
 	<script type="text/javascript" src="assets/js/main.js"></script>
 </body>
 </html>

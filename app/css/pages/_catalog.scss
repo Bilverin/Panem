@@ -97,9 +97,9 @@
 		& > ul {
 			display: flex; justify-content: space-between;
 			& > li {
-				padding-right: 25px;
+				padding-right: 25px; max-width: 335px;
 				@include respond-to(1399px) {
-					width: 33.33333%; margin-bottom: 60px;
+					width: 33.33333%; margin-bottom: 60px; max-width: none;
 				}
 				@include respond-to(md) {
 					width: 50%; padding-right: 40px;

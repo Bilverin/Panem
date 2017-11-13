@@ -7991,49 +7991,49 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 
 .icon-clip {
   background-image: url(../img/sprite.png);
-  background-position: -252px -161px;
+  background-position: -237px -168px;
   width: 12px;
   height: 24px; }
 
 .icon-company-location-1 {
   background-image: url(../img/sprite.png);
-  background-position: -252px -64px;
+  background-position: -252px -220px;
   width: 16px;
   height: 20px; }
 
 .icon-company-location-2 {
   background-image: url(../img/sprite.png);
-  background-position: -252px -104px;
+  background-position: -224px -206px;
   width: 16px;
   height: 20px; }
 
 .icon-company-location-3 {
   background-image: url(../img/sprite.png);
-  background-position: -252px -44px;
+  background-position: -252px -160px;
   width: 16px;
   height: 20px; }
 
 .icon-compose-active {
   background-image: url(../img/sprite.png);
-  background-position: -134px -168px;
+  background-position: -136px -206px;
   width: 30px;
   height: 30px; }
 
 .icon-compose {
   background-image: url(../img/sprite.png);
-  background-position: -104px -168px;
+  background-position: -166px -206px;
   width: 30px;
   height: 30px; }
 
 .icon-delete {
   background-image: url(../img/sprite.png);
-  background-position: -264px -161px;
+  background-position: -274px -44px;
   width: 8px;
   height: 8px; }
 
 .icon-docx {
   background-image: url(../img/sprite.png);
-  background-position: -183px -121px;
+  background-position: -205px -168px;
   width: 32px;
   height: 32px; }
 
@@ -8045,73 +8045,85 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 
 .icon-down {
   background-image: url(../img/sprite.png);
-  background-position: -262px -214px;
+  background-position: -272px -123px;
   width: 10px;
   height: 6px; }
 
 .icon-exit-black {
   background-image: url(../img/sprite.png);
-  background-position: -150px -198px;
+  background-position: -252px -44px;
   width: 22px;
   height: 24px; }
 
 .icon-exit-blue, .header nav > ul > li a.personal-area i.icon-exit {
   background-image: url(../img/sprite.png);
-  background-position: -172px -198px;
+  background-position: -252px -92px;
   width: 22px;
   height: 24px; }
 
 .icon-exit-white, .header nav > ul > li.active a.personal-area i.icon-exit {
   background-image: url(../img/sprite.png);
-  background-position: -128px -198px;
+  background-position: -252px -68px;
   width: 22px;
   height: 24px; }
 
 .icon-eye {
   background-image: url(../img/sprite.png);
-  background-position: -222px -168px;
+  background-position: -252px 0px;
   width: 30px;
   height: 20px; }
 
 .icon-header-search {
   background-image: url(../img/sprite.png);
-  background-position: -104px -198px;
+  background-position: -252px -20px;
   width: 24px;
   height: 24px; }
 
+.icon-home {
+  background-image: url(../img/sprite.png);
+  background-position: -137px -168px;
+  width: 34px;
+  height: 34px; }
+
 .icon-key {
   background-image: url(../img/sprite.png);
-  background-position: -252px -144px;
+  background-position: 0px -242px;
   width: 17px;
   height: 17px; }
 
+.icon-like {
+  background-image: url(../img/sprite.png);
+  background-position: -186px -121px;
+  width: 36px;
+  height: 36px; }
+
 .icon-link-mark-mob {
   background-image: url(../img/sprite.png);
-  background-position: -252px 0px;
+  background-position: -252px -116px;
   width: 20px;
   height: 26px; }
 
 .icon-link-mark {
   background-image: url(../img/sprite.png);
-  background-position: -252px -185px;
+  background-position: -268px -160px;
   width: 14px;
   height: 18px; }
 
 .icon-logo-tab {
   background-image: url(../img/sprite.png);
-  background-position: -164px -168px;
+  background-position: -222px -121px;
   width: 30px;
   height: 30px; }
 
 .icon-map-marker-active, .header .right div.city > a.active i.map-marker {
   background-image: url(../img/sprite.png);
-  background-position: -252px -84px;
+  background-position: -252px -180px;
   width: 16px;
   height: 20px; }
 
 .icon-map-marker, .header .right div.city > a i.map-marker {
   background-image: url(../img/sprite.png);
-  background-position: -252px -124px;
+  background-position: -252px -200px;
   width: 16px;
   height: 20px; }
 
@@ -8123,13 +8135,13 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 
 .icon-print {
   background-image: url(../img/sprite.png);
-  background-position: -215px -121px;
+  background-position: -104px -206px;
   width: 32px;
   height: 32px; }
 
 .icon-search {
   background-image: url(../img/sprite.png);
-  background-position: -252px -26px;
+  background-position: -252px -142px;
   width: 18px;
   height: 18px; }
 
@@ -8139,29 +8151,41 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   width: 104px;
   height: 121px; }
 
+.icon-snowflake {
+  background-image: url(../img/sprite.png);
+  background-position: -150px -121px;
+  width: 36px;
+  height: 36px; }
+
 .icon-sort-check {
   background-image: url(../img/sprite.png);
-  background-position: -252px -203px;
+  background-position: -150px -157px;
   width: 16px;
   height: 11px; }
 
 .icon-sort-sett {
   background-image: url(../img/sprite.png);
-  background-position: -194px -168px;
+  background-position: -196px -206px;
   width: 28px;
   height: 28px; }
 
 .icon-tortila {
   background-image: url(../img/sprite.png);
-  background-position: -150px -121px;
+  background-position: -104px -168px;
   width: 33px;
   height: 38px; }
 
 .icon-up {
   background-image: url(../img/sprite.png);
-  background-position: -252px -214px;
+  background-position: -272px -116px;
   width: 10px;
   height: 7px; }
+
+.icon-world {
+  background-image: url(../img/sprite.png);
+  background-position: -171px -168px;
+  width: 34px;
+  height: 34px; }
 
 /*********************************/
 /********** Typography ***********/
@@ -8315,7 +8339,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
       background: #dfdfdf;
       border-color: #dfdfdf;
       pointer-events: none; }
-  .btn-3, .header .logIn form ul.btns > li > a.btn-3 {
+  .btn-3, .logIn form ul.btns > li > a.btn-3, .popup-login form ul.btns > li > a.btn-3 {
     color: #ffffff;
     font-size: 18px;
     font-family: "museosanscyrl-900", sans-serif;
@@ -8329,10 +8353,10 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
     border-radius: 4px;
     -webkit-transition: .2s ease-out;
     transition: .2s ease-out; }
-    .btn-3:hover, .header .logIn form ul.btns > li > a.btn-3:hover {
+    .btn-3:hover, .logIn form ul.btns > li > a.btn-3:hover, .popup-login form ul.btns > li > a.btn-3:hover {
       color: #005cff;
       background: #ffffff; }
-    .btn-3.disabled, .header .logIn form ul.btns > li > a.disabled.btn-3 {
+    .btn-3.disabled, .logIn form ul.btns > li > a.disabled.btn-3, .popup-login form ul.btns > li > a.disabled.btn-3 {
       background: #dfdfdf;
       border-color: #dfdfdf;
       pointer-events: none; }
@@ -8354,6 +8378,121 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 /*********************************/
 /*********** Modules *************/
 /*********************************/
+.logIn, .header .logIn {
+  width: 356px;
+  padding: 0 35px 35px;
+  position: absolute;
+  left: -13px;
+  bottom: -15px;
+  -webkit-transform: translate(-10%, 100%);
+  -ms-transform: translate(-10%, 100%);
+  transform: translate(-10%, 100%);
+  background: #ffffff;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: .3s ease-out;
+  transition: .3s ease-out; }
+  @media (max-width: 1099px) {
+    .logIn, .header .logIn {
+      padding: 35px; } }
+  .logIn.active {
+    -webkit-transform: translate(0%, 100%);
+    -ms-transform: translate(0%, 100%);
+    transform: translate(0%, 100%);
+    opacity: 1;
+    pointer-events: all; }
+  .logIn form input[type=text] {
+    color: #000000;
+    font-size: 20px;
+    font-family: "museosanscyrl-500", sans-serif;
+    letter-spacing: -0.3px;
+    display: block;
+    width: 100%;
+    padding: 0 12px;
+    height: 40px;
+    margin-bottom: 10px;
+    border: solid 1px #b9bdc7;
+    -webkit-border-radius: 4px;
+    border-radius: 4px; }
+    .logIn form input[type=text]::-webkit-input-placeholder {
+      color: #cccccc; }
+    .logIn form input[type=text]::-moz-placeholder {
+      color: #cccccc; }
+    .logIn form input[type=text]:-moz-placeholder {
+      color: #cccccc; }
+    .logIn form input[type=text]:-ms-input-placeholder {
+      color: #cccccc; }
+  .logIn form input[type=checkbox] {
+    display: none; }
+  .logIn form input[type=checkbox]:checked ~ label:before {
+    background: url("../img/check.png") center center no-repeat; }
+  .logIn form label, .header .logIn form label {
+    font-size: 14px;
+    font-family: "opensans-regular", sans-serif;
+    position: relative;
+    padding-left: 27px;
+    margin-left: 11px;
+    margin-bottom: 10px;
+    cursor: pointer; }
+    .logIn form label:before, .header .logIn form label:before {
+      content: '';
+      display: block;
+      width: 18px;
+      height: 18px;
+      position: absolute;
+      left: 1px;
+      top: 1px;
+      border: solid 1px #b9bdc7;
+      -webkit-border-radius: 4px;
+      border-radius: 4px; }
+  .logIn form ul.btns {
+    margin-bottom: 10px; }
+    .logIn form ul.btns:last-child {
+      margin-bottom: 0; }
+    .logIn form ul.btns > li {
+      margin-right: 0; }
+      .logIn form ul.btns > li:first-child {
+        width: 130px;
+        -webkit-flex-shrink: 0;
+        -ms-flex-negative: 0;
+        flex-shrink: 0; }
+      .logIn form ul.btns > li > a.pass-recov {
+        color: #0141b2;
+        font-size: 14px;
+        font-family: "opensans-regular", sans-serif;
+        text-decoration: underline;
+        text-transform: initial;
+        letter-spacing: 0.1px;
+        margin-bottom: 5px; }
+        .logIn form ul.btns > li > a.pass-recov:hover {
+          text-decoration: none; }
+        .logIn form ul.btns > li > a.pass-recov:after {
+          content: none; }
+      .logIn form ul.btns > li > a.registr {
+        color: #005dff;
+        font-size: 18px;
+        font-family: "museosanscyrl-900", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 2px; }
+        .logIn form ul.btns > li > a.registr:after {
+          background: #005dff; }
+      .logIn form ul.btns > li ul.socials {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        padding-left: 4px; }
+        .logIn form ul.btns > li ul.socials li {
+          margin-right: 11px; }
+          .logIn form ul.btns > li ul.socials li:last-child {
+            margin-right: 0; }
+          .logIn form ul.btns > li ul.socials li a {
+            font-size: 22px; }
+            .logIn form ul.btns > li ul.socials li a:after {
+              content: none; }
+            .logIn form ul.btns > li ul.socials li a i {
+              color: #0141b2; }
+
 .header {
   display: -webkit-box;
   display: -webkit-flex;
@@ -8399,117 +8538,9 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
       .header .left > p {
         font-size: 20px;
         line-height: 30px; } }
-  .header .logIn {
-    width: 356px;
-    padding: 0 35px 35px;
-    position: absolute;
-    left: -13px;
-    bottom: -15px;
-    -webkit-transform: translate(-10%, 100%);
-    -ms-transform: translate(-10%, 100%);
-    transform: translate(-10%, 100%);
-    background: #ffffff;
-    opacity: 0;
-    pointer-events: none;
-    -webkit-transition: .3s ease-out;
-    transition: .3s ease-out; }
-    .header .logIn.active {
-      -webkit-transform: translate(0%, 100%);
-      -ms-transform: translate(0%, 100%);
-      transform: translate(0%, 100%);
-      opacity: 1;
-      pointer-events: all; }
-    .header .logIn form input[type=text] {
-      color: #000000;
-      font-size: 20px;
-      font-family: "museosanscyrl-500", sans-serif;
-      letter-spacing: -0.3px;
-      display: block;
-      width: 100%;
-      padding: 0 12px;
-      height: 40px;
-      margin-bottom: 10px;
-      border: solid 1px #b9bdc7;
-      -webkit-border-radius: 4px;
-      border-radius: 4px; }
-      .header .logIn form input[type=text]::-webkit-input-placeholder {
-        color: #cccccc; }
-      .header .logIn form input[type=text]::-moz-placeholder {
-        color: #cccccc; }
-      .header .logIn form input[type=text]:-moz-placeholder {
-        color: #cccccc; }
-      .header .logIn form input[type=text]:-ms-input-placeholder {
-        color: #cccccc; }
-    .header .logIn form input[type=checkbox] {
-      display: none; }
-    .header .logIn form input[type=checkbox]:checked ~ label:before {
-      background: url("../img/check.png") center center no-repeat; }
-    .header .logIn form label {
-      font-size: 14px;
-      font-family: "opensans-regular", sans-serif;
-      position: relative;
-      padding-left: 27px;
-      margin-left: 11px;
-      margin-bottom: 10px;
-      cursor: pointer; }
-      .header .logIn form label:before {
-        content: '';
-        display: block;
-        width: 18px;
-        height: 18px;
-        position: absolute;
-        left: 1px;
-        top: 1px;
-        border: solid 1px #b9bdc7;
-        -webkit-border-radius: 4px;
-        border-radius: 4px; }
-    .header .logIn form ul.btns {
-      margin-bottom: 10px; }
-      .header .logIn form ul.btns:last-child {
-        margin-bottom: 0; }
-      .header .logIn form ul.btns > li {
-        margin-right: 0; }
-        .header .logIn form ul.btns > li:first-child {
-          width: 130px;
-          -webkit-flex-shrink: 0;
-          -ms-flex-negative: 0;
-          flex-shrink: 0; }
-        .header .logIn form ul.btns > li > a.pass-recov {
-          color: #0141b2;
-          font-size: 14px;
-          font-family: "opensans-regular", sans-serif;
-          text-decoration: underline;
-          text-transform: initial;
-          letter-spacing: 0.1px;
-          margin-bottom: 5px; }
-          .header .logIn form ul.btns > li > a.pass-recov:hover {
-            text-decoration: none; }
-          .header .logIn form ul.btns > li > a.pass-recov:after {
-            content: none; }
-        .header .logIn form ul.btns > li > a.registr {
-          color: #005dff;
-          font-size: 18px;
-          font-family: "museosanscyrl-900", sans-serif;
-          text-transform: uppercase;
-          letter-spacing: 2px; }
-          .header .logIn form ul.btns > li > a.registr:after {
-            background: #005dff; }
-        .header .logIn form ul.btns > li ul.socials {
-          display: -webkit-box;
-          display: -webkit-flex;
-          display: -ms-flexbox;
-          display: flex;
-          padding-left: 4px; }
-          .header .logIn form ul.btns > li ul.socials li {
-            margin-right: 11px; }
-            .header .logIn form ul.btns > li ul.socials li:last-child {
-              margin-right: 0; }
-            .header .logIn form ul.btns > li ul.socials li a {
-              font-size: 22px; }
-              .header .logIn form ul.btns > li ul.socials li a:after {
-                content: none; }
-              .header .logIn form ul.btns > li ul.socials li a i {
-                color: #0141b2; }
+  @media (max-width: 1099px) {
+    .header .logIn {
+      display: none; } }
   .header a.burger, .header span.burger {
     display: none;
     width: 24px;
@@ -8520,21 +8551,35 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
     @media (max-width: 1099px) {
       .header a.burger, .header span.burger {
         display: block; } }
+    .header a.burger.active span:first-child, .header a.burger.active span:last-child, .header span.burger.active span:first-child, .header span.burger.active span:last-child {
+      top: 10px;
+      width: 0;
+      opacity: 0; }
+    .header a.burger.active span:nth-child(2), .header span.burger.active span:nth-child(2) {
+      -webkit-transform: translate(-50%, -50%) rotate(45deg);
+      -ms-transform: translate(-50%, -50%) rotate(45deg);
+      transform: translate(-50%, -50%) rotate(45deg); }
+    .header a.burger.active span:nth-child(3), .header span.burger.active span:nth-child(3) {
+      -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+      -ms-transform: translate(-50%, -50%) rotate(-45deg);
+      transform: translate(-50%, -50%) rotate(-45deg); }
     .header a.burger span, .header span.burger span {
       width: 100%;
       height: 4px;
       position: absolute;
       left: 50%;
-      -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-      transform: translateX(-50%);
-      background: #0141b2; }
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      background: #0141b2;
+      -webkit-transition: .3s ease-out;
+      transition: .3s ease-out; }
       .header a.burger span:first-child, .header span.burger span:first-child {
-        top: 0; }
+        top: 2px; }
       .header a.burger span:nth-child(2), .header a.burger span:nth-child(3), .header span.burger span:nth-child(2), .header span.burger span:nth-child(3) {
-        top: 8px; }
+        top: 10px; }
       .header a.burger span:last-child, .header span.burger span:last-child {
-        top: 16px; }
+        top: 18px; }
   .header a.logo, .header span.logo {
     display: inline-block;
     margin-right: 40px;
@@ -9589,6 +9634,135 @@ ul.btns {
         -ms-transform: translateX(100%);
         transform: translateX(100%); }
 
+.popup-login {
+  width: 356px;
+  padding: 35px;
+  display: none;
+  background: #ffffff; }
+  @media (max-width: 539px) {
+    .popup-login {
+      width: 100%;
+      padding: 40px 15px 25px;
+      left: 0 !important; } }
+  .popup-login a.close {
+    display: block;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    opacity: 0.5; }
+    .popup-login a.close:before, .popup-login a.close:after {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 2px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      background: #000000; }
+    .popup-login a.close:before {
+      -webkit-transform: translate(-50%, -50%) rotate(45deg);
+      -ms-transform: translate(-50%, -50%) rotate(45deg);
+      transform: translate(-50%, -50%) rotate(45deg); }
+    .popup-login a.close:after {
+      -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+      -ms-transform: translate(-50%, -50%) rotate(-45deg);
+      transform: translate(-50%, -50%) rotate(-45deg); }
+    .popup-login a.close:hover {
+      opacity: 1; }
+  .popup-login form input[type=text] {
+    color: #000000;
+    font-size: 20px;
+    font-family: "museosanscyrl-500", sans-serif;
+    letter-spacing: -0.3px;
+    display: block;
+    width: 100%;
+    padding: 0 12px;
+    height: 40px;
+    margin-bottom: 10px;
+    border: solid 1px #b9bdc7;
+    -webkit-border-radius: 4px;
+    border-radius: 4px; }
+    .popup-login form input[type=text]::-webkit-input-placeholder {
+      color: #cccccc; }
+    .popup-login form input[type=text]::-moz-placeholder {
+      color: #cccccc; }
+    .popup-login form input[type=text]:-moz-placeholder {
+      color: #cccccc; }
+    .popup-login form input[type=text]:-ms-input-placeholder {
+      color: #cccccc; }
+  .popup-login form input[type=checkbox] {
+    display: none; }
+  .popup-login form input[type=checkbox]:checked ~ label:before {
+    background: url("../img/check.png") center center no-repeat; }
+  .popup-login form label {
+    font-size: 14px;
+    font-family: "opensans-regular", sans-serif;
+    position: relative;
+    padding-left: 27px;
+    margin-left: 11px;
+    margin-bottom: 10px;
+    cursor: pointer; }
+    .popup-login form label:before {
+      content: '';
+      display: block;
+      width: 18px;
+      height: 18px;
+      position: absolute;
+      left: 1px;
+      top: 1px;
+      border: solid 1px #b9bdc7;
+      -webkit-border-radius: 4px;
+      border-radius: 4px; }
+  .popup-login form ul.btns {
+    margin-bottom: 10px; }
+    .popup-login form ul.btns:last-child {
+      margin-bottom: 0; }
+    .popup-login form ul.btns > li {
+      margin-right: 0; }
+      .popup-login form ul.btns > li:first-child {
+        width: 130px;
+        -webkit-flex-shrink: 0;
+        -ms-flex-negative: 0;
+        flex-shrink: 0; }
+      .popup-login form ul.btns > li > a.pass-recov {
+        color: #0141b2;
+        font-size: 14px;
+        font-family: "opensans-regular", sans-serif;
+        text-decoration: underline;
+        text-transform: initial;
+        letter-spacing: 0.1px;
+        margin-bottom: 5px; }
+        .popup-login form ul.btns > li > a.pass-recov:hover {
+          text-decoration: none; }
+        .popup-login form ul.btns > li > a.pass-recov:after {
+          content: none; }
+      .popup-login form ul.btns > li > a.registr {
+        color: #005dff;
+        font-size: 18px;
+        font-family: "museosanscyrl-900", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 2px; }
+        .popup-login form ul.btns > li > a.registr:after {
+          background: #005dff; }
+      .popup-login form ul.btns > li ul.socials {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        padding-left: 4px; }
+        .popup-login form ul.btns > li ul.socials li {
+          margin-right: 11px; }
+          .popup-login form ul.btns > li ul.socials li:last-child {
+            margin-right: 0; }
+          .popup-login form ul.btns > li ul.socials li a {
+            font-size: 22px; }
+            .popup-login form ul.btns > li ul.socials li a:after {
+              content: none; }
+            .popup-login form ul.btns > li ul.socials li a i {
+              color: #0141b2; }
+
 .popup-registration {
   padding: 46px 116px 39px 111px;
   width: 900px;
@@ -9597,6 +9771,20 @@ ul.btns {
   background: #f5f5f5;
   -webkit-border-radius: 8px;
   border-radius: 8px; }
+  @media (max-width: 991px) {
+    .popup-registration {
+      width: 750px;
+      padding: 46px 50px 39px; } }
+  @media (max-width: 767px) {
+    .popup-registration {
+      width: 100%;
+      left: 0 !important;
+      padding: 46px 30px 0;
+      -webkit-border-radius: 0;
+      border-radius: 0; } }
+  @media (max-width: 539px) {
+    .popup-registration {
+      padding: 30px 15px 0; } }
   .popup-registration a.close {
     display: block;
     width: 30px;
@@ -9628,6 +9816,10 @@ ul.btns {
     font-size: 42px;
     font-family: "museosanscyrl-500", sans-serif;
     margin-bottom: 27px; }
+    @media (max-width: 539px) {
+      .popup-registration h2 {
+        font-size: 32px;
+        padding-right: 38px; } }
   .popup-registration form .input-module {
     display: -webkit-box;
     display: -webkit-flex;
@@ -9638,12 +9830,34 @@ ul.btns {
     -ms-flex-align: center;
     align-items: center;
     margin-bottom: 15px; }
+    @media (max-width: 767px) {
+      .popup-registration form .input-module {
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-bottom: 29px;
+        padding-left: 37px; } }
+    @media (max-width: 539px) {
+      .popup-registration form .input-module {
+        padding-left: 0; } }
     .popup-registration form .input-module > p {
       font-size: 14px;
       font-family: "opensans-regular", sans-serif;
       text-transform: uppercase;
       letter-spacing: 0.3px;
       width: 84px; }
+      @media (max-width: 767px) {
+        .popup-registration form .input-module > p {
+          font-size: 18px;
+          font-family: "museosanscyrl-500", sans-serif;
+          letter-spacing: 1.1px;
+          width: 100%;
+          padding: 0 12px;
+          margin-bottom: 10px; } }
+      @media (max-width: 539px) {
+        .popup-registration form .input-module > p {
+          font-size: 16px;
+          padding-left: 2px; } }
     .popup-registration form .input-module > input {
       font-size: 20px;
       font-family: "museosanscyrl-500", sans-serif;
@@ -9654,9 +9868,30 @@ ul.btns {
       border: solid 1px #b9bdc7;
       -webkit-border-radius: 4px;
       border-radius: 4px; }
+      @media (max-width: 767px) {
+        .popup-registration form .input-module > input {
+          font-size: 44px;
+          line-height: 52px;
+          letter-spacing: -0.2px;
+          width: 100%;
+          height: auto;
+          padding: 0 8px 2px;
+          background: transparent;
+          border: none;
+          border-bottom: solid 2px #cccccc;
+          -webkit-border-radius: 0;
+          border-radius: 0; } }
+      @media (max-width: 539px) {
+        .popup-registration form .input-module > input {
+          font-size: 34px;
+          line-height: 42px;
+          padding: 0 2px 2px; } }
       .popup-registration form .input-module > input.name {
         width: -webkit-calc(100% - 84px);
         width: calc(100% - 84px); }
+        @media (max-width: 767px) {
+          .popup-registration form .input-module > input.name {
+            width: 100%; } }
     .popup-registration form .input-module ul.pass-actions {
       display: -webkit-box;
       display: -webkit-flex;
@@ -9664,6 +9899,9 @@ ul.btns {
       display: flex;
       margin-left: 27px;
       padding-top: 4px; }
+      @media (max-width: 767px) {
+        .popup-registration form .input-module ul.pass-actions {
+          display: none; } }
       .popup-registration form .input-module ul.pass-actions li {
         margin-right: 25px; }
         .popup-registration form .input-module ul.pass-actions li:last-child {
@@ -9762,6 +10000,22 @@ ul.btns {
     position: relative;
     margin: 11px 110px 16px 42px;
     cursor: pointer; }
+    @media (max-width: 767px) {
+      .popup-registration form > label {
+        color: #000000;
+        font-size: 22px;
+        line-height: 28px;
+        padding-left: 0;
+        margin: 36px 0 21px 110px; } }
+    @media (max-width: 539px) {
+      .popup-registration form > label {
+        font-size: 18px;
+        line-height: 25px;
+        margin-left: 83px; } }
+    @media (max-width: 480px) {
+      .popup-registration form > label {
+        font-size: 16px;
+        line-height: 22px; } }
     .popup-registration form > label:hover {
       color: #000000; }
     .popup-registration form > label:before {
@@ -9775,36 +10029,321 @@ ul.btns {
       border: solid 1px #b9bdc7;
       -webkit-border-radius: 2px;
       border-radius: 2px; }
+      @media (max-width: 767px) {
+        .popup-registration form > label:before {
+          content: none; } }
+    .popup-registration form > label span {
+      display: none;
+      width: 52px;
+      height: 18px;
+      position: absolute;
+      left: -83px;
+      top: 10px;
+      background: #d9d9d9;
+      -webkit-border-radius: 7px;
+      border-radius: 7px;
+      -webkit-transition: .3s ease-out;
+      transition: .3s ease-out; }
+      @media (max-width: 767px) {
+        .popup-registration form > label span {
+          display: block; } }
+      .popup-registration form > label span:after {
+        content: '';
+        display: block;
+        width: 32px;
+        height: 32px;
+        position: absolute;
+        left: -1px;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        background: #ffffff;
+        border: solid 1px #cdcdcd;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        -webkit-transition: .3s ease-out;
+        transition: .3s ease-out; }
   .popup-registration form > input[type=checkbox]:checked + label {
     color: #000000; }
     .popup-registration form > input[type=checkbox]:checked + label:before {
       background: url("../img/check.png") center center no-repeat; }
+    .popup-registration form > input[type=checkbox]:checked + label span {
+      background: #b5c7e8; }
+      .popup-registration form > input[type=checkbox]:checked + label span:after {
+        left: 21px;
+        background: #0947b4;
+        border-color: #0947b4; }
+  .popup-registration form > input[type=checkbox]:checked ~ ul.btns li button {
+    background: #005cff;
+    border-color: #005cff;
+    pointer-events: all; }
+    .popup-registration form > input[type=checkbox]:checked ~ ul.btns li button:hover {
+      background: #ffffff; }
   .popup-registration form ul.btns {
     -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center; }
+    @media (max-width: 767px) {
+      .popup-registration form ul.btns {
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap; } }
     .popup-registration form ul.btns > li {
       margin-right: 57px; }
+      @media (max-width: 767px) {
+        .popup-registration form ul.btns > li {
+          width: 100%;
+          margin-right: 0;
+          margin-bottom: 68px; } }
       .popup-registration form ul.btns > li:last-child {
-        margin-right: 0; }
+        margin-right: 0;
+        margin-bottom: 0; }
+      .popup-registration form ul.btns > li button {
+        background: #dfdfdf;
+        border-color: #dfdfdf;
+        pointer-events: none; }
+        @media (max-width: 767px) {
+          .popup-registration form ul.btns > li button {
+            font-size: 26px;
+            margin-left: 110px;
+            padding: 8px 70px 11px 56px; } }
+        @media (max-width: 539px) {
+          .popup-registration form ul.btns > li button {
+            text-align: center;
+            padding: 8px 15px 11px;
+            margin-left: 0;
+            width: 100%; } }
       .popup-registration form ul.btns > li ul.socials {
         display: -webkit-box;
         display: -webkit-flex;
         display: -ms-flexbox;
         display: flex; }
+        @media (max-width: 767px) {
+          .popup-registration form ul.btns > li ul.socials {
+            margin: 0 -30px;
+            padding: 49px 30px 39px;
+            -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            background: #ffffff; } }
+        @media (max-width: 539px) {
+          .popup-registration form ul.btns > li ul.socials {
+            margin: 0 -15px; } }
         .popup-registration form ul.btns > li ul.socials li {
           font-size: 18px;
           font-family: "museosanscyrl-500", sans-serif;
           margin-right: 21px; }
+          @media (max-width: 767px) {
+            .popup-registration form ul.btns > li ul.socials li {
+              font-size: 32px;
+              text-align: center;
+              margin: 0 30px; } }
+          @media (max-width: 639px) {
+            .popup-registration form ul.btns > li ul.socials li {
+              margin: 0 25px; } }
+          @media (max-width: 539px) {
+            .popup-registration form ul.btns > li ul.socials li {
+              font-size: 22px;
+              margin: 0 15px; } }
+          @media (max-width: 767px) {
+            .popup-registration form ul.btns > li ul.socials li:first-child {
+              width: 100%;
+              margin: 0 0 15px; } }
           .popup-registration form ul.btns > li ul.socials li:last-child {
             margin-right: 0; }
+            @media (max-width: 767px) {
+              .popup-registration form ul.btns > li ul.socials li:last-child {
+                margin-right: 30px; } }
+            @media (max-width: 639px) {
+              .popup-registration form ul.btns > li ul.socials li:last-child {
+                margin-right: 25px; } }
+            @media (max-width: 539px) {
+              .popup-registration form ul.btns > li ul.socials li:last-child {
+                margin-right: 15px; } }
           .popup-registration form ul.btns > li ul.socials li a {
             color: #0046bb;
             font-size: 24px; }
+            @media (max-width: 767px) {
+              .popup-registration form ul.btns > li ul.socials li a {
+                font-size: 50px; } }
+            @media (max-width: 539px) {
+              .popup-registration form ul.btns > li ul.socials li a {
+                font-size: 30px; } }
             .popup-registration form ul.btns > li ul.socials li a i {
               color: inherit;
               font-size: inherit; }
+
+.features {
+  position: relative;
+  margin-bottom: 16px; }
+  .features-nav {
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    top: -18px;
+    left: 0;
+    z-index: 5;
+    padding-right: 14px; }
+    .features-nav ul {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      margin-bottom: 16px; }
+      .features-nav ul li {
+        margin: 0 3px; }
+        .features-nav ul li.active span {
+          background: #ffffff;
+          border-color: #898a8a;
+          pointer-events: none; }
+        .features-nav ul li span {
+          display: inline-block;
+          width: 12px;
+          height: 12px;
+          background: #0046bb;
+          border: solid 1px #0046bb;
+          -webkit-border-radius: 50%;
+          border-radius: 50%;
+          cursor: pointer; }
+    .features-nav a.btn {
+      margin-left: 0; }
+  .features-items {
+    position: relative; }
+    .features-items > li {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      opacity: 0;
+      pointer-events: none;
+      -webkit-transition: .3s ease-out;
+      transition: .3s ease-out; }
+      .features-items > li.active {
+        opacity: 1;
+        pointer-events: all;
+        -webkit-transition: .3s .3s ease-out;
+        transition: .3s .3s ease-out; }
+      .features-items > li figure {
+        position: relative;
+        left: -27px;
+        height: 387px;
+        width: 100%; }
+        @media (max-width: 767px) {
+          .features-items > li figure {
+            left: 23px; } }
+        .features-items > li figure img {
+          position: absolute;
+          left: 0;
+          bottom: 0; }
+      .features-items > li div {
+        position: relative; }
+        .features-items > li div i {
+          position: absolute;
+          left: -5px;
+          top: 6px; }
+          @media (max-width: 767px) {
+            .features-items > li div i {
+              left: 14px;
+              top: 19px; } }
+          @media (max-width: 539px) {
+            .features-items > li div i {
+              left: 0; } }
+        .features-items > li div h3 {
+          font-size: 30px;
+          font-family: "museosanscyrl-500", sans-serif;
+          line-height: 36px;
+          padding-top: 4px;
+          padding-left: 49px;
+          padding-right: 40px;
+          position: relative; }
+          @media (max-width: 1199px) {
+            .features-items > li div h3 {
+              font-size: 18px;
+              line-height: 25px; } }
+          @media (max-width: 767px) {
+            .features-items > li div h3 {
+              font-size: 26px;
+              line-height: 34px;
+              padding: 16px 30px 16px 64px; } }
+          @media (max-width: 539px) {
+            .features-items > li div h3 {
+              font-size: 18px;
+              line-height: 24px;
+              padding: 16px 30px 16px 50px; } }
+          .features-items > li div h3 span {
+            font-size: 44px;
+            line-height: 48px;
+            display: block; }
+            @media (max-width: 1199px) {
+              .features-items > li div h3 span {
+                font-size: 25px;
+                line-height: 30px; } }
+            @media (max-width: 767px) {
+              .features-items > li div h3 span {
+                font-size: 32px;
+                line-height: 40px; } }
+            @media (max-width: 539px) {
+              .features-items > li div h3 span {
+                font-size: 24px;
+                line-height: 32px; } }
+          .features-items > li div h3 b {
+            font-family: "museosanscyrl-900", sans-serif;
+            letter-spacing: 2.5px; }
+        .features-items > li div p {
+          font-size: 24px;
+          font-family: "museosanscyrl-500", sans-serif;
+          line-height: 30px;
+          padding-top: 4px;
+          padding-left: 49px;
+          padding-right: 40px;
+          position: relative; }
+          @media (max-width: 1199px) {
+            .features-items > li div p {
+              font-size: 18px;
+              line-height: 25px; } }
+          @media (max-width: 767px) {
+            .features-items > li div p {
+              font-size: 26px;
+              line-height: 34px;
+              padding: 16px 30px 16px 64px; } }
+          @media (max-width: 539px) {
+            .features-items > li div p {
+              font-size: 18px;
+              line-height: 24px;
+              padding: 16px 30px 16px 50px; } }
+          .features-items > li div p span {
+            font-size: 30px;
+            line-height: 36px;
+            display: block; }
+            @media (max-width: 1199px) {
+              .features-items > li div p span {
+                font-size: 25px;
+                line-height: 30px; } }
+            @media (max-width: 767px) {
+              .features-items > li div p span {
+                font-size: 32px;
+                line-height: 40px; } }
+            @media (max-width: 539px) {
+              .features-items > li div p span {
+                font-size: 24px;
+                line-height: 32px; } }
+          .features-items > li div p b {
+            font-family: "museosanscyrl-900", sans-serif;
+            letter-spacing: 2.5px; }
+
+#map {
+  width: 100%;
+  height: 570px; }
 
 /****** Pages ******/
 .main-intro > figure {
@@ -10421,72 +10960,6 @@ ul.btns {
   .main-contacts > * {
     text-align: left; } }
 
-.main-contacts figure {
-  position: relative;
-  left: -27px; }
-  @media (max-width: 767px) {
-    .main-contacts figure {
-      left: 23px; } }
-
-.main-contacts > p {
-  font-size: 24px;
-  font-family: "museosanscyrl-500", sans-serif;
-  line-height: 30px;
-  padding-top: 4px;
-  padding-left: 49px;
-  padding-right: 40px;
-  margin-bottom: 16px;
-  position: relative; }
-  @media (max-width: 1199px) {
-    .main-contacts > p {
-      font-size: 18px;
-      line-height: 25px; } }
-  @media (max-width: 767px) {
-    .main-contacts > p {
-      font-size: 26px;
-      line-height: 34px;
-      padding: 16px 30px 16px 64px; } }
-  @media (max-width: 539px) {
-    .main-contacts > p {
-      font-size: 18px;
-      line-height: 24px;
-      padding: 16px 30px 16px 50px; } }
-  .main-contacts > p:before {
-    content: '';
-    display: block;
-    width: 36px;
-    height: 36px;
-    position: absolute;
-    left: -5px;
-    top: 6px;
-    background: url("../img/snowflake.png") center center no-repeat; }
-    @media (max-width: 767px) {
-      .main-contacts > p:before {
-        left: 14px;
-        top: 19px; } }
-    @media (max-width: 539px) {
-      .main-contacts > p:before {
-        left: 0; } }
-  .main-contacts > p span {
-    font-size: 30px;
-    line-height: 36px;
-    display: block; }
-    @media (max-width: 1199px) {
-      .main-contacts > p span {
-        font-size: 25px;
-        line-height: 30px; } }
-    @media (max-width: 767px) {
-      .main-contacts > p span {
-        font-size: 32px;
-        line-height: 40px; } }
-    @media (max-width: 539px) {
-      .main-contacts > p span {
-        font-size: 24px;
-        line-height: 32px; } }
-  .main-contacts > p b {
-    font-family: "museosanscyrl-900", sans-serif;
-    letter-spacing: 2.5px; }
-
 .main-contacts form {
   padding: 30px 46px 34px;
   margin-bottom: 49px;
@@ -10537,7 +11010,7 @@ ul.btns {
       -ms-flex-wrap: wrap;
       flex-wrap: wrap; } }
   .main-contacts form input {
-    color: #cccccc;
+    color: #000000;
     font-size: 22px;
     font-family: "museosanscyrl-500", sans-serif;
     letter-spacing: 4.3px;
@@ -10547,6 +11020,14 @@ ul.btns {
     border: solid 1px #b29b40;
     -webkit-border-radius: 3px;
     border-radius: 3px; }
+    .main-contacts form input::-webkit-input-placeholder {
+      color: #cccccc; }
+    .main-contacts form input::-moz-placeholder {
+      color: #cccccc; }
+    .main-contacts form input:-moz-placeholder {
+      color: #cccccc; }
+    .main-contacts form input:-ms-input-placeholder {
+      color: #cccccc; }
     @media (max-width: 1350px) {
       .main-contacts form input {
         width: 100%;
@@ -10603,74 +11084,74 @@ ul.btns {
     .main-contacts form button:hover {
       background: #b29b40; }
 
-.main-contacts ul {
+.main-contacts > ul {
   padding-left: 49px;
   margin-bottom: 30px; }
   @media (max-width: 767px) {
-    .main-contacts ul {
+    .main-contacts > ul {
       padding-left: 62px;
       margin-bottom: 22px; } }
   @media (max-width: 539px) {
-    .main-contacts ul {
+    .main-contacts > ul {
       padding-left: 0; } }
-  .main-contacts ul li {
+  .main-contacts > ul li {
     margin-bottom: 33px; }
-    .main-contacts ul li:last-child {
+    .main-contacts > ul li:last-child {
       margin-bottom: 0; }
-    .main-contacts ul li h3 {
+    .main-contacts > ul li h3 {
       font-size: 28px;
       font-family: "museosanscyrl-500", sans-serif;
       margin-bottom: 9px; }
       @media (max-width: 767px) {
-        .main-contacts ul li h3 {
+        .main-contacts > ul li h3 {
           font-size: 32px;
           margin-bottom: 15px; } }
       @media (max-width: 539px) {
-        .main-contacts ul li h3 {
+        .main-contacts > ul li h3 {
           font-size: 26px; } }
-    .main-contacts ul li p {
+    .main-contacts > ul li p {
       font-size: 18px;
       font-family: "museosanscyrl-500", sans-serif;
       margin-bottom: 10px; }
       @media (max-width: 1199px) {
-        .main-contacts ul li p {
+        .main-contacts > ul li p {
           font-size: 16px;
           margin-bottom: 5px; } }
       @media (max-width: 767px) {
-        .main-contacts ul li p {
+        .main-contacts > ul li p {
           font-size: 26px;
           margin-bottom: 9px; } }
       @media (max-width: 539px) {
-        .main-contacts ul li p {
+        .main-contacts > ul li p {
           font-size: 18px;
           margin-bottom: 5px; } }
-      .main-contacts ul li p a {
+      .main-contacts > ul li p a {
         color: inherit; }
         @media (max-width: 767px) {
-          .main-contacts ul li p a {
+          .main-contacts > ul li p a {
             color: #0046bb; } }
-        .main-contacts ul li p a:hover {
+        .main-contacts > ul li p a:hover {
           text-decoration: underline; }
-    .main-contacts ul li *:last-child {
+    .main-contacts > ul li *:last-child {
       margin-bottom: 0; }
 
-.main-contacts a.btn {
+.main-contacts > a.btn {
   margin-left: 49px; }
   @media (max-width: 767px) {
-    .main-contacts a.btn {
+    .main-contacts > a.btn {
       margin-left: 0;
       padding: 12px 23px 10px; } }
-  .main-contacts a.btn span {
+  .main-contacts > a.btn span {
     color: inherit;
     font-family: inherit;
     font-size: inherit; }
     @media (max-width: 767px) {
-      .main-contacts a.btn span {
+      .main-contacts > a.btn span {
         display: none; } }
-    .main-contacts a.btn span.mob {
+    .main-contacts > a.btn span.mob {
       display: none; }
       @media (max-width: 767px) {
-        .main-contacts a.btn span.mob {
+        .main-contacts > a.btn span.mob {
           display: inline; } }
 
 .main-partners {
@@ -10929,11 +11410,13 @@ ul.btns {
     -ms-flex-pack: justify;
     justify-content: space-between; }
     .catalog-root > ul > li, .knowledge-root > ul > li {
-      padding-right: 25px; }
+      padding-right: 25px;
+      max-width: 335px; }
       @media (max-width: 1399px) {
         .catalog-root > ul > li, .knowledge-root > ul > li {
           width: 33.33333%;
-          margin-bottom: 60px; } }
+          margin-bottom: 60px;
+          max-width: none; } }
       @media (max-width: 991px) {
         .catalog-root > ul > li, .knowledge-root > ul > li {
           width: 50%;
@@ -15072,7 +15555,8 @@ ul.btns {
     position: relative;
     z-index: 2;
     padding: 121px 0 139px;
-    background: url("../img/info-bg.png") left top no-repeat; }
+    background: url("../img/info-bg.png") left top no-repeat;
+    background-size: contain; }
     @media (max-width: 767px) {
       .app .wr-main-info {
         padding: 86px 0 74px; } }

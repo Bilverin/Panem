@@ -24,6 +24,9 @@
 		<link rel="stylesheet" href="assets/css/main.css">
 		<link rel="stylesheet" href="assets/css/print.css" media="print">
 	
+		<!-- JS -->
+		<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+	
 		<title>ПАНЭМ</title>
 	</head>
 
@@ -309,14 +312,55 @@
 
 							<!-- Contacts -->
 							<div class="main-contacts">
-								<figure>
-									<img src="assets/img/contacts-1.png">
-								</figure>
-								<p><span>Собственный автопарк,</span> оборудованный холодильными установками, позволяет <b>ПАНЭМ</b> доставить товар по региону бесплатно, сохраняя все его качественные характеристики.  </p>
+								<div class="features">
+									<div class="features-nav">
+										<ul>
+										</ul>
+										<a href="#" class="btn">Обновить</a>
+									</div>
+									<ul class="features-items">
+										<li class="active">
+											<figure>
+												<img src="assets/img/features-1.png">
+											</figure>
+											<div>
+												<i class="icon icon-snowflake"></i>
+												<p><span>Собственный автопарк,</span> оборудованный холодильными установками, позволяет <b>ПАНЭМ</b> доставить товар по региону бесплатно, сохраняя все его качественные характеристики.</p>
+											</div>
+										</li>
+										<li>
+											<figure>
+												<img src="assets/img/features-2.png">
+											</figure>
+											<div>
+												<i class="icon icon-world"></i>
+												<p>Технологи <b>ПАНЭМ</b> посещают ведущие международные  выставки по хлебопечению и кондитерскому мастерству и с удовольствием делятся всеми знаниями и новинками на семинарах, которые проходят в Демонстрационных Центрах.</p>
+											</div>
+										</li>
+										<li>
+											<figure>
+												<img src="assets/img/features-3.png">
+											</figure>
+											<div>
+												<i class="icon icon-like"></i>
+												<h3><span>Более 1500</span> кондитерских и хлебопекарен Поволжья и Казахстана выбрали сотрудничество с <b>ПАНЭМ</b></h3>
+											</div>
+										</li>
+										<li>
+											<figure>
+												<img src="assets/img/features-4.png">
+											</figure>
+											<div>
+												<i class="icon icon-home"></i>
+												<h3><span>1500 м2 собственных складских площадей</span></h3>
+											</div>
+										</li>
+									</ul>
+								</div>
 								<form action="#">
 									<p>Укажите свой телефон — наш менеджер позвонит <br>в течение минуты и ответит на все интересующие вопросы.</p>
 									<div class="input-module">
-										<input type="text">
+										<input type="phone" placeholder="+7(___)_______">
 										<button>Отправить</button>
 									</div>
 								</form>
@@ -471,7 +515,7 @@
 			</div>
 			<div class="input-module">
 				<p>Телефон</p>
-				<input type="text">
+				<input type="phone">
 			</div>
 			<div class="input-module">
 				<p>Пароль</p>
@@ -483,10 +527,10 @@
 				</ul>
 			</div>
 			<input id="popupReg1" type="checkbox">
-			<label for="popupReg1">Я соглашаюсь с политикой конфиденциальности и даю согласие на обработку и хранение моих персональных данных</label>
+			<label for="popupReg1"><span></span>Я соглашаюсь с политикой конфиденциальности и даю согласие на обработку и хранение моих персональных данных</label>
 			<ul class="btns">
 				<li>
-					<button class="btn-2 disabled">Регистрировать</a>
+					<button class="btn-2">Регистрировать</a>
 				</li>
 				<li>
 					<ul class="socials">
@@ -512,8 +556,48 @@
 		</form>
 	</div>
 	
+	<div class="popup-login js-loginPopup">
+		<a href="#" class="close b-close"></a>
+		<form action="#">
+			<input type="text" placeholder="Э/почта">
+			<input type="text" placeholder="Пароль">
+			<input id="login1" type="checkbox">
+			<label for="login1">Чужой компьютер</label>
+			<ul class="btns">
+				<li>
+					<a href="#" class="btn-3 disabled">Войти</a>
+				</li>
+				<li>
+					<a href="#" class="pass-recov">Восстановить пароль</a>
+				</li>
+			</ul>
+			<ul class="btns">
+				<li>
+					<ul class="socials">
+						<li>
+							<a href="#"><i class="fa fa-vk"></i></a>
+						</li>
+						<li>
+							<a href="#"><i class="fa fa-facebook"></i></a>
+						</li>
+						<li>
+							<a href="#"><i class="fa fa-google"></i></a>
+						</li>
+						<li>
+							<a href="#">...</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#" class="registr js-popupReg">Регистрация</a>
+				</li>
+			</ul>
+		</form>
+	</div>
+	
 	<!-- Scripts -->
 	<script type="text/javascript" src="assets/js/libs.min.js"></script>
+	<script type="text/javascript" src="assets/js/input.masked.min.js"></script>
 	<script type="text/javascript" src="assets/js/main.js"></script>
 </body>
 </html>
