@@ -165,6 +165,28 @@ $(document).ready(function() {
         // Блокирование возможности зумить карту скроллингом
         myMap.behaviors.disable('scrollZoom');
     }
+
+    // Royal Slider
+    $('#slider').royalSlider({
+    	fullscreen: {
+    		enabled: false,
+    		nativeFS: true
+    	},
+    	controlNavigation: 'thumbnails',
+    	thumbs: {
+    		orientation: 'vertical',
+    		spacing: 20,
+    		appendSpan: true
+    	},
+    	transitionType:'fade',
+    	// autoScaleSlider: true, 
+    	autoScaleSliderWidth: 830,     
+    	autoScaleSliderHeight: 400,
+    	loop: true,
+    	arrowsNav: false,
+    	keyboardNavEnabled: true,
+
+    });
 });
 
 // resize

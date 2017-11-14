@@ -386,6 +386,9 @@
 			@include respond-to(lg) {
 				padding-left: 16px;
 			}
+			@include respond-to(md) {
+				margin-bottom: 40px;
+			}
 			@include respond-to(539px) {
 				padding-left: 0;
 			}
@@ -456,24 +459,23 @@
 
 		&-slider {
 			margin-bottom: 50px; width: 100%;
-			@include respond-to(md) {
+			@include respond-to(sm) {
 				margin-bottom: 40px;
-			}
-			img {
-				width: 100%;
-				@include respond-to(md) {
-					display: none;
-				}
 			}
 			figure {
 				display: none; margin: 0 -27px;
 				&.mob {
-					@include respond-to(md) {
+					@include respond-to(sm) {
 						display: block;
 					}
 					img {
-						display: block;
+						display: block; width: 100%;
 					}
+				}
+			}
+			#slider {
+				@include respond-to(sm) {
+					display: none;
 				}
 			}
 		}
