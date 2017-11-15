@@ -184,9 +184,9 @@
 
 // header
 .header {
-	display: flex; justify-content: space-between; padding: 0 16px;
+	display: flex; justify-content: space-between; padding: 0 16px; align-items: center;
 	@include respond-to(1399px) {
-		padding: 0 5px 0 16px; align-items: center;
+		padding: 0 5px 0 16px;
 	}
 	@include respond-to(md) {
 		padding: 0 16px;
@@ -197,13 +197,13 @@
 
 	.left, 
 	.right {
-		display: flex;
+		display: flex; align-items: center;
 	}
 
 	.left {
 		& > p {
 			font-size: 26px; font-family: $ms-700; text-transform: uppercase; line-height: 32px;
-			display: none; position: relative; z-index: 20; margin-top: -4px;
+			display: none; position: relative; z-index: 20; margin-top: 2px;
 			@include respond-to(1099px) {
 				display: block;
 			}
@@ -530,6 +530,13 @@
 			@include respond-to(1099px) {
 				display: block;
 			}
+			&.active {
+				i {
+					&.icon-header-search {
+						@extend .icon-header-search-active;
+					}
+				}
+			}
 		}
 		div.city {
 			padding-left: 10px; padding-right: 10px; position: relative; margin-right: -6px; z-index: 20;
@@ -639,10 +646,10 @@
 		margin: 0 -15px;
 	}
 	@include respond-to(sm) {
-		padding: 0 15px 0 30px;
+		margin: 0 15px 0 30px; padding: 0
 	}
 	@include respond-to(539px) {
-		flex-direction: row; max-height: none; padding: 0;
+		flex-direction: row; max-height: none; margin: 0;
 	}
 	ul {
 		&:first-child {
@@ -665,7 +672,7 @@
 				padding-right: 15px;
 			}
 			@include respond-to(md) {
-				padding: 0 15px 0 0; width: 50%; margin-bottom: 57px;
+				padding: 0 25px 0 0; width: 50%; margin-bottom: 57px;
 			}
 			@include respond-to(539px) {
 				width: 100%; padding: 0 15px;
@@ -1132,6 +1139,94 @@ ul.btns {
 			span {
 				color: #005cff; font-size: 16px; font-family: $ms-700;
 				position: relative; right: 0; top: -10px; padding-left: 6px; transform: translateX(100%);
+			}
+		}
+	}
+}
+
+// search mobile 
+.search-mobile {
+	form {
+		padding: 0 8px 0 102px;
+		@include respond-to(639px) {
+			padding: 0 15px 0 3px;
+		}
+		@include respond-to(539px) {
+			padding: 0;
+		}
+		.input-module {
+			display: flex; justify-content: space-between; align-items: center;
+			@include respond-to(539px) {
+				flex-wrap: wrap;
+			}
+			input {
+				&[type=text] {
+					font-size: 44px; font-family: $ms-500; line-height: 48px;
+					width: 100%; padding: 0 12px;
+					background: transparent; border: none; border-bottom: solid 2px #c4c4c4;
+					@include respond-to(539px) {
+						font-size: 32px; line-height: 36px;
+						padding: 0;
+					}
+				}
+				&[type=checkbox] {
+					display: none;
+				}
+			}
+			label {
+				color: #999999; font-size: 18px; font-family: $ms-500; line-height: 25px; letter-spacing: 1.1px; font-weight: 400; text-transform: uppercase;
+				display: flex; width: 100%; justify-content: space-between; align-items: center; padding: 0 64px 0 12px;
+				@include respond-to(539px) {
+					font-size: 16px; line-height: 22px;
+					padding: 0; position: relative; padding-right: 60px;
+				}
+				@include respond-to(xs) {
+					font-size: 14px; line-height: 18px; letter-spacing: 0.3px;
+				}
+				span {
+					display: block; width: 52px; height: 18px; position: relative;
+					background: #d9d9d9; border-radius: 7px;
+					transition: .3s ease-out;
+					@include respond-to(539px) {
+						position: absolute; right: 0; top: 50%; transform: translateY(-50%);
+					}
+					&:after {
+						content: '';
+						display: block; width: 32px; height: 32px; position: absolute; left: -1px; top: 50%; transform: translateY(-50%);
+						background: #ffffff; border: solid 1px #cdcdcd; border-radius: 50%;
+						transition: .3s ease-out;
+					}
+				}
+			}
+			input[type=checkbox]:checked + label {
+				color: #000000;
+				span {
+					background: #b5c7e8;
+					&:after {
+						left: 21px;
+						background: #0947b4; border-color: #0947b4;
+					}
+				}
+			}
+			button {
+				color: $text-link; font-size: 20px; font-family: $ms-700; text-transform: uppercase; letter-spacing: 1px;
+				flex-shrink: 0; margin: 8px 6px 0 19px; padding: 0;
+				background: transparent; border: none;
+				@include respond-to(539px) {
+					margin: 10px 0 0;
+				}
+			}
+		}
+		ul {
+			padding-top: 46px;
+			@include respond-to(539px) {
+				padding-top: 20px;
+			}
+			li {
+				margin-bottom: 20px;
+				&:last-child {
+					margin-bottom: 0;
+				}
 			}
 		}
 	}

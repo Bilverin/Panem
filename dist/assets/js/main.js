@@ -122,71 +122,128 @@ $(document).ready(function() {
 	$('.popup-registration form input[type=phone]').mask("9 (999) 9999999");
 
 	/* яндекс карта на странице контактов */
+	// взаимодействие с картой при клике на нее
+	$('.wr-contacts-map').click(function() {
+		$(this).addClass('active');
+	});
 	// проверка, есть ли карта на странице или нет
-    if($('*').is('#map')) {
-    	ymaps.ready(initMap);
-    }
-    // переменные для карты
-    var myMap,
-    	myPlacemark;
-    // функция создания карты
-    function initMap(){
-    	// инициализация карты с центров по координатам
+	if($('*').is('#map')) {
+		ymaps.ready(initMap);
+	}
+	// переменные для карты
+	var myMap,
+		myPlacemark;
+	// функция создания карты
+	function initMap(){
+		// инициализация карты с центров по координатам
 		myMap = new ymaps.Map("map", {
-            center: [52.717126, 48.757708],
-            zoom: 7
-        });
+			center: [52.717126, 48.757708],
+			zoom: 7
+		});
 
-        // метки
-        // Пенза
-        var placemarkPenza = new ymaps.Placemark([53.167530, 45.017543], {}, {
-        	iconLayout: 'default#image',
-        	iconImageHref: 'assets/img/placeholder-penza.png',
-        	iconImageSize: [198, 50],
-        	iconImageOffset: [14, -50]
-        });
-        // Самара
-        var placemarkSamara = new ymaps.Placemark([53.212916, 50.275068], {}, {
-        	iconLayout: 'default#image',
-        	iconImageHref: 'assets/img/placeholder-samara.png',
-        	iconImageSize: [223, 50],
-        	iconImageOffset: [14, -50]
-        });
-        // Саратов
-        var placemarkSaratov = new ymaps.Placemark([51.506869, 45.946132], {}, {
-        	iconLayout: 'default#image',
-        	iconImageHref: 'assets/img/placeholder-saratov.png',
-        	iconImageSize: [223, 50],
-        	iconImageOffset: [14, -50]
-        });
-        // Добавление меток на карту
-        myMap.geoObjects.add(placemarkPenza).add(placemarkSamara).add(placemarkSaratov);
+		// метки
+		// Пенза
+		var placemarkPenza = new ymaps.Placemark([53.167530, 45.017543], {}, {
+			iconLayout: 'default#image',
+			iconImageHref: 'assets/img/placeholder-penza.png',
+			iconImageSize: [198, 50],
+			iconImageOffset: [14, -50]
+		});
+		// Самара
+		var placemarkSamara = new ymaps.Placemark([53.212916, 50.275068], {}, {
+			iconLayout: 'default#image',
+			iconImageHref: 'assets/img/placeholder-samara.png',
+			iconImageSize: [223, 50],
+			iconImageOffset: [14, -50]
+		});
+		// Саратов
+		var placemarkSaratov = new ymaps.Placemark([51.506869, 45.946132], {}, {
+			iconLayout: 'default#image',
+			iconImageHref: 'assets/img/placeholder-saratov.png',
+			iconImageSize: [223, 50],
+			iconImageOffset: [14, -50]
+		});
+		// Добавление меток на карту
+		myMap.geoObjects.add(placemarkPenza).add(placemarkSamara).add(placemarkSaratov);
 
-        // Блокирование возможности зумить карту скроллингом
-        myMap.behaviors.disable('scrollZoom');
-    }
+		// Блокирование возможности зумить карту скроллингом
+		// myMap.behaviors.disable('scrollZoom');
+	}
 
-    // Royal Slider
-    $('#slider').royalSlider({
-    	fullscreen: {
-    		enabled: false,
-    		nativeFS: true
-    	},
-    	controlNavigation: 'thumbnails',
-    	thumbs: {
-    		orientation: 'vertical',
-    		spacing: 20,
-    		appendSpan: true
-    	},
-    	transitionType:'fade',
-    	// autoScaleSlider: true, 
-    	autoScaleSliderWidth: 830,     
-    	autoScaleSliderHeight: 400,
-    	loop: true,
-    	arrowsNav: false,
-    	keyboardNavEnabled: true,
+	// Royal Slider
+	$('#slider').royalSlider({
+		fullscreen: {
+			enabled: false,
+			nativeFS: true
+		},
+		controlNavigation: 'thumbnails',
+		thumbs: {
+			orientation: 'vertical',
+			spacing: 20,
+			appendSpan: true
+		},
+		transitionType:'fade',
+		// autoScaleSlider: true, 
+		autoScaleSliderWidth: 830,     
+		autoScaleSliderHeight: 400,
+		loop: true,
+		arrowsNav: false,
+		keyboardNavEnabled: true,
 
-    });
+	});
+
+	// форма поиска на мобильной версии
+	$('.js-searchMob').click(function(e) {
+		e.preventDefault();
+
+		$(this).toggleClass('active');
+		$('.js-searchFormMob').slideToggle();
+	});
+
+	// развертывание статьи в мобильной версии на странице личного кабинета
+	if($(window).width() < 992) {
+		var cabArtWrap = $('.js-mobCabinetArticles'),
+			cabArtWrapParent = $('.js-mobCabinetArticles').parent(),
+			cabArtItem = $('.js-mobCabinetArticles ul li'),
+			cabArtItemCount = $('.js-mobCabinetArticles ul li').length,
+			cabArtHeigth = 0,
+			cabArtFullHeigth = 0,
+			cabArtActivity = false;
+		if(cabArtItemCount > 2) {
+			for(i=0; i < 2; i++) {
+				cabArtHeigth = cabArtHeigth + cabArtItem.eq(i).outerHeight( true );
+			}
+			for(i=0; i < cabArtItemCount; i++) {
+				cabArtFullHeigth = cabArtFullHeigth + cabArtItem.eq(i).outerHeight( true )
+			}
+			cabArtWrapParent.height(cabArtHeigth);
+			cabArtWrap.height(cabArtHeigth);
+			$('.js-cabArtSlide').click(function(e) {
+				e.preventDefault();
+
+				$(this).toggleClass('active');
+				if(cabArtActivity == false) {
+					$(cabArtWrap).height(cabArtFullHeigth).addClass('active');
+					cabArtActivity = true;
+				} else {
+					$(cabArtWrap).height(cabArtHeigth).removeClass('active');
+					cabArtActivity = false;
+				}
+			});
+		} else {
+			$('.js-cabArtSlide').css('display', 'none');
+		}
+	}
+
+	// скроллинг до товара при клике на его ссылку
+	$('.js-scrollToCatItem a').click(function(e) {
+		e.preventDefault();
+		
+		if($(window).width() < 992) {
+			var itemToScroll = $('.catalog-item').offset().top;
+			$("html, body").animate({ scrollTop: itemToScroll }, 600);
+		}
+	})
 });
 
 // resize
@@ -224,13 +281,49 @@ $(window).resize(function() {
 			masonryDestr2 = 0;
 		}
 	}
+
+	// высота блка статей в личном кабинете при ресайзинге
+	if($(window).width() < 992) {
+		var cabArtWrap = $('.js-mobCabinetArticles'),
+			cabArtWrapParent = $('.js-mobCabinetArticles').parent(),
+			cabArtItem = $('.js-mobCabinetArticles ul li'),
+			cabArtItemCount = $('.js-mobCabinetArticles ul li').length,
+			cabArtHeigth = 0,
+			cabArtFullHeigth = 0,
+			cabArtActivity = false;
+		if(cabArtItemCount > 2) {
+			for(i=0; i < 2; i++) {
+				cabArtHeigth = cabArtHeigth + cabArtItem.eq(i).outerHeight( true );
+			}
+			for(i=0; i < cabArtItemCount; i++) {
+				cabArtFullHeigth = cabArtFullHeigth + cabArtItem.eq(i).outerHeight( true )
+			}
+			cabArtWrapParent.height(cabArtHeigth);
+			cabArtWrap.height(cabArtHeigth);
+			$('.js-cabArtSlide').click(function(e) {
+				e.preventDefault();
+
+				$(this).toggleClass('active');
+				if(cabArtActivity == false) {
+					$(cabArtWrap).height(cabArtFullHeigth).addClass('active');
+					cabArtActivity = true;
+				} else {
+					$(cabArtWrap).height(cabArtHeigth).removeClass('active');
+					cabArtActivity = false;
+				}
+			});
+		} else {
+			$('.js-cabArtSlide').css('display', 'none');
+		}
+	}
 });
 
 // Закрытие всплывающих окон при клике в любую точку сайта кроме самого блока
 $(document).mouseup(function (e) {
 	var cityBlock = $("div.city"),
 		sortList = $(".sort-popup").parent(),
-		logInWrap = $('.header .logIn').parent();
+		logInWrap = $('.header .logIn').parent(),
+		mapWrap = $('#map').parent();
 	if (cityBlock.has(e.target).length === 0){
 		$('.js-cityDropdown').removeClass('active');
 		$('.js-cityList').removeClass('active');
@@ -240,6 +333,9 @@ $(document).mouseup(function (e) {
 	}
 	if (logInWrap.has(e.target).length === 0){
 		$('.js-popupLogIn').removeClass('active');
+	}
+	if (mapWrap.has(e.target).length === 0){
+		$(mapWrap).removeClass('active');
 	}
 });
 

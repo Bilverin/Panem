@@ -49,7 +49,7 @@
 			// Offer 
 			&-offer {
 				position: relative; z-index: 3; padding: 39px 0 25px;
-				background: #ffffff;
+				background: #ffffff url('../img/offer-bg.png') center 56% no-repeat;
 				@include respond-to(sm) {
 					padding: 95px 0 18px;
 				}
@@ -152,10 +152,13 @@
 				}
 			}
 			&-map {
-				figure {
-					img {
-						width: 100%;
+				&.active {
+					#map {
+						pointer-events: all;
 					}
+				}
+				#map {
+					pointer-events: none;
 				}
 			}
 		}
@@ -164,6 +167,14 @@
 			padding: 30px 0 68px; min-height: calc(100vh - 133px);
 			@include respond-to(sm) {
 				padding: 30px 0 0;
+			}
+		}
+
+		&-search-mobile {
+			padding: 10px 0 41px; display: none;
+			background: #f5f5f5;
+			@media (min-width: 1100px) {
+				display: none !important;
 			}
 		}
 		

@@ -30,7 +30,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-company-location-1 {
   background-image: url(../img/sprite.png);
-  background-position: -252px -220px;
+  background-position: -16px -242px;
   width: 16px;
   height: 20px;
 }
@@ -42,7 +42,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-company-location-3 {
   background-image: url(../img/sprite.png);
-  background-position: -252px -160px;
+  background-position: 0px -242px;
   width: 16px;
   height: 20px;
 }
@@ -54,13 +54,13 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-compose {
   background-image: url(../img/sprite.png);
-  background-position: -166px -206px;
+  background-position: -222px -121px;
   width: 30px;
   height: 30px;
 }
 .icon-delete {
   background-image: url(../img/sprite.png);
-  background-position: -274px -44px;
+  background-position: -274px -68px;
   width: 8px;
   height: 8px;
 }
@@ -78,25 +78,25 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-down {
   background-image: url(../img/sprite.png);
-  background-position: -272px -123px;
+  background-position: -272px -147px;
   width: 10px;
   height: 6px;
 }
 .icon-exit-black {
   background-image: url(../img/sprite.png);
-  background-position: -252px -44px;
+  background-position: -252px -68px;
   width: 22px;
   height: 24px;
 }
 .icon-exit-blue {
   background-image: url(../img/sprite.png);
-  background-position: -252px -92px;
+  background-position: -252px -116px;
   width: 22px;
   height: 24px;
 }
 .icon-exit-white {
   background-image: url(../img/sprite.png);
-  background-position: -252px -68px;
+  background-position: -252px -92px;
   width: 22px;
   height: 24px;
 }
@@ -106,21 +106,27 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   width: 30px;
   height: 20px;
 }
-.icon-header-search {
+.icon-header-search-active {
   background-image: url(../img/sprite.png);
   background-position: -252px -20px;
   width: 24px;
   height: 24px;
 }
+.icon-header-search {
+  background-image: url(../img/sprite.png);
+  background-position: -252px -44px;
+  width: 24px;
+  height: 24px;
+}
 .icon-home {
   background-image: url(../img/sprite.png);
-  background-position: -137px -168px;
+  background-position: -171px -168px;
   width: 34px;
   height: 34px;
 }
 .icon-key {
   background-image: url(../img/sprite.png);
-  background-position: 0px -242px;
+  background-position: -252px -224px;
   width: 17px;
   height: 17px;
 }
@@ -132,31 +138,31 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-link-mark-mob {
   background-image: url(../img/sprite.png);
-  background-position: -252px -116px;
+  background-position: -252px -140px;
   width: 20px;
   height: 26px;
 }
 .icon-link-mark {
   background-image: url(../img/sprite.png);
-  background-position: -268px -160px;
+  background-position: -268px -184px;
   width: 14px;
   height: 18px;
 }
 .icon-logo-tab {
   background-image: url(../img/sprite.png);
-  background-position: -222px -121px;
+  background-position: -166px -206px;
   width: 30px;
   height: 30px;
 }
 .icon-map-marker-active {
   background-image: url(../img/sprite.png);
-  background-position: -252px -180px;
+  background-position: -252px -184px;
   width: 16px;
   height: 20px;
 }
 .icon-map-marker {
   background-image: url(../img/sprite.png);
-  background-position: -252px -200px;
+  background-position: -252px -204px;
   width: 16px;
   height: 20px;
 }
@@ -174,7 +180,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-search {
   background-image: url(../img/sprite.png);
-  background-position: -252px -142px;
+  background-position: -252px -166px;
   width: 18px;
   height: 18px;
 }
@@ -210,13 +216,13 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-up {
   background-image: url(../img/sprite.png);
-  background-position: -272px -116px;
+  background-position: -272px -140px;
   width: 10px;
   height: 7px;
 }
 .icon-world {
   background-image: url(../img/sprite.png);
-  background-position: -171px -168px;
+  background-position: -137px -168px;
   width: 34px;
   height: 34px;
 }
