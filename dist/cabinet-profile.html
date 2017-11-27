@@ -69,7 +69,7 @@
 										<li><a href="knowledge.html">База знаний</a></li>
 										<li><a href="contacts.html"><span>Как купить/контакты</span><span class="mob">Контакты</span></a></li>
 										<li class="active">
-											<a href="#" class="personal-area exit"><i class="icon icon-exit"></i>Выход</a>
+											<a href="#" class="personal-area exit"><i class="icon icon-exit"></i><i class="icon icon-exit-black mob"></i>Выход</a>
 										</li>
 									</ul>
 									<div class="city">
@@ -116,20 +116,20 @@
 								</ul>
 							</nav>
 							<div class="cabinet-profile">
-								<form action="#" class="profile-info">
+								<div action="#" class="profile-info">
 									<div class="main-info">
 										<a href="#" class="ava-upload"><i class="fa fa-camera"></i></a>
 										<div class="input-module">
 											<p>Имя</p>
-											<input class="name" type="text">
+											<input class="name js-name" type="text">
 										</div>
 										<div class="input-module">
 											<p>Э/Почта</p>
-											<input type="text">
+											<input class="js-mail" type="text">
 										</div>
 										<div class="input-module">
 											<p>Телефон</p>
-											<input type="phone">
+											<input class="js-phone" type="phone">
 										</div>
 										<div class="input-module">
 											<p>Пароль</p>
@@ -181,7 +181,7 @@
 										</ul>
 									</div>
 									<button class="disable">Обновить</button>
-								</form>
+								</div>
 								<form action="#" class="profile-add">
 									<h2>Анкета пользователя</h2>
 									<a href=".add-info" class="js-cabinetAccord">Анкета пользователя</a>
@@ -240,15 +240,14 @@
 												</li>
 												<li class="another">
 													<input id="profile-check7" type="checkbox">
-													<label for="profile-check7"></label>
-													<input type="text" placeholder="свое направление">
-													<a href="#">Свое направление</a>
+													<label for="profile-check7" class="js-clear"><em>Свое направление</em></label>
+													<input type="text" class="js-clearInput" placeholder="свое направление">
 												</li>
 											</ul>
 										</div>
 									</div>
 									<div class="agree-info">
-										<input id="conf-agree" type="checkbox">
+										<input id="conf-agree" type="checkbox" checked="checked">
 										<label for="conf-agree">Я согласен с Политикой конфиденциальности и даю согласие <br>на обработку и хранение моих персональных данных<span></span></label>
 										<button><span>Обновить</span><span class="mob">Сохранить данные</span></button>
 									</div>

@@ -84,11 +84,16 @@ img,
 video {
     vertical-align: middle;
 }
-
+input, select, textarea {
+	&:focus {
+		outline: none;
+	}
+}
 form {
 	input,
 	select,
 	textarea {
+		min-width: 0;
 		-webkit-appearance: none;
 		text-overflow: ellipsis;
 		outline: none;
@@ -96,6 +101,14 @@ form {
 		&:focus,
 		&:active {
 			text-overflow: ellipsis;
+		}
+	}
+	select {
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		&::-ms-expand {
+			display: none;
 		}
 	}
 

@@ -433,7 +433,10 @@
 					}
 					& > a {
 						color: #b9bdc7;
-						pointer-events: none;
+						pointer-events: none; cursor: default;
+						&:hover {
+							text-decoration: none;
+						}
 						@include respond-to(1399px) {
 							color: #a1b8e5;
 						}
@@ -714,6 +717,16 @@
 			li {
 				@include respond-to(539px) {
 					width: 100%;
+				}
+				&:first-child {
+					@include respond-to(md) {
+						order: 1;
+					}
+				}
+				&:last-child {
+					@include respond-to(md) {
+						order: 0;
+					}
 				}
 			}
 		}

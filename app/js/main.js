@@ -1,5 +1,38 @@
 $(document).ready(function() {
 
+	// проявление отзывов
+	$('.js-showTesti').click(function(e) {
+		e.preventDefault();
+
+		$(this).parent().css('display', 'none');
+		$('.testimonials').slideDown();
+	});
+
+	// прерывания действия при нажатии на кнопки активных элементов навигации
+	$('.knowledge-nav-list, .catalog-nav-list, .events-nav, .cabinet-nav, .messages-nav').find('li.active a').click(function(e) {
+		e.preventDefault();
+	});
+
+	// events sliding
+	$('.js-eventsSliding').click(function(e) {
+		e.preventDefault();
+
+		$(this).toggleClass('active');
+		$('.js-eventsList').slideToggle();
+	});
+
+	// очистка инпута
+	$('.js-clear').click(function() {
+		$('.js-clearInput').val('');
+	})
+
+	// кнопка обновить при заполнении полей
+	var profileForm = $('.main-info');
+	profileForm.find('input').keyup(function() {
+		console.log(1);
+		(profileForm.find('input.js-name').val()=="" || profileForm.find('input.js-mail').val()=="" || profileForm.find('input.js-phone').val()=="" || profileForm.find('input.js-pass').val()=="") ? $('.profile-info button').addClass('disable') : $('.profile-info button').removeClass('disable');
+	});
+
 	// Всплывающий список городов в хедере по клику
 	$('.js-cityDropdown').click(function(e){
 		e.preventDefault();
@@ -13,7 +46,7 @@ $(document).ready(function() {
 		e.preventDefault();
 
 		var inpPass = $('.js-pass');
-		inpPass.replaceWith(inpPass.clone().attr('type',(inpPass.attr('type') == 'password') ? 'text' : 'password'));
+		(inpPass.attr('type') == 'password') ? inpPass.attr('type', 'text') : inpPass.attr('type', 'password');
 	});
 
 	// меню бургер
@@ -116,8 +149,6 @@ $(document).ready(function() {
 	// jquery маска для телефонных номеров
 	// на главной
 	$(".main-contacts form input[type=phone]").mask("+7(999)9999999");
-	// на странице профиля
-	$('.cabinet-profile .main-info input[type=phone]').mask("9 (999) 9999999");
 	// попап регистрации
 	$('.popup-registration form input[type=phone]').mask("9 (999) 9999999");
 
@@ -316,6 +347,8 @@ $(window).resize(function() {
 			$('.js-cabArtSlide').css('display', 'none');
 		}
 	}
+
+
 });
 
 // Закрытие всплывающих окон при клике в любую точку сайта кроме самого блока
@@ -345,32 +378,30 @@ $(document).mouseup(function (e) {
 function CustomSlider(module) {
 	var moduleBlock = $(module),
 		nav = $(module + '-nav > ul'),
+		navButton = $(module + '-nav > a'),
 		itemList = $(module + '-items'),
 		item = $(module + '-items > li'),
 		itemLength = $(module + '-items > li').length,
 		itemMaxHeight = 0,
-		itemCurrHeight = 0;
+		itemCurrHeight = 0,
+		itemActiveHeight = itemList.find('li.active').outerHeight();
 
 	
 	for (i=0;i<itemLength;i++) {
-		// расчет самой высокой высоты элемента слайдера
-		itemCurrHeight = item.eq(i).outerHeight();
-		if(itemCurrHeight > itemMaxHeight) {
-			itemMaxHeight = itemCurrHeight;
-		}
-
 		// создание кнопок навигации
 		nav.append('<li><span></span></li>');
 	}
-	// задаем высоту контейнера по самому высокому элементу слайдера
-	itemList.css('height', itemMaxHeight);
+	// задаем высоту контейнера по активному элементу
+	itemList.css('height', itemActiveHeight);
+
 	// добавляем класс active для кнопки соотвествующей активному элементу (по умолчанию первого)
 	nav.find('li').eq(0).addClass('active');
 
 	// переключение слайдов
 	nav.find('li span').click(function() {
 		// узнаем порядковый номер кнопки на которую кликнули
-		var itemIndex = $(this).parent().index();
+		var itemIndex = $(this).parent().index(),
+			itemActiveHeight = item.eq(itemIndex).outerHeight();
 
 		// удаляем старые классы активных элементов
 		nav.find('li.active').removeClass('active');
@@ -379,19 +410,38 @@ function CustomSlider(module) {
 		// добавляем классы для текущих элементов
 		$(this).parent().addClass('active');
 		item.eq(itemIndex).addClass('active');
+
+		// прописываем высоту активного элемента контейнеру
+		itemList.css('height', itemActiveHeight);
+	});
+
+	navButton.click(function(e) {
+		e.preventDefault();
+
+		var currItem = nav.find('li.active').index();
+		// проверка: является ли активный элемент последним в списке
+		if(currItem != itemLength-1) {
+			// переключаем на следующий элемент
+			nav.find('li.active').removeClass('active').next().addClass('active');
+			itemList.find('li.active').removeClass('active').next().addClass('active');
+		} else {
+			// удаляем текущие активные классы
+			nav.find('li.active').removeClass('active');
+			itemList.find('li.active').removeClass('active');
+			// прописываем активные классы первым элементам
+			nav.find('li').eq(0).addClass('active');
+			itemList.find('li').eq(0).addClass('active');
+		}
+		// прописываем высоту активного элемента контейнеру
+		itemActiveHeight = itemList.find('li.active').outerHeight();
+		itemList.css('height', itemActiveHeight);
+
 	});
 
 	// слайдер при ресайзинге
 	$(window).resize(function() {
-		itemMaxHeight = 0;
-		for (i=0;i<itemLength;i++) {
-			// расчет самой высокой высоты элемента слайдера
-			itemCurrHeight = item.eq(i).height();
-			if(itemCurrHeight > itemMaxHeight) {
-				itemMaxHeight = itemCurrHeight;
-			}
-		}
-		// задаем высоту контейнера по самому высокому элементу слайдера
-		itemList.css('height', itemMaxHeight);
+		// задаем высоту контейнера по активному элементу
+		itemActiveHeight = itemList.find('li.active').outerHeight()
+		itemList.css('height', itemActiveHeight);
 	});
 }
