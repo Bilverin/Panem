@@ -1,5 +1,12 @@
 $(document).ready(function() {
 
+	// открытие всех социальных кнопок в окне ЛогИн
+	$('.js-moreSocials').click(function(e) {
+		e.preventDefault();
+
+		$(this).parent().parent().addClass('active');
+	});
+
 	// проявление отзывов
 	$('.js-showTesti').click(function(e) {
 		e.preventDefault();
@@ -356,7 +363,10 @@ $(document).mouseup(function (e) {
 	var cityBlock = $("div.city"),
 		sortList = $(".sort-popup").parent(),
 		logInWrap = $('.header .logIn').parent(),
-		mapWrap = $('#map').parent();
+		mapWrap = $('#map').parent(),
+		socialsLogIn = $('.popup-login .socials.active, .header .logIn .socials.active'),
+		headerNavigation = $('.js-headerNav.active'),
+		headerNavigationClose = $('.js-burgerNav.active');
 	if (cityBlock.has(e.target).length === 0){
 		$('.js-cityDropdown').removeClass('active');
 		$('.js-cityList').removeClass('active');
@@ -369,6 +379,13 @@ $(document).mouseup(function (e) {
 	}
 	if (mapWrap.has(e.target).length === 0){
 		$(mapWrap).removeClass('active');
+	}
+	if (socialsLogIn.has(e.target).length === 0 && !socialsLogIn.is(e.target)){
+		$(socialsLogIn).removeClass('active');
+	}
+	if ((headerNavigation.has(e.target).length === 0 && !headerNavigation.is(e.target)) && (headerNavigationClose.has(e.target).length === 0 && !headerNavigationClose.is(e.target))){
+		$(headerNavigation).removeClass('active');
+		$(headerNavigationClose).removeClass('active');
 	}
 });
 

@@ -9134,12 +9134,18 @@ img.rsImg {
     .logIn form ul.btns:last-child {
       margin-bottom: 0; }
     .logIn form ul.btns > li {
-      margin-right: 0; }
+      margin-right: 0;
+      -webkit-align-self: auto;
+      -ms-flex-item-align: auto;
+      -ms-grid-row-align: auto;
+      align-self: auto;
+      position: relative; }
       .logIn form ul.btns > li:first-child {
         width: 130px;
         -webkit-flex-shrink: 0;
         -ms-flex-negative: 0;
-        flex-shrink: 0; }
+        flex-shrink: 0;
+        z-index: 10; }
       .logIn form ul.btns > li > a.pass-recov {
         color: #0141b2;
         font-size: 14px;
@@ -9165,11 +9171,27 @@ img.rsImg {
         display: -webkit-flex;
         display: -ms-flexbox;
         display: flex;
-        padding-left: 4px; }
+        padding-left: 4px;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        background: #ffffff; }
+        .logIn form ul.btns > li ul.socials.active li {
+          display: inline-block; }
+          .logIn form ul.btns > li ul.socials.active li.more-socials {
+            display: none; }
         .logIn form ul.btns > li ul.socials li {
-          margin-right: 11px; }
+          margin-right: 11px;
+          display: none; }
+          .logIn form ul.btns > li ul.socials li:first-child, .logIn form ul.btns > li ul.socials li:nth-child(2), .logIn form ul.btns > li ul.socials li:nth-child(3) {
+            display: inline-block; }
           .logIn form ul.btns > li ul.socials li:last-child {
             margin-right: 0; }
+          .logIn form ul.btns > li ul.socials li.more-socials {
+            display: inline-block; }
           .logIn form ul.btns > li ul.socials li a {
             font-size: 22px; }
             .logIn form ul.btns > li ul.socials li a:after {
@@ -10515,12 +10537,18 @@ ul.btns {
     .popup-login form ul.btns:last-child {
       margin-bottom: 0; }
     .popup-login form ul.btns > li {
-      margin-right: 0; }
+      margin-right: 0;
+      position: relative;
+      -webkit-align-self: auto;
+      -ms-flex-item-align: auto;
+      -ms-grid-row-align: auto;
+      align-self: auto; }
       .popup-login form ul.btns > li:first-child {
         width: 130px;
         -webkit-flex-shrink: 0;
         -ms-flex-negative: 0;
-        flex-shrink: 0; }
+        flex-shrink: 0;
+        z-index: 10; }
       .popup-login form ul.btns > li > a.pass-recov {
         color: #0141b2;
         font-size: 14px;
@@ -10546,11 +10574,27 @@ ul.btns {
         display: -webkit-flex;
         display: -ms-flexbox;
         display: flex;
-        padding-left: 4px; }
+        padding-left: 4px;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        background: #ffffff; }
+        .popup-login form ul.btns > li ul.socials.active li {
+          display: inline-block; }
+          .popup-login form ul.btns > li ul.socials.active li.more-socials {
+            display: none; }
         .popup-login form ul.btns > li ul.socials li {
-          margin-right: 11px; }
+          margin-right: 11px;
+          display: none; }
+          .popup-login form ul.btns > li ul.socials li:first-child, .popup-login form ul.btns > li ul.socials li:nth-child(2), .popup-login form ul.btns > li ul.socials li:nth-child(3) {
+            display: inline-block; }
           .popup-login form ul.btns > li ul.socials li:last-child {
             margin-right: 0; }
+          .popup-login form ul.btns > li ul.socials li.more-socials {
+            display: inline-block; }
           .popup-login form ul.btns > li ul.socials li a {
             font-size: 22px; }
             .popup-login form ul.btns > li ul.socials li a:after {

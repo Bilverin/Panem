@@ -145,9 +145,9 @@
 				margin-bottom: 0;
 			}
 			& > li {
-				margin-right: 0;
+				margin-right: 0; align-self: auto; position: relative;
 				&:first-child {
-					width: 130px; flex-shrink: 0;
+					width: 130px; flex-shrink: 0; z-index: 10;
 				}
 				& > a {
 					&.btn-3 {
@@ -171,11 +171,26 @@
 					}
 				}
 				ul.socials {
-					display: flex; padding-left: 4px;
+					display: flex; padding-left: 4px; position: absolute; left: 0; top: 50%; transform: translateY(-50%);
+					background: #ffffff;
+					&.active {
+						li {
+							display: inline-block;
+							&.more-socials {
+								display: none;
+							}
+						}
+					}
 					li {
-						margin-right: 11px;
+						margin-right: 11px; display: none;
+						&:first-child, &:nth-child(2), &:nth-child(3) {
+							display: inline-block;
+						}
 						&:last-child {
 							margin-right: 0;
+						}
+						&.more-socials {
+							display: inline-block;
 						}
 						a {
 							font-size: 22px;
@@ -1280,9 +1295,9 @@ ul.btns {
 					margin-bottom: 0;
 				}
 				& > li {
-					margin-right: 0;
+					margin-right: 0; position: relative; align-self: auto;
 					&:first-child {
-						width: 130px; flex-shrink: 0;
+						width: 130px; flex-shrink: 0; z-index: 10;
 					}
 					& > a {
 						&.btn-3 {
@@ -1306,11 +1321,26 @@ ul.btns {
 						}
 					}
 					ul.socials {
-						display: flex; padding-left: 4px;
+						display: flex; padding-left: 4px; position: absolute; left: 0; top: 50%; transform: translateY(-50%);
+						background: #ffffff;
+						&.active {
+							li {
+								display: inline-block;
+								&.more-socials {
+									display: none;
+								}
+							}
+						}
 						li {
-							margin-right: 11px;
+							margin-right: 11px; display: none;
+							&:first-child, &:nth-child(2), &:nth-child(3) {
+								display: inline-block;
+							}
 							&:last-child {
 								margin-right: 0;
+							}
+							&.more-socials {
+								display: inline-block;
 							}
 							a {
 								font-size: 22px;
